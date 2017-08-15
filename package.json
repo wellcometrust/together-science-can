@@ -4,7 +4,10 @@
   "description": "Site for the Together Science Can campaign",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js",
+    "build:html": "node index.js",
+    "build:cssjs": "webpack --config webpack.config.prod.js",
+    "build:cssjs:dev": "webpack --config webpack.config.dev.js",
+    "watch": "nodemon --watch components --ext 'njk js scss' --exec 'npm run build:html && npm run build:cssjs:dev'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +25,22 @@
   "bugs": {
     "url": "https://github.com/wellcometrust/together-science-can/issues"
   },
-  "homepage": "https://github.com/wellcometrust/together-science-can#readme"
+  "homepage": "https://github.com/wellcometrust/together-science-can#readme",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.4.1",
+    "eslint-config-wellcome": "^1.0.8",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }
