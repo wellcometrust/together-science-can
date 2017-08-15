@@ -1,0 +1,25 @@
+{
+  "name": "together-science-can",
+  "version": "0.1.0",
+  "description": "Site for the Together Science Can campaign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellcometrust/together-science-can.git"
+  },
+  "keywords": [
+    "wellcome",
+    "togethersciencecan",
+    "static-site",
+    "nodejs"
+  ],
+  "author": "wellcometrust",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wellcometrust/together-science-can/issues"
+  },
+  "homepage": "https://github.com/wellcometrust/together-science-can#readme"
+}
