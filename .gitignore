@@ -1,4 +1,3 @@
 node_modules
-.DS_Store
-build/*
-!build/README.md
+dist/*
+!dist/README.md
