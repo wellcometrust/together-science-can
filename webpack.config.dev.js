@@ -2,13 +2,16 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const scss = new ExtractTextPlugin({ filename: 'styles.css' });
+// we're certain that the --define options is specified, so this is safe
+const hash = process.argv[process.argv.indexOf('--define') + 1];
+
+const scss = new ExtractTextPlugin({ filename: `styles-${hash}.css` });
 
 module.exports = {
   entry: path.join(__dirname, 'components', 'index.js'),
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'main.js'
+    path: path.join(__dirname, 'dist'),
+    filename: `main-${hash}.js`
   },
   devtool: 'cheap-module-source-map', // enable source maps
   module: {
@@ -24,7 +27,7 @@ module.exports = {
           use: [
             {
               loader: "css-loader",
-              options: { sourceMap: true }
+              options: { sourceMap: true, minimize: true }
             },
             {
               loader: "sass-loader",

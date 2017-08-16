@@ -4,10 +4,10 @@
   "description": "Site for the Together Science Can campaign",
   "main": "index.js",
   "scripts": {
-    "build:html": "node index.js",
-    "build:cssjs": "webpack --config webpack.config.prod.js",
-    "build:cssjs:dev": "webpack --config webpack.config.dev.js",
-    "watch": "nodemon --watch components --ext 'njk js scss' --exec 'npm run build:html && npm run build:cssjs:dev'",
+    "build": "npm run clean-dist && webpack --config webpack.config.prod.js --define \"$(node index.js)\"",
+    "build:dev": "npm run clean-dist && webpack --config webpack.config.dev.js --define \"$(node index.js)\"",
+    "watch": "nodemon --watch components --ext 'njk js scss' --exec 'npm run build:dev'",
+    "clean-dist": "rm dist/*.map && rm dist/*.css && rm dist/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
