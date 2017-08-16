@@ -2,6 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+// here we get the hash created by the HTML generator,
+// which is passed to us in the --define CLI arg
+// --define isn't supposed to be used like this, but we're not using it for anything else so why not.
+// Webpack throws on unknown CLI args.
 // we're certain that the --define options is specified, so this is safe
 const hash = process.argv[process.argv.indexOf('--define') + 1];
 
