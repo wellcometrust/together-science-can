@@ -6,10 +6,10 @@ const render = require('./app/render.js');
 
 const OUTPUT_FILE_NAME = 'index.html';
 
-const html = render(content);
+const html = render('./components/index.njk', content);
 
 fs.writeFile(
-  path.join(__dirname, 'build', OUTPUT_FILE_NAME),
+  path.join(__dirname, 'dist', OUTPUT_FILE_NAME),
   html,
   err => {
     if (err)  throw err;
