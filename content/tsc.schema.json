@@ -14,7 +14,6 @@
           "type": "string",
           "title": "Footer text",
           "description": "Displays under the form",
-          "format": "html",
           "options": {
             "wysiwyg": true
           }
@@ -55,7 +54,6 @@
         },
         "link": {
           "type": "string",
-          "format": "url",
           "title": "Link"
         },
         "download": {
@@ -107,7 +105,6 @@
         "body": {
           "type": "string",
           "title": "Intro body",
-          "format": "html",
           "options": {
             "wysiwyg": true
           }
@@ -144,7 +141,6 @@
         "body": {
           "type": "string",
           "title": "Section body",
-          "format": "html",
           "options": {
             "wysiwyg": true
           }
@@ -167,7 +163,6 @@
         "body": {
           "type": "string",
           "title": "Section body",
-          "format": "html",
           "options": {
             "wysiwyg": true
           }
@@ -193,7 +188,6 @@
         "body": {
           "type": "string",
           "title": "Section body",
-          "format": "html",
           "options": {
             "wysiwyg": true
           }
