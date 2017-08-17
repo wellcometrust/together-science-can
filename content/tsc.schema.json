@@ -87,9 +87,9 @@
     "global": {
       "type": "object",
       "title": "Page properties",
-      "required": [ "title" ],
+      "required": [ "page_title" ],
       "properties": {
-        "title": {
+        "page_title": {
           "type": "string",
           "title": "Page title"
         }
