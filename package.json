@@ -4,10 +4,10 @@
   "description": "Site for the Together Science Can campaign",
   "main": "index.js",
   "scripts": {
-    "build:html": "node index.js",
-    "build:cssjs": "webpack --config webpack.config.prod.js",
-    "build:cssjs:dev": "webpack --config webpack.config.dev.js",
-    "watch": "nodemon --watch components --ext 'njk js scss' --exec 'npm run build:html && npm run build:cssjs:dev'",
+    "build": "npm run clean-dist && webpack --config webpack.config.prod.js --define \"$(node index.js)\"",
+    "build:dev": "npm run clean-dist && webpack --config webpack.config.dev.js --define \"$(node index.js)\"",
+    "watch": "nodemon --watch components --ext 'njk js scss' --exec 'npm run build:dev'",
+    "clean-dist": "mkdir -p dist && rm -rf dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -36,6 +36,7 @@
     "eslint-loader": "^1.9.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "node-sass": "^4.5.3",
+    "nunjucks": "^3.0.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.4"
