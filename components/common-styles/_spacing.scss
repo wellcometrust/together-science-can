@@ -4,4 +4,12 @@ $tsc-spacing-xs: 18px;
 $tsc-spacing-s: 25px;
 $tsc-spacing-m: 36px;
 
-$tsc-border-radius: 3px;
+$border-radii: (
+  s: 3px,
+  l: 8px,
+);
+
+@function border-radius($size) {
+  @return map-get($border-radii, $size);
+}
+

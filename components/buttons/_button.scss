@@ -19,7 +19,7 @@
   @include button-colours($tscBlack, $tscWhite, $tscBlackInt,$tscWhite);
   @include rem(padding, $tsc-spacing-xs $tsc-spacing-s);
 
-  border-radius: $tsc-border-radius;
+  border-radius: border-radius(s);
   display: inline-block;
   font-size: fs(xxxs);
   font-weight: fw(bold);
