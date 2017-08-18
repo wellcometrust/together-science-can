@@ -1,0 +1,19 @@
+$breakpoints: (
+  s: 768px
+);
+
+@function breakpoint($level) {
+  @return map-get($breakpoints, $level);
+}
+
+html {
+    scroll-behavior: smooth;
+    // Better scrolling on webkit touch devices
+    -webkit-overflow-scrolling: touch;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}

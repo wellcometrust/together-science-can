@@ -1,6 +1,6 @@
 const nunjucks = require('nunjucks');
 
-nunjucks.configure({ autoescape: true, throwOnUndefined: true });
+nunjucks.configure('components', { throwOnUndefined: true });
 
 module.exports = function render(template, data) {
   return nunjucks.render(template, data);

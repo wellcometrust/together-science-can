@@ -1,0 +1,21 @@
+$body-padding: 20px;
+
+$spacings: (
+  xs: 18px,
+  s: 25px,
+  m: 36px,
+);
+
+@function spacing($size) {
+  @return map-get($spacings, $size);
+}
+
+$border-radii: (
+  s: 3px,
+  l: 8px,
+);
+
+@function border-radius($size) {
+  @return map-get($border-radii, $size);
+}
+

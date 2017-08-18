@@ -1,0 +1,42 @@
+@mixin button-colours($foreground, $background, $hoverColor, $hoverBackground) {
+  background: $background;
+
+  &,
+  &:visited {
+    color: $foreground;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $hoverBackground;
+    color: $hoverColor;
+  }
+}
+
+.button {
+  @include appearance(none);
+  @include button-colours($tscBlack, $tscWhite, $tscBlackInt,$tscWhite);
+  @include rem(padding, spacing(xs) spacing(s));
+
+  border-radius: border-radius(s);
+  display: inline-block;
+  font-size: fs(xxxs);
+  font-weight: fw(bold);
+  line-height: lh(xxxs);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @include respond-to(breakpoint(s)) {
+    font-size: fs(xxs);
+    line-height: lh(xxs);
+  }
+}
+
+.button--black {
+  @include button-colours($tscWhite, $tscBlack, $tscWhite,$tscBlackInt);
+}
+
+.button--standalone {
+  @include rem(margin, spacing(m) 0);
+}
