@@ -1,1 +1,121 @@
-{}
+{
+  "global": {
+    "page_title": "Together Science Can"
+  },
+  "intro": {
+    "title": "Science is powerful",
+    "body": "In a changing world, we need to come together to celebrate the power of interational collaboration. Add your voice to the movement to keep science open.",
+    "cta": {
+      "text": "Watch the film",
+      "link": "#watch-the-film"
+    }
+  },
+  "signup": {
+    "title": "Take action! Be part of the movement",
+    "footer": "We'll send you well-timed news and ideas for how you can support the movement. We won't share your email with anyone else.",
+    "cta": {
+      "text": "Join now"
+    }
+  },
+  "film": {
+    "embed_url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "mission": {
+    "title": "Our mission",
+    "body": "<p>Together Science Can celebrates the power of international collaboration. Today there are problems seemingly too big and too complex to solve. In these cases, there is only one thing researchers can do - stand together.</p><p>Together we mix backgrounds, logic and instinct. Together we push the boundaries of what is possible. Together we do more than we do apart.</p><p>Together science can keep borders open to collaboration and progress.</p>",
+    "boomerang_embed": ""
+  },
+  "flip_cards": {
+    "title": "Ideas for action",
+    "body": "Get involved and show how #TogetherScienceCan",
+    "cards": [
+      {
+        "title": "Join the movement",
+        "body": "Sign up and receive news and ideas for action from Together Science Can",
+        "cta": {
+          "text": "Join now"
+        },
+        "flip_side": {
+          "title": "Join the movement",
+          "cta": {
+            "text": "Join now"
+          }
+        },
+        "complete": {
+          "title": "Thank you",
+          "body": "Please invite others to join"
+        }
+      },
+      {
+        "title": "Form a chain",
+        "body": "Join hands the Together Science Can way. Take a picture and share on social media to show how",
+        "cta": {
+          "text": "#TogetherScienceCan",
+          "disabled": true
+        }
+      },
+      {
+        "title": "Create a poster",
+        "body": "Print, customise and share your own #TogetherScienceCan message to amplify our collective voice",
+        "cta": {
+          "text": "Download poster",
+          "link": "",
+          "download": true
+        }
+      }
+    ]
+  },
+  "downloads": {
+    "title": "Action kits",
+    "body": "",
+    "cards": [
+      {
+        "title": "For individuals and teams",
+        "body": "This kit gives you ideas and customisable materials so you can take part in the way that suits you",
+        "image_url": "https://wellcome.ac.uk/",
+        "cta": {
+          "text": "Download",
+          "link": "",
+          "download": true
+        }
+      },
+      {
+        "title": "For organisations",
+        "body": "This kit gives you a guide and customisable materials so your academic, industry, governmental or non-governmental organisation can take part.",
+        "image_url": "https://wellcome.ac.uk/",
+        "cta": {
+          "text": "Download",
+          "link": "",
+          "download": true
+        }
+      }
+    ]
+  },
+  "social_feed": {
+    "subtitle": "Join the conversation",
+    "title": "#TogetherScienceCan"
+  },
+  "secondary_signup": {
+    "title": "Join us, take action and stay informed",
+    "footer": "We'll send you well-timed news and ideas for how you can support the movement. We won't share your email with anyone else.",
+    "cta": {
+      "text": "Join now"
+    }
+  },
+  "footer": {
+    "partners_title": "In partnership",
+    "partners": [
+      {
+        "title": "Wellcome",
+        "image_url": "https://wellcome.ac.uk/sites/all/themes/corp_base/assets/images/new-logos/wellcome-logo--white.png"
+      }
+    ],
+    "contact_title": "Contact",
+    "contact_details": {
+      "email": "contact@togethersciencecan.org",
+      "facebook": "https://facebook.com/wellcometrust",
+      "instagram": "https://instagram.com/wellcometrust",
+      "twitter": "https://twitter.com/wellcometrust"
+    }
+  }
+}

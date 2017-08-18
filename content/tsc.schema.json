@@ -1,0 +1,292 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Together Science Can",
+  "definitions": {
+    "signup_form": {
+      "type": "object",
+      "required": [ "cta" ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Form title"
+        },
+        "footer": {
+          "type": "string",
+          "title": "Footer text",
+          "description": "Displays under the form",
+          "options": {
+            "wysiwyg": true
+          }
+        },
+        "cta": {
+          "$ref": "#/definitions/cta",
+          "title": "Submit button"
+        }
+      }
+    },
+    "card": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Card title"
+        },
+        "body": {
+          "type": "string",
+          "title": "Card body"
+        },
+        "image_url": {
+          "type": "string",
+          "format": "url",
+          "title": "Card image URL"
+        },
+        "cta": { "$ref": "#/definitions/cta" }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "title": "Call to action",
+      "required": [ "text" ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "title": "Button text"
+        },
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "download": {
+          "type": "boolean",
+          "title": "File download",
+          "description": "If true, the button will use the `download` HTML attribute, meaning that the file will be downloaded without leaving the page."
+        },
+        "disabled": {
+          "type": "boolean",
+          "title": "Disabled",
+          "description": "This will add the `disabled` HTML attribute to the button, meaning that it won't be interactive and its styling will be different."
+        }
+      }
+    }
+  },
+  "required": [
+    "global",
+    "intro",
+    "signup",
+    "film",
+    "mission",
+    "flip_cards",
+    "downloads",
+    "social_feed",
+    "secondary_signup",
+    "footer"
+  ],
+  "properties": {
+    "global": {
+      "type": "object",
+      "title": "Page properties",
+      "required": [ "page_title" ],
+      "properties": {
+        "page_title": {
+          "type": "string",
+          "title": "Page title"
+        }
+      }
+    },
+    "intro": {
+      "type": "object",
+      "title": "Intro section",
+      "required": [ "title", "body", "cta" ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Intro title"
+        },
+        "body": {
+          "type": "string",
+          "title": "Intro body",
+          "options": {
+            "wysiwyg": true
+          }
+        },
+        "cta": { "$ref": "#/definitions/cta" }
+      }
+    },
+    "signup": {
+      "$ref": "#/definitions/signup_form",
+      "title": "Primary signup form"
+    },
+    "film": {
+      "type": "object",
+      "title": "Film section",
+      "required": [ "embed_url" ],
+      "properties": {
+        "embed_url": {
+          "type": "string",
+          "format": "url",
+          "title": "YouTube Embed URL",
+          "description": "You can retrieve this by clicking Share > Embed on the YouTube video, and copying the URL part from the embed code, e.g. https://www.youtube.com/embed/dQw4w9WgXcQ"
+        }
+      }
+    },
+    "mission": {
+      "type": "object",
+      "title": "Mission section",
+      "required": [ "title", "body", "boomerang_embed" ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Section title"
+        },
+        "body": {
+          "type": "string",
+          "title": "Section body",
+          "options": {
+            "wysiwyg": true
+          }
+        },
+        "boomerang_embed": {
+          "type": "string",
+          "title": "Boomerang embed code"
+        }
+      }
+    },
+    "flip_cards": {
+      "type": "object",
+      "title": "Flip cards",
+      "required": [ "title", "body", "cards" ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Section title"
+        },
+        "body": {
+          "type": "string",
+          "title": "Section body",
+          "options": {
+            "wysiwyg": true
+          }
+        },
+        "cards": {
+          "type": "array",
+          "title": "Cards",
+          "items": {
+            "$ref": "#/definitions/card"
+          }
+        }
+      }
+    },
+    "downloads": {
+      "type": "object",
+      "title": "Kit download cards",
+      "required": [ "title", "body", "cards" ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Section title"
+        },
+        "body": {
+          "type": "string",
+          "title": "Section body",
+          "options": {
+            "wysiwyg": true
+          }
+        },
+        "cards": {
+          "type": "array",
+          "title": "Cards",
+          "items": {
+            "$ref": "#/definitions/card"
+          }
+        }
+      }
+    },
+    "social_feed": {
+      "type": "object",
+      "title": "Social feed",
+      "required": [ "title" ],
+      "properties": {
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        }
+      }
+    },
+    "secondary_signup": {
+      "$ref": "#/definitions/signup_form",
+      "title": "Secondary signup form"
+    },
+    "footer": {
+      "type": "object",
+      "title": "Footer",
+      "required": [ "partners_title", "partners", "contact_title", "contact_details" ],
+      "properties": {
+        "partners_title": {
+          "type": "string",
+          "title": "Partners heading"
+        },
+        "partners": {
+          "type": "array",
+          "title": "Partner logos",
+          "items": {
+            "type": "object",
+            "title": "Partner logo",
+            "required": [ "title", "image_url" ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Logo title",
+                "description": "Used as alt text for the image."
+              },
+              "image_url": {
+                "type": "string",
+                "title": "Image URL",
+                "format": "url"
+              },
+              "link": {
+                "type": "string",
+                "title": "Partner link",
+                "format": "url"
+              }
+            }
+          }
+        },
+        "contact_title": {
+          "type": "string",
+          "title": "Contacts heading"
+        },
+        "contact_details": {
+          "type": "object",
+          "title": "Contact details",
+          "required": [ "email", "facebook", "instagram", "twitter" ],
+          "properties": {
+            "email": {
+              "type": "string",
+              "title": "Email",
+              "format": "email"
+            },
+            "facebook": {
+              "type": "string",
+              "title": "Facebook",
+              "format": "url"
+            },
+            "instagram": {
+              "type": "string",
+              "title": "Instagram",
+              "format": "url"
+            },
+            "twitter": {
+              "type": "string",
+              "title": "Twitter",
+              "format": "url"
+            }
+          }
+        }
+      }
+    }
+  }
+}
