@@ -1,3 +1,11 @@
+$breakpoints: (
+  s: 768px
+);
+
+@function breakpoint($level) {
+  @return map-get($breakpoints, $level);
+}
+
 html {
     scroll-behavior: smooth;
     // Better scrolling on webkit touch devices

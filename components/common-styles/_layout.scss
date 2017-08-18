@@ -1,11 +1,4 @@
 // NOTE: in a lot of this code, we're not using the rem() mixin, since we want the layout to be independent of text-zoom
-$breakpoints: (
-  s: 768px
-);
-
-@function breakpoint($level) {
-  @return map-get($breakpoints, $level);
-}
 
 .section {
   padding: 0 $body-padding;

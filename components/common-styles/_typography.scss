@@ -20,7 +20,8 @@ $line-heights: (
 
 $font-weights: (
   regular: 400,
-  bold: 900,
+  bold: 700,
+  black: 900,
 );
 
 @function fs($size) {
@@ -46,7 +47,7 @@ html {
 
 body {
   font-family: $bodyFont;
-  font-weight: 400;
+  font-weight: fw(regular);
 }
 
 h1,
@@ -54,7 +55,7 @@ h2,
 h3,
 h4 {
   font-family: $headingFont;
-  font-weight: 900;
+  font-weight: fw(black);
   text-transform: uppercase;
 }
 
@@ -62,7 +63,7 @@ h1 {
   font-size: fs(l);
   line-height: lh(l);
   // TODO: replace with actual breakpoint once confirmed
-  @include respond-to(768px) {
+  @include respond-to(breakpoint(s)) {
     font-size: fs(xl);
     line-height: lh(xl);
   }
@@ -72,7 +73,7 @@ h1 {
   font-size: fs(s);
   line-height: lh(s);
   // TODO: replace with actual breakpoint once confirmed
-  @include respond-to(768px) {
+  @include respond-to(breakpoint(s)) {
     font-size: fs(m);
     line-height: lh(m);
   }
