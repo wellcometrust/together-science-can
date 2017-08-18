@@ -1,8 +1,14 @@
 $body-padding: 20px;
 
-$tsc-spacing-xs: 18px;
-$tsc-spacing-s: 25px;
-$tsc-spacing-m: 36px;
+$spacings: (
+  xs: 18px,
+  s: 25px,
+  m: 36px,
+);
+
+@function spacing($size) {
+  @return map-get($spacings, $size);
+}
 
 $border-radii: (
   s: 3px,

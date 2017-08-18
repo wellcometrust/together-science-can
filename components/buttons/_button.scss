@@ -17,7 +17,7 @@
 .button {
   @include appearance(none);
   @include button-colours($tscBlack, $tscWhite, $tscBlackInt,$tscWhite);
-  @include rem(padding, $tsc-spacing-xs $tsc-spacing-s);
+  @include rem(padding, spacing(xs) spacing(s));
 
   border-radius: border-radius(s);
   display: inline-block;
@@ -38,5 +38,5 @@
 }
 
 .button--standalone {
-  @include rem(margin, $tsc-spacing-m 0);
+  @include rem(margin, spacing(m) 0);
 }
