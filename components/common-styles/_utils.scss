@@ -1,0 +1,81 @@
+$baseline-px: 18px;
+$old-ie: false;
+
+// Utilities
+// *********
+// Useful mixins and classes
+// PX to REM
+// Convert px values to rem values with px fallback - https://github.com/bitmanic/rem
+// need to list 0 units in mixin so they're allowed in this file
+// scss-lint:disable ZeroUnit, VendorPrefixes
+@mixin rem($property, $px-values) {
+  // Convert the baseline into rems
+  $baseline-rem: $baseline-px / 1rem;
+  // Print the first line in pixel values
+  #{$property}: $px-values;
+  // If there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == 'number' {
+    #{$property}: $px-values / $baseline-rem;
+  } @else {
+    // Create an empty list that we can dump values into
+    $rem-values: unquote('');
+    @each $value in $px-values {
+      // If the value is zero, return 0
+      @if index((0, 0px, 0em, 0%, 0ex, 0cm, 0mm, 0in, 0pt, 0pc), $value) {
+        $rem-values: append($rem-values, $value);
+      }
+      @else {
+        $rem-values: append($rem-values, $value / $baseline-rem);
+      }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values;
+  }
+}
+
+// MEDIA QUERIES
+// Allows us to ignore media queries for IE8 and below, they will be served 'desktop' equivalent styles.
+@mixin respond-to($min-width, $max-width: false) {
+  @if $old-ie {
+    @content;
+  } @else {
+    @media screen and (min-width: $min-width) {
+      @if $max-width {
+        @media (max-width: $max-width) {
+          @content
+        }
+      }
+      @else {
+        @content;
+      }
+    }
+  }
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+// for use when @extend causes specificty issues
+@mixin visuallyhidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin undovisuallyhidden() {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: auto;
+  position: static;
+  width: auto;
+}
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}

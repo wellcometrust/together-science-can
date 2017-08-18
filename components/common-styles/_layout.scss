@@ -1,0 +1,20 @@
+// NOTE: in a lot of this code, we're not using the rem() mixin, since we want the layout to be independent of text-zoom
+$breakpoints: (
+  s: 768px
+);
+
+@function breakpoint($level) {
+  @return map-get($breakpoints, $level);
+}
+
+.section {
+  padding: 0 $body-padding;
+  margin: 0 auto;
+}
+
+.section--form {
+  background: $tscLighterGrey;
+  max-width: 1230px;
+  padding-top: $tsc-spacing-m;
+  padding-bottom: $tsc-spacing-m;
+}

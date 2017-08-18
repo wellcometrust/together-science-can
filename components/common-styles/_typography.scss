@@ -1,0 +1,80 @@
+$font-sizes: (
+  xxxs: 12px,
+  xxs: 15px,
+  xs: 18px,
+  s: 20px,
+  m: 25px,
+  l: 38px,
+  xl: 60px,
+);
+
+$line-heights: (
+  xxxs: 12px,
+  xxs: 15px,
+  xs: 28px,
+  s: 28px,
+  m: 35px,
+  l: 36px,
+  xl: 55px,
+);
+
+$font-weights: (
+  regular: 400,
+  bold: 900,
+);
+
+@function fs($size) {
+  @return map-get($font-sizes, $size);
+}
+
+@function lh($size) {
+  @return (map-get($line-heights, $size) / fs($size));
+}
+
+@function fw($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-smooth: always;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
+}
+
+body {
+  font-family: $bodyFont;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headingFont;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: fs(l);
+  line-height: lh(l);
+  // TODO: replace with actual breakpoint once confirmed
+  @include respond-to(768px) {
+    font-size: fs(xl);
+    line-height: lh(xl);
+  }
+}
+
+.intro__body {
+  font-size: fs(s);
+  line-height: lh(s);
+  // TODO: replace with actual breakpoint once confirmed
+  @include respond-to(768px) {
+    font-size: fs(m);
+    line-height: lh(m);
+  }
+}
+
