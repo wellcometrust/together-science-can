@@ -93,6 +93,24 @@
         }
       }
     },
+    "header": {
+      "type": "object",
+      "title": "Header",
+      "required": [ "navigation", "mobile_nav", "cta" ],
+      "properties": {
+        "navigation": {
+          "type": "array",
+          "title": "Navigation items",
+          "items": { "$ref": "#/definitions/cta" }
+        },
+        "mobile_nav": {
+          "type": "array",
+          "title": "Mobile nav items",
+          "items": { "$ref": "#/definitions/cta" }
+        },
+        "cta": { "$ref": "#/definitions/cta" }
+      }
+    },
     "intro": {
       "type": "object",
       "title": "Intro section",
