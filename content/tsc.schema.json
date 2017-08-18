@@ -246,6 +246,11 @@
                 "type": "string",
                 "title": "Image URL",
                 "format": "url"
+              },
+              "link": {
+                "type": "string",
+                "title": "Partner link",
+                "format": "url"
               }
             }
           }
