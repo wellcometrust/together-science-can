@@ -1,5 +1,22 @@
+@mixin button-colours($foreground, $background, $hoverColor, $hoverBackground) {
+  background: $background;
+
+  &,
+  &:visited {
+    color: $foreground;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $hoverBackground;
+    color: $hoverColor;
+  }
+}
+
 .button {
   @include appearance(none);
+  @include button-colours($tscBlack, $tscWhite, $tscBlackInt,$tscWhite);
   @include rem(padding, 18px 25px);
 
   border-radius: 3px;
@@ -14,26 +31,10 @@
     font-size: fs(xxs);
     line-height: lh(xxs);
   }
-
-  &,
-  &:visited {
-    color: $tscBlack;
-  }
-
-  &:hover {
-    color: $tscBlackInt;
-  }
 }
 
 .button--black {
-  background: $tscBlack;
-  color: $tscWhite;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: $tscBlackInt;
-  }
+  @include button-colours($tscWhite, $tscBlack, $tscWhite,$tscBlackInt);
 }
 
 .button--standalone {
