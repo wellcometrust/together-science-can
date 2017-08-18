@@ -7,5 +7,17 @@
   <link rel="stylesheet" type="text/css" href="styles-{{ hash }}.css">
 </head>
 <body>
+  {% include "header/header.njk" %}
+  <main>
+    {% include "sections/intro/intro.njk" %}
+    {% include "sections/primary-signup/primary-signup.njk" %}
+    {% include "sections/film/film.njk" %}
+    {% include "sections/mission/mission.njk" %}
+    {% include "sections/flip-cards/flip-cards.njk" %}
+    {% include "sections/downloads/downloads.njk" %}
+    {% include "sections/social-feed/social-feed.njk" %}
+    {% include "sections/secondary-signup/secondary-signup.njk" %}
+  </main>
+  {% include "footer/footer.njk" %}
 </body>
 </html>

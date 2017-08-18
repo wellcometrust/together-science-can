@@ -1,0 +1,41 @@
+.button {
+  @include appearance(none);
+  @include rem(padding, 18px 25px);
+
+  border-radius: 3px;
+  display: inline-block;
+  font-size: fs(xxxs);
+  font-weight: fw(bold);
+  line-height: lh(xxxs);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @include respond-to(breakpoint(s)) {
+    font-size: fs(xxs);
+    line-height: lh(xxs);
+  }
+
+  &,
+  &:visited {
+    color: $tscBlack;
+  }
+
+  &:hover {
+    color: $tscBlackInt;
+  }
+}
+
+.button--black {
+  background: $tscBlack;
+  color: $tscWhite;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $tscBlackInt;
+  }
+}
+
+.button--standalone {
+  @include rem(margin, 36px 0);
+}
