@@ -1,0 +1,26 @@
+.header {
+  display: none;
+}
+
+// all these styles only apply on desktop so we wrap them in a media query
+@include respond-to(breakpoint(s)) {
+  .header {
+    display: block;
+    width: 100%;
+  }
+
+  .main-nav--desktop__list {
+    box-sizing: border-box;
+    padding: spacing(xl) spacing(l) spacing(xl) 0;
+    text-align: right;
+    width: 100%;
+  }
+
+  .main-nav--desktop__item {
+    @include rem(margin-left, spacing(xs));
+  }
+
+  .main-nav--desktop__item {
+     @include rem(margin-left, spacing(xs) + spacing(xxs));
+  }
+}
