@@ -1,0 +1,25 @@
+.intro-video {
+  clip-path: circle(100% at 50% 0);
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include respond-to(breakpoint(s)) {
+    clip-path: circle(80% at 0 20%);
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    z-index: -1;
+  }
+}
+
+.intro-video__video {
+  height: 380px;
+
+  @include respond-to(breakpoint(s)) {
+    height: 100vh;
+  }
+}
