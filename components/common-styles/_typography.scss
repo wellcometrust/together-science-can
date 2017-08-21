@@ -71,6 +71,18 @@ h1 {
   }
 }
 
+h3 {
+  font-size: fs(m);
+  line-height: 1;
+  margin: 0;
+
+  // TODO: replace with actual breakpoint once confirmed
+  @include respond-to(breakpoint(s)) {
+    font-size: fs(l);
+    line-height: 1;
+  }
+}
+
 .intro__body {
   font-size: fs(s);
   line-height: lh(s);
@@ -80,4 +92,3 @@ h1 {
     line-height: lh(m);
   }
 }
-

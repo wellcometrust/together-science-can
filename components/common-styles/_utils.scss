@@ -93,3 +93,18 @@ $old-ie: false;
   -ms-transform: $transform;
   transform: $transform;
 }
+
+@mixin flex($justify: center, $align: center, $direction: column, $wrap: nowrap) {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: $justify;
+    -webkit-justify-content: $justify;
+    align-items: $align;
+    -webkit-align-items: $align;
+    flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+    flex-wrap: $wrap;
+    -webkit-flex-wrap: $wrap;
+}

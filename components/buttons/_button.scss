@@ -40,6 +40,10 @@
   }
 }
 
+.button--fullwidth {
+  width: 100%;
+}
+
 .button--black {
   @include button-colours($tscWhite, $tscBlack, $tscWhite,$tscBlackInt);
 

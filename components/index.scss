@@ -2,11 +2,14 @@
 @import 'common-styles/spacing';
 @import 'common-styles/colours';
 @import 'common-styles/fonts';
+@import 'common-styles/drop-shadow';
 
 @import 'common-styles/global';
 @import 'common-styles/typography';
 @import 'common-styles/layout';
 @import 'common-styles/lists';
+
+@import 'patterns/form/form';
 
 @import 'header/header';
 @import 'intro-video/intro-video';
