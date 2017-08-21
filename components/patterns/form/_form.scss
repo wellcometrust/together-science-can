@@ -29,11 +29,27 @@
 }
 
 .form__success {
-  display: none;
+  @include transition(opacity 0.5s 0.25s);
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 
   &.form_success--visible {
     display: block;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
   }
+}
+
+.form__content {
+  @include transition(opacity 0.5s);
+}
+
+.form__content--success {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .form {

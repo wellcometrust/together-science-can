@@ -108,3 +108,10 @@ $old-ie: false;
     flex-wrap: $wrap;
     -webkit-flex-wrap: $wrap;
 }
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
