@@ -79,3 +79,17 @@ $old-ie: false;
   -moz-appearance: $value;
   appearance: $value;
 }
+
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}

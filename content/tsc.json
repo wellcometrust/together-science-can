@@ -2,12 +2,46 @@
   "global": {
     "page_title": "Together Science Can"
   },
+  "header": {
+    "navigation": [
+      {
+        "text": "Watch the film",
+        "link": "#watch-the-film",
+        "icon": "play"
+      },
+      {
+        "text": "Ideas for action",
+        "link": "#ideas-for-action"
+      },
+      {
+        "text": "Action kits",
+        "link": "#action-kits"
+      }
+    ],
+    "mobile_nav": [
+      {
+        "text": "Ideas for action",
+        "link": "#ideas-for-action",
+        "icon": "anchor"
+      },
+      {
+        "text": "Action kits",
+        "link": "#action-kits",
+        "icon": "anchor"
+      }
+    ],
+    "cta": {
+      "text": "Join the movement",
+      "link": "#join-the-movement"
+    }
+  },
   "intro": {
-    "title": "Science is powerful",
-    "body": "In a changing world, we need to come together to celebrate the power of interational collaboration. Add your voice to the movement to keep science open.",
+    "title": "Science <br>is powerful",
+    "body": "In a changing world, we need to come together to celebrate the power of international collaboration. Add your voice to the movement to keep science open.",
     "cta": {
       "text": "Watch the film",
-      "link": "#watch-the-film"
+      "link": "#watch-the-film",
+      "icon": "play"
     }
   },
   "signup": {

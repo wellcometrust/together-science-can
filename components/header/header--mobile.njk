@@ -1,0 +1,9 @@
+<nav class="main-nav--mobile">
+  <ul class="inline-list main-nav--mobile__list">
+    {% for nav_item in header.mobile_nav %}
+      <li class="main-nav--mobile__item">
+        {{ button.create(color='', text=nav_item.text, link=nav_item.link, icon=nav_item.icon if nav_item.icon) }}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

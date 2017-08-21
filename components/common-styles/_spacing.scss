@@ -1,9 +1,14 @@
 $body-padding: 20px;
 
 $spacings: (
+  xxxs: 10px,
+  xxs: 13px,
   xs: 18px,
   s: 25px,
   m: 36px,
+  l: 42px,
+  xl: 54px,
+  xxl: 80px
 );
 
 @function spacing($size) {

@@ -1,0 +1,10 @@
+{% macro create(color, text, link, standalone=false, disabled=false, download=false, icon='none') %}
+  <a
+    class="button button--{{ color }} button--{{ icon }} {{ "button--standalone" if standalone }}"
+    href="{{ link }}"
+    {% if disabled %} disabled="true" {% endif %}
+    {% if download %} download="{{ download }}" {% endif %}
+  >
+    {{ text }}
+  </a>
+{% endmacro %}
