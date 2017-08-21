@@ -1,12 +1,21 @@
 {% import "buttons/button.njk" as button %}
 
 <section class="section section--intro">
-  <h1 class="intro__heading">{{ intro.title }}</h1>
-  <div class="intro__body">
-    {{ intro.body }}
+  <div class="intro__content">
+    <h1 class="intro__heading">{{ intro.title|safe }}</h1>
+    <div class="intro__body">
+      {{ intro.body }}
+    </div>
+    <div class="intro__cta">
+      {{
+        button.create(
+          color='black',
+          text=intro.cta.text,
+          link=intro.cta.link,
+          standalone=true,
+          icon=intro.cta.icon if intro.cta.icon)
+      }}
+    </div>
+    {% include "header/header--mobile.njk" %}
   </div>
-  <div class="intro__cta">
-    {{ button.create(style='black', text=intro.cta.text, link=intro.cta.link, standalone=true) }}
-  </div>
-  {% include "header/header--mobile.njk" %}
 </section>

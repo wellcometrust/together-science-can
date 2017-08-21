@@ -2,8 +2,26 @@
   display: none;
 }
 
+.main-nav--mobile__list {
+  font-size: 0;
+}
+
+.main-nav--mobile__item {
+  max-width: 50%;
+  vertical-align: top;
+
+  .button {
+    font-size: fs(xxs);
+    line-height: lh(xxs);
+  }
+}
+
 // all these styles only apply on desktop so we wrap them in a media query
 @include respond-to(breakpoint(s)) {
+  .main-nav--mobile {
+    display: none;
+  }
+
   .header {
     display: block;
     width: 100%;

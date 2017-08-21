@@ -65,6 +65,11 @@
           "type": "boolean",
           "title": "Disabled",
           "description": "This will add the `disabled` HTML attribute to the button, meaning that it won't be interactive and its styling will be different."
+        },
+        "icon": {
+          "type": "string",
+          "title": "Icon",
+          "enum": [ "play", "anchor" ]
         }
       }
     }

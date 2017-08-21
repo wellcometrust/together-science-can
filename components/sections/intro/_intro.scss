@@ -1,0 +1,22 @@
+.section--intro {
+  text-align: center;
+
+  @include respond-to(breakpoint(s)) {
+    margin: 0 auto;
+    max-width: 1366px;
+    text-align: left;
+  }
+}
+
+.intro__content {
+  padding-bottom: spacing(xxl);
+
+  @include respond-to(breakpoint(s)) {
+    box-sizing: border-box;
+    margin-left: auto;
+    padding-top: spacing(xxl);
+    padding-bottom: spacing(xxl) * 2 + spacing(xl);
+    padding-left: spacing(xxxs);
+    width: 50%;
+  }
+}

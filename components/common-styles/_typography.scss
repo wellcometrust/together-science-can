@@ -60,6 +60,8 @@ h4 {
 }
 
 h1 {
+  @include rem(margin, spacing(l) 0 spacing(xs));
+
   font-size: fs(l);
   line-height: lh(l);
   // TODO: replace with actual breakpoint once confirmed

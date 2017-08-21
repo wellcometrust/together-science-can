@@ -6,12 +6,12 @@
 
       {% for nav_item in header.navigation %}
         <li class="main-nav--desktop__item">
-          {{ button.create(style='', text=nav_item.text, link=nav_item.link) }}
+          {{ button.create(color='', text=nav_item.text, link=nav_item.link, icon=nav_item.icon if nav_item.icon) }}
         </li>
       {% endfor %}
 
       <li class="main-nav--desktop__item main-nav--desktop__item--last">
-        {{ button.create(style='black', text=header.cta.text, link=header.cta.link) }}
+        {{ button.create(color='black', text=header.cta.text, link=header.cta.link) }}
       </li>
     </ul>
   </nav>
