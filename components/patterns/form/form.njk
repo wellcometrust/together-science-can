@@ -1,0 +1,19 @@
+<div class="section-wrapper--form drop-shadow">
+  <section class="section section--form">
+    <div class="form__content">
+      <h3 class="form__title">{% block title %}{% endblock %}</h3>
+
+      {% block form %}
+      {% endblock %}
+
+      <p class="form__footer">
+        {% block footer %}
+        {% endblock %}
+      </p>
+    </div>
+
+    <div class="form__success">
+      <h3 class="form__title">{% block success %}{% endblock %}</h3>
+    </div>
+  </section>
+</div>

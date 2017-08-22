@@ -60,14 +60,27 @@ h4 {
 }
 
 h1 {
-  @include rem(margin, spacing(l) 0 spacing(xs));
+  @include rem(margin, spacing(l) 0 spacing(xxxs));
 
   font-size: fs(l);
   line-height: lh(l);
   // TODO: replace with actual breakpoint once confirmed
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin, spacing(l) 0 spacing(xs));
     font-size: fs(xl);
     line-height: lh(xl);
+  }
+}
+
+h3 {
+  font-size: fs(m);
+  line-height: 1;
+  margin: 0;
+
+  // TODO: replace with actual breakpoint once confirmed
+  @include respond-to(breakpoint(l)) {
+    font-size: fs(l);
+    line-height: 1;
   }
 }
 
@@ -75,9 +88,8 @@ h1 {
   font-size: fs(s);
   line-height: lh(s);
   // TODO: replace with actual breakpoint once confirmed
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(l)) {
     font-size: fs(m);
     line-height: lh(m);
   }
 }
-

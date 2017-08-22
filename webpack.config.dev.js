@@ -17,6 +17,11 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: `main-${hash}.js`
   },
+  resolve: {
+    alias: {
+      utils: path.resolve(__dirname, 'components/common-js/utils.js')
+    }
+  },
   devtool: 'cheap-module-source-map', // enable source maps
   module: {
     loaders: [

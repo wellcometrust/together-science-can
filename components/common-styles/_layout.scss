@@ -1,14 +1,7 @@
 // NOTE: in a lot of this code, we're not using the rem() mixin, since we want the layout to be independent of text-zoom
 
 .section {
+  box-sizing: border-box;
   padding: 0 $body-padding;
   margin: 0 auto;
-}
-
-.section--form {
-  border-radius: border-radius(l);
-  background: $tscLighterGrey;
-  max-width: 1230px;
-  padding-top: spacing(m);
-  padding-bottom: spacing(m);
 }
