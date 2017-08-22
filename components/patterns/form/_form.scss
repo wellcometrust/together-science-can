@@ -118,3 +118,7 @@
   @include rem(padding-top, spacing(xxs));
   margin-bottom: 0;
 }
+
+.ajax-enabler {
+  display: none;
+}
