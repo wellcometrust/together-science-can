@@ -15,8 +15,14 @@
     box-sizing: border-box;
     margin-left: auto;
     padding-top: spacing(xxl);
-    padding-bottom: spacing(xxl) * 2 + spacing(xl);
+    padding-bottom: spacing(xxl) + spacing(xl);
     padding-left: spacing(xxxs);
     width: 50%;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    padding-top: spacing(xxl);
+    padding-bottom: spacing(xxl) * 2 + spacing(xl);
+    padding-left: spacing(xxxs);
   }
 }

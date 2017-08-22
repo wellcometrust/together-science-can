@@ -30,11 +30,10 @@
   font-size: fs(xxxs);
   font-weight: fw(bold);
   line-height: lh(xxxs);
-  letter-spacing: -0.001em;
   text-transform: uppercase;
   text-decoration: none;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(l)) {
     font-size: fs(xxs);
     line-height: lh(xxs);
   }
@@ -69,7 +68,11 @@
 }
 
 .button--standalone {
-  @include rem(margin, spacing(l) 0);
+  @include rem(margin, spacing(s) 0);
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin, spacing(l) 0);
+  }
 }
 
 .button--play {
