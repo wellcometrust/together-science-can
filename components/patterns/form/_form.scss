@@ -1,10 +1,15 @@
+$form-widths: (
+  s: 1024px,
+  l: 1230px,
+);
+
 .section-wrapper--form {
-  max-width: 1024px;
+  max-width: map-get($form-widths, s);
   margin-left: auto;
   margin-right: auto;
 
   @include respond-to(breakpoint(l)) {
-    max-width: 1230px;
+    max-width: map-get($form-widths, l);
   }
 }
 
