@@ -19,7 +19,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      utils: path.resolve(__dirname, 'components/common-js/utils.js'),
+      utils: path.resolve(__dirname, 'components/common-js/utils.js')
     }
   },
   devtool: 'cheap-module-source-map', // enable source maps
