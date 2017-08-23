@@ -52,7 +52,8 @@
     }
   },
   "film": {
-    "embed_url": "https://www.youtube.com/embed/bnKaOo67mLQ?modestbranding=1&showinfo=0&controls=0"
+    "embed_url": "https://www.youtube.com/embed/bnKaOo67mLQ?modestbranding=1&showinfo=0&controls=0",
+    "show_stats": true
   },
   "mission": {
     "title": "Our mission",
