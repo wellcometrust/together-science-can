@@ -11,7 +11,8 @@
   vertical-align: top;
 
   .button {
-    font-size: fs(xxs);
+    // inconsistency in design, but we can't have 100 standard font sizes
+    font-size: fs(xxs) - 1px;
     line-height: lh(xxs);
   }
 }

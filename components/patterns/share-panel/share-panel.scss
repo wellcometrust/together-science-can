@@ -40,21 +40,19 @@ $share-panel-width: 400px;
   cursor: normal;
 
   // increase specificity to override the interactive style of .button
-  &.share-panel__title:hover,
-  &.share-panel__title:focus {
-    background-color: $tscBlack;
-  }
+  &.share-panel__title {
+    // inconsistency in design, doesn't happen elsewhere
+    @include rem(padding, spacing(xs) 15px);
 
-  @include respond-to(breakpoint(s)) {
-    &.share-panel__title {
+    &:hover,
+    &:focus {
+      background-color: $tscBlack;
+    }
+
+    @include respond-to(breakpoint(s)) {
       font-size: fs(xxs);
     }
   }
-}
-
-.share-panel__title__plus {
-  // keep it on the same line
-  margin-left: -0.1em;
 }
 
 .share-panel__buttons {
