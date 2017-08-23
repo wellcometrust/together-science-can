@@ -119,7 +119,7 @@ $old-ie: false;
 @mixin font-feature-settings($settings...) {
   @if length($settings) == 0 { $settings: none; }
   -webkit-font-feature-settings: $settings;
-  -webkit-font-feature-settings: $settings;
   -moz-font-feature-settings: $settings;
   -ms-font-feature-settings: $settings;
+  font-feature-settings: $settings;
 }
