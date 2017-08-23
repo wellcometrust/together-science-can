@@ -142,13 +142,18 @@
     "film": {
       "type": "object",
       "title": "Film section",
-      "required": [ "embed_url" ],
+      "required": [ "embed_url", "show_stats" ],
       "properties": {
         "embed_url": {
           "type": "string",
           "format": "url",
           "title": "YouTube Embed URL",
           "description": "You can retrieve this by clicking Share > Embed on the YouTube video, and copying the URL part from the embed code, e.g. https://www.youtube.com/embed/dQw4w9WgXcQ"
+        },
+        "show_stats": {
+          "type": "boolean",
+          "title": "Show stats",
+          "default": false
         }
       }
     },

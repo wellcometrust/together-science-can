@@ -1,0 +1,76 @@
+$social-counter-fs: (
+  s: 40px,
+  m: 45px,
+  l: 55px
+);
+
+.social-counter {
+  @include rem(margin, -1 * spacing(xs) 0 0);
+}
+
+.social-counter__list {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  @include respond-to(breakpoint(s)) {
+    @include flex(space-between, flex-end, row, wrap);
+  }
+}
+
+.social-counter__item {
+  @include rem(margin-bottom, spacing(m));
+  display: block;
+  text-align: center;
+
+  @include respond-to(breakpoint(s)) {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.social-counter__item--views .social-counter__title {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 57.33'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bfill:%239c28b1;%7D%3C/style%3E%3CclipPath id='clip-path' transform='translate(0 0)'%3E%3Crect class='cls-1' width='100' height='57.33'/%3E%3C/clipPath%3E%3C/defs%3E%3Ctitle%3Etsc-eye-icon%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M91.17,33.18c-14.54-14.54-29.36-21.47-44-20.61C24.88,13.86,10,32.45,9.8,32.63L0,24.89C.75,23.94,18.62,1.71,46.39.09,64.8-1,82.83,7.18,100,24.34Z' transform='translate(0 0)'/%3E%3Cpath class='cls-3' d='M50.24,57.33a20.51,20.51,0,1,1,20.5-20.51,20.53,20.53,0,0,1-20.5,20.51m0-28.52a8,8,0,1,0,8,8,8,8,0,0,0-8-8' transform='translate(0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.social-counter__item--shares .social-counter__title {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 74.7 88.1'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bfill:%239c28b1;%7D%3C/style%3E%3CclipPath id='clip-path' transform='translate(0)'%3E%3Crect class='cls-1' width='74.7' height='88.1'/%3E%3C/clipPath%3E%3C/defs%3E%3Ctitle%3Etsc-shares-icon%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M59.7,30a15.1,15.1,0,1,0-14-9.7L25.3,34A14.77,14.77,0,0,0,15,29.8a15,15,0,1,0,0,30,14.77,14.77,0,0,0,10.3-4.2l20,13.3a14.18,14.18,0,0,0-.6,4.2,15,15,0,1,0,4.8-11L29.4,48.8a17.58,17.58,0,0,0,.6-4,13.35,13.35,0,0,0-.6-4l21-14.1A14.66,14.66,0,0,0,59.7,30m0-22a7,7,0,1,1-7,7,7,7,0,0,1,7-7M14.9,51.8a7,7,0,1,1,7-7,7,7,0,0,1-7,7M59.7,66.2a7,7,0,1,1-7,7,7,7,0,0,1,7-7' transform='translate(0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.social-counter__item--signups .social-counter__title {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 69.63 69.64'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-4%7Bfill:none;%7D.cls-2%7Bclip-path:url(%23clip-path);%7D.cls-3%7Bfill:%239c28b1;%7D.cls-4%7Bstroke:%239c28b1;stroke-miterlimit:10;stroke-width:2px;%7D%3C/style%3E%3CclipPath id='clip-path' transform='translate(0)'%3E%3Crect class='cls-1' width='69.63' height='69.64'/%3E%3C/clipPath%3E%3C/defs%3E%3Ctitle%3Etsc-signups-icon%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cg class='cls-2'%3E%3Cpath class='cls-3' d='M44,1a2,2,0,0,0-1.66.94l-9.53,15L14.27,24.5a2,2,0,0,0-1.19,1.28l-12,40.28a2,2,0,0,0,2.47,2.5l40.31-12a2,2,0,0,0,1.28-1.16l7.53-18.5,15-9.56a2,2,0,0,0,.34-3.09L45.43,1.59A2,2,0,0,0,44,1m.38,5.16L63.46,25.28,51.37,33,36.65,18.28ZM33.62,20.91,48.71,36,41.77,53,10,62.44l13-13a7,7,0,0,0,8.28-11.12,6.94,6.94,0,0,0-4.94-2,7,7,0,0,0-6.19,10.34l-13,13,9.5-31.81ZM26.34,40.28a3,3,0,0,1,2.13.91,3,3,0,1,1-4.25,0,3,3,0,0,1,2.13-.91' transform='translate(0)'/%3E%3Cpath class='cls-4' d='M44,1a2,2,0,0,0-1.66.94l-9.53,15L14.27,24.5a2,2,0,0,0-1.19,1.28l-12,40.28a2,2,0,0,0,2.47,2.5l40.31-12a2,2,0,0,0,1.28-1.16l7.53-18.5,15-9.56a2,2,0,0,0,.34-3.09L45.43,1.59A2,2,0,0,0,44,1Zm.38,5.16L63.46,25.28,51.37,33,36.65,18.28ZM33.62,20.91,48.71,36,41.77,53,10,62.44l13-13a7,7,0,0,0,8.28-11.12,6.94,6.94,0,0,0-4.94-2,7,7,0,0,0-6.19,10.34l-13,13,9.5-31.81ZM26.34,40.28a3,3,0,0,1,2.13.91,3,3,0,1,1-4.25,0A3,3,0,0,1,26.34,40.28Z' transform='translate(0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.social-counter__title {
+  @include rem(padding, spacing(xxxs) 0 spacing(xxxs) (spacing(s) + spacing(xxxs)));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: spacing(s) auto;
+  color: $tscMediumGrey;
+  display: inline-block;
+  font-size: fs(xxs);
+  font-weight: fw(bold);
+  letter-spacing: 0.13em;
+  line-height: lh(xxs);
+  text-transform: uppercase;
+}
+
+.social-counter__number {
+  // TODO: check if we need to do a "countup" animation here
+  // if yes, uncomment lines below to avoid text skipping
+
+  // @include font-feature-settings("lnum" 1);
+  // @include font-feature-settings("tnum");
+  font-family: $headingFont;
+  font-size: map_get($social-counter-fs, s);
+  font-weight: fw(black);
+  letter-spacing: -0.05em;
+  line-height: 1;
+
+  @include respond-to(breakpoint(s)) {
+    font-size: map_get($social-counter-fs, m);
+  }
+  @include respond-to(breakpoint(l)) {
+    font-size: map_get($social-counter-fs, l);
+  }
+}

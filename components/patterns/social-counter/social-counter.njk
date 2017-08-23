@@ -1,0 +1,28 @@
+{% if film.show_stats %}
+<figure class="social-counter" role="note">
+  <ul class="social-counter__list">
+    {# this will eventually be populated by the JSON and updated via JS #}
+    <li class="social-counter__item social-counter__item--views">
+      <div class="social-counter__title__wrapper">
+        <div class="social-counter__title">Views<span class="visuallyhidden">:</span>
+        </div>
+      </div>
+      <samp class="social-counter__number">1,000,000</samp>
+    </li>
+    <li class="social-counter__item social-counter__item--shares">
+      <div class="social-counter__title__wrapper">
+        <div class="social-counter__title">Shares<span class="visuallyhidden">:</span>
+        </div>
+      </div>
+      <samp class="social-counter__number">2345</samp>
+    </li>
+    <li class="social-counter__item social-counter__item--signups">
+      <div class="social-counter__title__wrapper">
+        <div class="social-counter__title">Signups<span class="visuallyhidden">:</span>
+        </div>
+      </div>
+      <samp class="social-counter__number">54,789</samp>
+    </li>
+  </ul>
+</figure>
+{% endif %}
