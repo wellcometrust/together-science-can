@@ -1,0 +1,9 @@
+{% macro create(text="", url="") %}
+  <a
+    class="share-button share-button--twitter"
+    target="tsc_twitter_share"
+    rel="noopener noreferrer"
+    href="https://twitter.com/intent/tweet?text={{ text | urlencode }}&amp;url={{ url | urlencode }}"
+    title="Tweet (opens in a new tab)"></a>
+{% endmacro %}
+

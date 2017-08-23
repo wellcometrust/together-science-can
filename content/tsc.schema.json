@@ -142,7 +142,7 @@
     "film": {
       "type": "object",
       "title": "Film section",
-      "required": [ "embed_url", "show_stats" ],
+      "required": [ "embed_url", "show_stats", "sharing_url" ],
       "properties": {
         "embed_url": {
           "type": "string",
@@ -154,6 +154,24 @@
           "type": "boolean",
           "title": "Show stats",
           "default": false
+        },
+        "sharing_url": {
+          "type": "string",
+          "format": "url",
+          "title": "YouTube Sharing URL",
+          "description": "You can retrieve this by clicking Share on the YouTube video and copying the provided link."
+        },
+        "tweet_text": {
+          "type": "string",
+          "title": "Pre-defined tweet text"
+        },
+        "email_subject": {
+          "type": "string",
+          "title": "Pre-defined email subject"
+        },
+        "email_body": {
+          "type": "string",
+          "title": "Pre-defined email body text"
         }
       }
     },
