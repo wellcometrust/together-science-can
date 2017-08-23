@@ -1,0 +1,29 @@
+$film-width: 734px;
+
+.section--film {
+  @include rem(padding-top, spacing(xl) + spacing(xxs));
+  max-width: $film-width;
+}
+
+.film__wrapper {
+  height: 0;
+  position: relative;
+}
+
+.film__wrapper--16-9 {
+  padding-bottom: 56.25%;
+}
+// we didn't have the actual film at the time of writing this,
+// so we made a class in case its aspect ratio is 16:10
+.film__wrapper--16-10 {
+  padding-bottom: 62.5%;
+}
+
+.film__iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
