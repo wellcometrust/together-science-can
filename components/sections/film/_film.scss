@@ -1,6 +1,7 @@
 $film-width: 734px;
 
 .section--film {
+  @include rem(margin-bottom, spacing(xxl) * 2 + spacing(l));
   @include rem(padding-top, spacing(xl) + spacing(xxs));
   max-width: $film-width;
 }
