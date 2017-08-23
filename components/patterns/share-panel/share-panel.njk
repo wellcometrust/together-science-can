@@ -1,0 +1,14 @@
+{% import "patterns/share-panel/fb-share-button.njk" as fb_share_button %}
+{% import "patterns/share-panel/twitter-share-button.njk" as twitter_share_button %}
+{% import "patterns/share-panel/email-share-button.njk" as email_share_button %}
+
+<aside class="share-panel">
+  <div class="share-panel__title">Share the film<span class="visuallyhidden">:</span>
+    <span class="share-panel__title__plus" aria-hidden="true" role="presentation">+</span>
+  </div>
+  <div class="share-panel__buttons">
+    {{ fb_share_button.create(url="https://youtu.be/bnKaOo67mLQ") }}
+    {{ twitter_share_button.create(url="https://youtu.be/bnKaOo67mLQ") }}
+    {{ email_share_button.create(subject="Together Science Can", body="Check out this sweet link https://youtu.be/bnKaOo67mLQ") }}
+  </div>
+</aside>

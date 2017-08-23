@@ -1,0 +1,96 @@
+$share-panel-width: 400px;
+
+.share-panel {
+  @include flex(space-between, center, row, nowrap);
+  @include rem(margin-top, spacing(m));
+  background-color: $tscPurple;
+  left: -$body-padding;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
+  width: calc(100% + #{2 * $body-padding});
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(margin, spacing(l) auto 0);
+    border-radius: border-radius(s);
+    position: static;
+    width: $share-panel-width;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin, spacing(m) auto 0);
+  }
+}
+
+.share-panel__title,
+.share-panel__buttons {
+  display: inline-block;
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
+}
+
+.share-panel__title {
+  @extend .button;
+  @extend .button--black;
+  background-color: $tscBlack;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: $tscWhite;
+  cursor: normal;
+
+  // increase specificity to override the interactive style of .button
+  &.share-panel__title:hover,
+  &.share-panel__title:focus {
+    background-color: $tscBlack;
+  }
+
+  @include respond-to(breakpoint(s)) {
+    &.share-panel__title {
+      font-size: fs(xxs);
+    }
+  }
+}
+
+.share-panel__title__plus {
+  // keep it on the same line
+  margin-left: -0.1em;
+}
+
+.share-panel__buttons {
+  // putting display first so the mixin overrides it
+  display: inline-block;
+  @include flex(space-around, center, row, nowrap);
+  background-color: $tscPurple;
+  height: 100%;
+}
+
+.share-button {
+  @include rem(padding, spacing(xxs) 0);
+  background-color: $tscPurple;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto fs(s);
+  // correct by 1px each side for rendering gap
+  height: fs(s) + 2px;
+  position: relative;
+  top: -1px;
+  width: percentage(1 / 3);
+
+  &:hover,
+  &:focus {
+    background-color: $tscPurpleInt;
+  }
+}
+
+.share-button--facebook {
+  @extend %social-icon--facebook;
+}
+
+.share-button--twitter {
+  @extend %social-icon--twitter;
+}
+
+.share-button--email {
+  @extend %social-icon--email;
+}

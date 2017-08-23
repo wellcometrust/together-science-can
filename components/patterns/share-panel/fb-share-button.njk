@@ -1,0 +1,8 @@
+{% macro create(url="") %}
+  <a
+    class="share-button share-button--facebook"
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://www.facebook.com/sharer/sharer.php?u={{ url | urlencode }}&amp;src=sdkpreparse"
+    title="Share on Facebook (opens in a new tab)"></a>
+{% endmacro %}
