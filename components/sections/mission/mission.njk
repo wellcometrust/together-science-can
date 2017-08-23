@@ -1,2 +1,13 @@
 <section class="section section--mission">
+  <div class="mission__boomerang-wrapper">
+    <div class="mission__boomerang drop-shadow">
+      <div class="mission__boomerang__inner">
+        {{ mission.boomerang_embed | safe }}
+      </div>
+    </div>
+  </div>
+  <div class="mission__content">
+    <h2>{{ mission.title | safe }}</h2>
+    {{ mission.body | safe }}
+  </div>
 </section>

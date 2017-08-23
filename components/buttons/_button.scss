@@ -29,14 +29,14 @@
   font-family: $bodyFont;
   font-size: fs(xxxs);
   font-weight: fw(bold);
-  line-height: lh(xxxs);
+  line-height: 1;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   text-decoration: none;
 
   @include respond-to(breakpoint(l)) {
     font-size: fs(xxs);
-    line-height: lh(xxs);
+    line-height: 1;
   }
 }
 
