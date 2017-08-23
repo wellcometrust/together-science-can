@@ -1,0 +1,116 @@
+$mission-section-widths: (
+  s: 984px,
+  l: 1168px,
+);
+
+$mission-content-widths: (
+  s: 474px,
+  l: 576px,
+);
+
+$mission-boomerang-widths: (
+  s: 360px,
+  l: 400px,
+);
+
+$instagram-embed-bar-height: 66px;
+
+.section--mission {
+  @include rem(margin, spacing(xl) * 2 0);
+
+  @include respond-to(breakpoint(s)) {
+    @include flex(center, flex-start, row, nowrap);
+    @include rem(margin, spacing(xl) * 2 + spacing(l));
+    margin-left: auto;
+    margin-right: auto;
+    max-width: map_get($mission-section-widths, s);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin, spacing(xxl) * 2 + spacing(m));
+    margin-left: auto;
+    margin-right: auto;
+    max-width: map-get($mission-section-widths, l);
+  }
+}
+
+.mission__content,
+.mission__boomerang-wrapper {
+  @include respond-to(breakpoint(s)) {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.mission__content {
+  box-sizing: border-box;
+  text-align: left;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(padding-left, spacing(xs));
+    max-width: map-get($mission-content-widths, s);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    max-width: map-get($mission-content-widths, l);
+  }
+}
+
+.mission__boomerang-wrapper {
+  @include respond-to(breakpoint(s)) {
+    text-align: right;
+    width: 50%;
+  }
+}
+
+.mission__boomerang__inner {
+  border-radius: border-radius(l);
+  overflow: hidden;
+
+  @include respond-to(breakpoint(s)) {
+    max-height: map-get($mission-boomerang-widths, s);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    max-height: map-get($mission-boomerang-widths, l);
+  }
+}
+
+.mission__boomerang {
+  display: inline-block;
+  margin-bottom: 0;
+  max-height: 100vw;
+  overflow: hidden;
+  width: 100%;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(margin-right, spacing(xs));
+    max-height: map-get($mission-boomerang-widths, s);
+    overflow: visible;
+    width: map-get($mission-boomerang-widths, s);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    max-height: map-get($mission-boomerang-widths, l);
+    width: map-get($mission-boomerang-widths, l);
+  }
+
+  &:before {
+    // correct for the shadow pseudo-element peeking out
+    bottom: 21%;
+    left: 17.5%;
+    width: 65%;
+    @include respond-to(breakpoint(s)) {
+      bottom: 1%;
+      left: 10%;
+      width: 80%;
+    }
+  }
+
+  & iframe {
+    border: none;
+    margin: 0;
+    position: relative;
+    top: -$instagram-embed-bar-height;
+  }
+}
