@@ -7,8 +7,8 @@
     <span class="share-panel__title__plus" aria-hidden="true" role="presentation">+</span>
   </div>
   <div class="share-panel__buttons">
-    {{ fb_share_button.create(url="https://youtu.be/bnKaOo67mLQ") }}
-    {{ twitter_share_button.create(url="https://youtu.be/bnKaOo67mLQ") }}
-    {{ email_share_button.create(subject="Together Science Can", body="Check out this sweet link https://youtu.be/bnKaOo67mLQ") }}
+    {{ fb_share_button.create(url=film.sharing_url) }}
+    {{ twitter_share_button.create(text=film.tweet_text, url=film.sharing_url) }}
+    {{ email_share_button.create(subject=film.email_subject, body=film.email_body) }}
   </div>
 </aside>

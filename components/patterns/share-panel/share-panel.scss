@@ -71,6 +71,7 @@ $share-panel-width: 400px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto fs(s);
+  cursor: pointer;
   // correct by 1px each side for rendering gap
   height: fs(s) + 2px;
   position: relative;
