@@ -249,11 +249,11 @@
     "social_feed": {
       "type": "object",
       "title": "Social feed",
-      "required": [ "title" ],
+      "required": [ "title", "hashtag" ],
       "properties": {
-        "subtitle": {
+        "hashtag": {
           "type": "string",
-          "title": "Subtitle"
+          "title": "Hash tag"
         },
         "title": {
           "type": "string",

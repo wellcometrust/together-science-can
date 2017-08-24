@@ -1,0 +1,50 @@
+.social-feed__title,
+.social-feed__hashtag {
+  text-align: center;
+}
+
+.social-feed__title {
+  @include rem(padding, 0 spacing(xs));
+  color: $tscMediumGrey;
+  font-size: fs(m);
+  line-height: 1;
+
+  @include respond-to(breakpoint(l)) {
+    font-size: fs(l);
+  }
+}
+
+.social-feed__hashtag {
+  @include rem(margin-bottom, spacing(xl));
+  font-size: fs(m);
+  font-weight: fw(semibold);
+  line-height: 1;
+  text-transform: none;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(margin-bottom, spacing(m));
+    font-size: fs(xl);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin-bottom, spacing(m) + 6px);
+    font-size: fs(xxl);
+  }
+}
+
+.social-feed__feed {
+  @include rem(margin-bottom, spacing(xxl) * 2);
+  text-align: center;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(margin-bottom, spacing(xl) * 2 + spacing(s));
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin-bottom, spacing(xl) * 4);
+  }
+
+  & > .button {
+    display: inline-block;
+  }
+}

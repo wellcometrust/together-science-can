@@ -89,6 +89,16 @@
   }
 }
 
+.button--green {
+  @include button-colours($tscBlack, $tscGreen, $tscBlack, $tscGreenInt);
+
+  &.button--play {
+    &:after {
+      @include play-icon('000000');
+    }
+  }
+}
+
 .button--expanded-ls {
   letter-spacing: 0.13em;
 }
