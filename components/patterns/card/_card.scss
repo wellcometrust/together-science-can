@@ -1,0 +1,101 @@
+// special case in the design, otherwise the title kinda breaks
+$card-title-font-size: 35px;
+
+.cards-list {
+  @include perspective(1000px);
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card {
+  &:before {
+    // correct for the shadow pseudo-element peeking out
+    bottom: 5%;
+    left: 25%;
+    width: 50%;
+    border-radius: 12%;
+
+    @include respond-to(breakpoint(s)) {
+      bottom: 1%;
+      left: 20%;
+      width: 60%;
+    }
+  }
+}
+
+.card__inner {
+  @include rem(padding, spacing(m) spacing(m) - 3px);
+  background: $tscLighterGrey;
+  border-radius: border-radius(l);
+  box-sizing: border-box;
+  text-align: center;
+  height: 100%;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(padding, spacing(m) spacing(s) + 5px);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(padding, spacing(xxl) spacing(xl));
+  }
+
+  .card--tail & {
+    @include respond-to(breakpoint(l)) {
+      @include rem(padding, spacing(m) - 6px spacing(xxs) * 2);
+    }
+  }
+}
+
+.card__title {
+  @include rem(margin-bottom, spacing(s));
+  font-size: $card-title-font-size;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  text-align: center;
+
+  @include respond-to(breakpoint(s)) {
+    display: inline-block;
+  }
+}
+
+.card--head,
+.card--tail {
+  @include transition(transform 750ms);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.card--head {
+  z-index: 1;
+
+  .card-wrapper--flipped & {
+    @include transform(rotateY(180deg));
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+.card--tail {
+  @include transform(rotateY(-180deg));
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 0;
+
+  .card-wrapper--flipped & {
+    @include transform(rotateY(0deg));
+    position: relative;
+    visibility: visible;
+    z-index: 1;
+  }
+}

@@ -57,9 +57,9 @@
           "title": "Link"
         },
         "download": {
-          "type": "boolean",
-          "title": "File download",
-          "description": "If true, the button will use the `download` HTML attribute, meaning that the file will be downloaded without leaving the page."
+          "type": "string",
+          "title": "Downloadable file name",
+          "description": "If the link is a file and this field is filled in, the button will use the `download` HTML attribute, meaning that the file will be downloaded without leaving the page. The value of this field will be used as the filename."
         },
         "disabled": {
           "type": "boolean",

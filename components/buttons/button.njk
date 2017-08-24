@@ -1,18 +1,16 @@
 {% macro create(
     color,
     text,
-    link,
+    link="",
     standalone=false,
     disabled=false,
     download=false,
     expanded_ls=false,
     icon='none') %}
   <a
-    class="button button--{{ color }} button--{{ icon }} {{ "button--standalone" if standalone }} {{ "button--expanded-ls" if expanded_ls }}"
-    href="{{ link }}"
-    {% if disabled %} disabled="true" {% endif %}
+    class="button button--{{ color }} button--{{ icon }} {{ "button--standalone" if standalone }} {{ "button--expanded-ls" if expanded_ls }} {{ "button--disabled" if disabled }}"
     {% if download %} download="{{ download }}" {% endif %}
-  >
+    href="{{ link }}">
     {{ text }}
   </a>
 {% endmacro %}

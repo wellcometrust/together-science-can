@@ -1,0 +1,30 @@
+{% macro create(
+    title="",
+    body="",
+    cta="",
+    flip_side=false,
+    complete="") %}
+<div class="card-wrapper">
+  <div class="card {{ "card--head" if flip_side }} drop-shadow">
+    <div class="card__inner">
+      <h3 class="card__title">{{ title | safe }}</h3>
+      <div class="card__body">{{ body | safe }}</div>
+      {{ cta | safe }}
+    </div>
+  </div>
+  {% if flip_side !== false %}
+    <div class="card card--tail drop-shadow">
+      <div class="card__inner">
+        <div class="form__content">
+          <h3 class="card__title">{{ flip_side.title | safe }}</h3>
+          {% include "forms/signup-form.njk" %}
+        </div>
+        <div class="form__success">
+          <h3 class="form__title">{{ complete.title | safe }}</h3>
+          {{ complete.body | safe }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+{% endmacro %}

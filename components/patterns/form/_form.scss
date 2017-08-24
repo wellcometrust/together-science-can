@@ -71,6 +71,13 @@ $form-widths: (
 .form {
   @include respond-to(breakpoint(s)) {
     @include flex(space-between, flex-end, row, wrap);
+
+    .card & {
+      display: block;
+      text-align: left;
+      max-width: 250px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -88,9 +95,21 @@ $form-widths: (
     }
   }
 
+  .card & {
+    @include rem(margin-top, spacing(xs));
+
+    &:last-of-type {
+      @include rem(margin-top, spacing(xxxs) * 2);
+    }
+  }
+
   label {
     display: block;
-    margin-bottom: spacing(xxs);
+    @include rem(margin-bottom, spacing(xxs));
+
+    .card & {
+      @include rem(margin-bottom, spacing(xxxs));
+    }
   }
 
   label, input, textarea, select {
