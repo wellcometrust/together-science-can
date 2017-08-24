@@ -69,10 +69,11 @@
     "body": "<p>Get involved and show how #TogetherScienceCan</p>",
     "cards": [
       {
-        "title": "Join the <br>movement",
+        "title": "Join the movement",
         "body": "Sign up and receive news and ideas for action from Together Science Can",
         "cta": {
-          "text": "Join now"
+          "text": "Join now",
+          "link": "#primary-signup"
         },
         "flip_side": {
           "title": "Join the movement",
@@ -98,8 +99,8 @@
         "body": "Print, customise and share your own #TogetherScienceCan message to amplify our collective voice",
         "cta": {
           "text": "Download poster",
-          "link": "",
-          "download": true
+          "link": "/together-science-can-poster.jpg",
+          "download": "together-science-can-poster.jpg"
         }
       }
     ]
@@ -115,7 +116,7 @@
         "cta": {
           "text": "Download",
           "link": "",
-          "download": true
+          "download": "tsc-action-kit-individuals-teams.zip"
         }
       },
       {
@@ -125,7 +126,7 @@
         "cta": {
           "text": "Download",
           "link": "",
-          "download": true
+          "download": "tsc-action-kit-organisations.zip"
         }
       }
     ]

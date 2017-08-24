@@ -14,7 +14,7 @@
             text=this_card.cta.text,
             link=this_card.cta.link or "",
             disabled=this_card.cta.disabled,
-            download=this_card.download,
+            download=this_card.cta.download or false,
             standalone=true) %}
 
         {{ card.create(

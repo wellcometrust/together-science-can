@@ -88,12 +88,14 @@ $card-title-font-size: 35px;
   left: 0;
   position: absolute;
   top: 0;
+  visibility: hidden;
   width: 100%;
   z-index: 0;
 
   .card-wrapper--flipped & {
     @include transform(rotateY(0deg));
     position: relative;
+    visibility: visible;
     z-index: 1;
   }
 }

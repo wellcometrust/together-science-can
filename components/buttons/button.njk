@@ -9,8 +9,8 @@
     icon='none') %}
   <a
     class="button button--{{ color }} button--{{ icon }} {{ "button--standalone" if standalone }} {{ "button--expanded-ls" if expanded_ls }} {{ "button--disabled" if disabled }}"
-    href="{{ link }}"
-    {% if download %} download="{{ download }}" {% endif %}>
+    {% if download %} download="{{ download }}" {% endif %}
+    href="{{ link }}">
     {{ text }}
   </a>
 {% endmacro %}
