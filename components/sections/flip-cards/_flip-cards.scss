@@ -52,5 +52,17 @@ $flip-cards-widths: (
     @include respond-to(breakpoint(l)) {
       @include flex-basis(map-get($flip-cards-widths, l));
     }
+
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{$i}) .card:first-of-type .card__inner {
+        @extend %number-background--#{$i};
+      }
+    }
+
+    .card__inner {
+      background-size: auto 75%;
+      background-position: -1 * spacing(xs) calc(100% + #{spacing(xxxs)});
+      background-repeat: no-repeat;
+    }
   }
 }
