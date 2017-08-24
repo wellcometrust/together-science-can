@@ -9,19 +9,25 @@ $flip-cards-widths: (
 );
 
 .section--flip-cards {
-  margin: 0 auto;
+  @include rem(margin-bottom, spacing(xxl) + spacing(xl) + spacing(xxxs));
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 ($body-padding / 2);
 
   @include respond-to(breakpoint(s)) {
+    @include rem(margin-bottom, spacing(xxl));
     max-width: map-get($flip-cards-section-widths, s);
   }
 
   @include respond-to(breakpoint(l)) {
+    @include rem(margin-bottom, spacing(xxl) + spacing(xl));
     max-width: map-get($flip-cards-section-widths, l);
   }
 }
 
 .flip-cards__header {
   @include rem(margin-bottom, spacing(xxl) + spacing(xxs) + spacing(xxxs));
+  padding: 0 ($body-padding / 2);
 
   @include respond-to(breakpoint(l)) {
     @include rem(margin-bottom, spacing(xl));
