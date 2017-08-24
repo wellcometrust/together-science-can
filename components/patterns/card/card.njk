@@ -3,10 +3,14 @@
     body="",
     cta="",
     flip_side=false,
-    complete="") %}
+    complete="",
+    image_url=false) %}
 <div class="card-wrapper">
   <div class="card {{ "card--head" if flip_side }} drop-shadow">
     <div class="card__inner">
+      {% if image_url %}
+        <img class="card__image" src="{{ image_url }}" role="presentation" aria-hidden="true">
+      {% endif %}
       <h3 class="card__title">{{ title | safe }}</h3>
       <div class="card__body">{{ body | safe }}</div>
       {{ cta | safe }}

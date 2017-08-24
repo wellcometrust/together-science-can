@@ -1,2 +1,29 @@
+{% import "patterns/card/card.njk" as card %}
+{% import "buttons/button.njk" as button %}
+
 <section class="section section--downloads">
+  <div class="downloads__header">
+    <h2>{{ downloads.title | safe }}</h2>
+  </div>
+  <div class="downloads__cards-wrapper">
+    <div class="downloads__cards cards-list">
+      {% for this_card in downloads.cards %}
+        {% set this_cta=button.create(
+            color='black',
+            text=this_card.cta.text,
+            link=this_card.cta.link or "",
+            disabled=this_card.cta.disabled,
+            download=this_card.cta.download or false,
+            standalone=true) %}
+
+        {{ card.create(
+            title=this_card.title,
+            body=this_card.body,
+            cta=this_cta,
+            image_url=this_card.image_url,
+            flip_side=this_card.flip_side or false,
+            complete=this_card.complete or "") }}
+      {% endfor %}
+    </div>
+  </div>
 </section>

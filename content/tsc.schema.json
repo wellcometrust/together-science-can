@@ -37,7 +37,6 @@
         },
         "image_url": {
           "type": "string",
-          "format": "url",
           "title": "Card image URL"
         },
         "cta": { "$ref": "#/definitions/cta" }

@@ -1,0 +1,83 @@
+$downloads-section-widths: (
+  s: 984px,
+  l: 1168px,
+);
+
+$downloads-cards-widths: (
+  s: 400px,
+  l: 530px,
+);
+
+.section--downloads {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 ($body-padding / 2);
+
+  @include respond-to(breakpoint(s)) {
+    max-width: map-get($downloads-section-widths, s);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    max-width: map-get($downloads-section-widths, l);
+  }
+}
+
+.downloads__header {
+  @include rem(margin-bottom, spacing(m));
+  padding: 0 ($body-padding / 2);
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(margin-bottom, spacing(xl));
+  }
+}
+
+.downloads__cards {
+  @include respond-to(breakpoint(s)) {
+    @include flex(space-between, flex-start, row, nowrap);
+  }
+
+  .card-wrapper {
+    @include rem(margin-bottom, spacing(xl) + spacing(xxxs));
+
+    @include respond-to(breakpoint(s)) {
+      @include flex-basis(map-get($downloads-cards-widths, s));
+      @include rem(margin-right, spacing(xxxs));
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    @include respond-to(breakpoint(l)) {
+      @include flex-basis(map-get($downloads-cards-widths, l));
+    }
+  }
+
+  .card__inner {
+    @include rem(padding, #{spacing(m) - 6px} spacing(s));
+    background-color: $tscRed;
+
+    @include respond-to(breakpoint(s)) {
+      @include rem(padding, spacing(l) spacing(m));
+    }
+
+    @include respond-to(breakpoint(s)) {
+      @include rem(padding, spacing(xl));
+    }
+  }
+
+  .card__image {
+    @include rem(margin-bottom, spacing(s));
+    max-width: spacing(xxl) * 2;
+
+    @supports (object-fit: contain) {
+      object-fit: contain;
+      height: 200px;
+      width: 100%;
+    }
+  }
+
+  .button {
+    margin-bottom: 0;
+  }
+}
