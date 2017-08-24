@@ -1,2 +1,19 @@
+{% import "buttons/button.njk" as button %}
+
 <section class="section section--social-feed">
+  <h2 class="social-feed__title">{{ social_feed.title }}</h2>
+  <div
+    class="social-feed__hashtag"
+    role="definition"
+    aria-label="{{ social_feed.hashtag | replace("#", "Hashtag ") }}">
+    {{- social_feed.hashtag -}}
+  </div>
+  <div class="social-feed__feed">
+    {# fallback link to Wellcome Twitter page #}
+    {{ button.create(
+            color="blue",
+            text="Join us on Twitter",
+            link="https://twitter.com/wellcometrust",
+            standalone=true) }}
+  </div>
 </section>

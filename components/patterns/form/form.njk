@@ -1,5 +1,7 @@
-<div class="section-wrapper--form drop-shadow">
-  <section class="section section--form">
+<div class="section-wrapper--form drop-shadow {% block wrapper_classes %}{% endblock %}">
+  <section
+    id="{% block id %}{% endblock %}"
+    class="section section--form {% block section_classes %}{% endblock %}">
     <div class="form__content">
       <h3 class="form__title">{% block title %}{% endblock %}</h3>
 
