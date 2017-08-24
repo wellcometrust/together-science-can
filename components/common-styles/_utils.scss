@@ -109,6 +109,13 @@ $old-ie: false;
     -webkit-flex-wrap: $wrap;
 }
 
+@mixin flex-basis($basis) {
+  -webkit-flex-basis: $basis;
+  -moz-flex-basis: $basis;
+  -ms-flex-basis: $basis;
+  flex-basis: $basis;
+}
+
 @mixin transition($transition...) {
     -moz-transition:    $transition;
     -o-transition:      $transition;
@@ -122,4 +129,12 @@ $old-ie: false;
   -moz-font-feature-settings: $settings;
   -ms-font-feature-settings: $settings;
   font-feature-settings: $settings;
+}
+
+@mixin perspective($perspective) {
+    -moz-perspective: $perspective;
+    -webkit-perspective: $perspective;
+    -ms-perspective: $perspective;
+    -o-perspective: $perspective;
+    perspective: $perspective;
 }
