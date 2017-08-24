@@ -12,6 +12,15 @@
     background: $hoverBackground;
     color: $hoverColor;
   }
+
+  &.button--disabled,
+  &.button--disabled:hover,
+  &.button--disabled:focus,
+  &.button--disabled:active {
+    background: transparent;
+    border: solid 2px $background;
+    color: $tscBlack;
+  }
 }
 
 @mixin play-icon($color: 'ffffff') {
@@ -25,6 +34,7 @@
 
   border: none;
   border-radius: border-radius(s);
+  cursor: pointer;
   display: inline-block;
   font-family: $bodyFont;
   font-size: fs(xxxs);
@@ -38,6 +48,11 @@
     font-size: fs(xxs);
     line-height: 1;
   }
+}
+
+.button--disabled {
+  cursor: normal;
+  pointer-events: none;
 }
 
 .button--fullwidth {
@@ -60,6 +75,16 @@
   &.button--play {
     &:after {
       @include play-icon('000000');
+    }
+  }
+}
+
+.button--blue {
+  @include button-colours($tscWhite, $tscBlue, $tscWhite, $tscBlueInt);
+
+  &.button--play {
+    &:after {
+      @include play-icon('ffffff');
     }
   }
 }

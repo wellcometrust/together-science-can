@@ -1,0 +1,56 @@
+$flip-cards-section-widths: (
+  s: 984px,
+  l: 1400px,
+);
+
+$flip-cards-widths: (
+  s: 300px,
+  l: 420px,
+);
+
+.section--flip-cards {
+  margin: 0 auto;
+
+  @include respond-to(breakpoint(s)) {
+    max-width: map-get($flip-cards-section-widths, s);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    max-width: map-get($flip-cards-section-widths, l);
+  }
+}
+
+.flip-cards__header {
+  @include rem(margin-bottom, spacing(xxl) + spacing(xxs) + spacing(xxxs));
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin-bottom, spacing(xl));
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin-bottom, spacing(xxl) + spacing(xxs));
+  }
+}
+
+.flip-cards__cards {
+  @include respond-to(breakpoint(s)) {
+    @include flex(space-between, flex-start, row, nowrap);
+  }
+
+  .card-wrapper {
+    @include rem(margin-bottom, spacing(xl) + spacing(xxxs));
+
+    @include respond-to(breakpoint(s)) {
+      @include flex-basis(map-get($flip-cards-widths, s));
+      @include rem(margin-right, spacing(xxxs));
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    @include respond-to(breakpoint(l)) {
+      @include flex-basis(map-get($flip-cards-widths, l));
+    }
+  }
+}

@@ -1,2 +1,29 @@
+{% import "patterns/card/card.njk" as card %}
+{% import "buttons/button.njk" as button %}
+
 <section class="section section--flip-cards">
+  <div class="flip-cards__header">
+    <h2>{{ flip_cards.title | safe }}</h2>
+    {{ flip_cards.body | safe }}
+  </div>
+  <div class="flip_cards__cards-wrapper">
+    <div class="flip-cards__cards cards-list">
+      {% for this_card in flip_cards.cards %}
+        {% set this_cta=button.create(
+            color='blue',
+            text=this_card.cta.text,
+            link=this_card.cta.link or "",
+            disabled=this_card.cta.disabled,
+            download=this_card.download,
+            standalone=true) %}
+
+        {{ card.create(
+            title=this_card.title,
+            body=this_card.body,
+            cta=this_cta,
+            flip_side=this_card.flip_side or false,
+            form_data=signup) }}
+      {% endfor %}
+    </div>
+  </div>
 </section>
