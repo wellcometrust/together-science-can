@@ -1,5 +1,26 @@
 .section-wrapper--secondary-signup {
+  margin-bottom: 0;
+
   &:before {
-    content: none;
+    z-index: 0;
+
+    @include respond-to(breakpoint(s)) {
+      // the shadow isn't affected by the transform by default
+      @include transform(translateY(200%));
+    }
+  }
+}
+
+.section--secondary-signup {
+  // this changes stacking order so the shadow appears underneath even with z-index 0
+  @include transform(translateY(0));
+
+  @include respond-to(breakpoint(s)) {
+    @include transform(translateY(50%));
+
+    &:before {
+      // the shadow isn't affected by the transform by default
+      @include transform(translateY(200%));
+    }
   }
 }

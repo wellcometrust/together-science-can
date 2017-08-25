@@ -289,8 +289,7 @@
               },
               "image_url": {
                 "type": "string",
-                "title": "Image URL",
-                "format": "url"
+                "title": "Image URL"
               },
               "link": {
                 "type": "string",
