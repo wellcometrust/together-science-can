@@ -1,0 +1,170 @@
+.footer {
+  font-size: fs(xxs);
+  line-height: lh(xxs);
+
+  &, a, a:visited {
+    color: $tscMediumGrey;
+  }
+
+  a {
+    cursor: pointer;
+
+    &:hover {
+      color: $tscWhite;
+    }
+  }
+}
+
+.footer__top {
+  @include rem(padding, spacing(l) 0);
+  background: $tscDarkerGrey;
+  text-align: center;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(padding, spacing(xxl) * 2 0 spacing(xxl));
+    text-align: left;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(padding, spacing(xxl) * 2 + spacing(xl) 0 spacing(xxl) + spacing(xxxs));
+  }
+}
+
+.footer__heading {
+  @include rem(margin-bottom, spacing(s));
+  color: $tscWhite;
+  font-family: $bodyFont;
+  font-size: fs(xxs);
+  line-height: 1;
+  text-transform: none;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(margin-bottom, spacing(xs));
+  }
+
+  @include respond-to(breakpoint(l)) {
+    font-size: fs(xs);
+  }
+}
+
+.footer__top__container {
+  & + & {
+    @include rem(padding-top, spacing(s));
+  }
+
+  @include respond-to(breakpoint(s)) {
+    max-width: 984px;
+  }
+}
+
+.footer-partners__list {
+  @include flex(space-between, center, row, wrap);
+  @include rem(padding, $body-padding);
+
+  @include respond-to(breakpoint(s)) {
+    padding: 0;
+  }
+}
+
+.footer__partner-logo {
+  @include rem(margin-bottom, spacing(xs));
+}
+
+.footer__contact__item {
+  @include rem(margin-right, spacing(s));
+  display: inline-block;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.footer__contact__item--standalone.footer__contact__item--standalone {
+  @include rem(margin-bottom, spacing(xxxs) * 2);
+  display: block;
+  margin-right: 0;
+}
+
+.footer__contact__link {
+  @include rem(height, spacing(xxxs) * 2);
+  @include rem(width, spacing(xxxs) * 2);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.footer__contact__link--facebook {
+  @extend %social-icon--facebook--green;
+}
+.footer__contact__link--twitter {
+  @extend %social-icon--twitter--green;
+}
+.footer__contact__link--instagram {
+  @extend %social-icon--instagram--green;
+}
+
+.footer__top__container,
+.footer__bottom__container {
+  margin: 0 auto;
+
+  @include respond-to(breakpoint(l)) {
+    max-width: 1168px;
+  }
+}
+
+.footer__bottom {
+  @include rem(padding, spacing(s) $body-padding);
+  background-color: $tscBlack;
+  font-size: fs(xxxs);
+  line-height: lh(xxxs);
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(padding, spacing(xxxs));
+  }
+}
+
+.footer__bottom__left,
+.footer__bottom__right {
+  background-color: $tscBlack;
+  text-align: center;
+
+  @include respond-to(breakpoint(s)) {
+    display: inline-block;
+  }
+}
+
+.footer__bottom__left {
+  @include rem(margin-bottom, spacing(s));
+
+  @include respond-to(breakpoint(s)) {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.footer__bottom__right {
+  @include respond-to(breakpoint(s)) {
+    float: right;
+    text-align: right;
+  }
+
+  .footer__bottom__item {
+    @include rem(margin-bottom, spacing(xs));
+    line-height: lh(m);
+
+    @include respond-to(breakpoint(s)) {
+      margin-bottom: 0;
+
+      &, p {
+        @include rem(margin-left, spacing(m));
+      }
+    }
+  }
+}
+
+.footer__bottom__item {
+  &, p {
+    display: inline-block;
+    margin: 0;
+  }
+}

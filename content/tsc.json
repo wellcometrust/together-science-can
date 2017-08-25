@@ -147,7 +147,16 @@
     "partners": [
       {
         "title": "Wellcome",
-        "image_url": "https://wellcome.ac.uk/sites/all/themes/corp_base/assets/images/new-logos/wellcome-logo--white.png"
+        "image_url": "https://wellcome.ac.uk/sites/all/themes/corp_base/assets/images/new-logos/wellcome-logo--white.png",
+        "link": "https://wellcome.ac.uk"
+      },
+      {
+        "title": "Bill and Melinda Gates Foundation",
+        "image_url": "https://www.gatesfoundation.org/images/gfo/bmgf-logo.png"
+      },
+      {
+        "title": "Medical Research Council",
+        "image_url": "../static/images/mrc-reverse-logo.svg"
       }
     ],
     "contact_title": "Contact",

@@ -1,1 +1,73 @@
-<footer></footer>
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__top__container">
+      <h4 id="footer-partners" class="footer__heading">{{ footer.partners_title }}</h4>
+      <ul class="footer-partners__list inline-list" aria-labelledby="footer-partners">
+        {% for partner in footer.partners %}
+          {% if partner.link %}
+            {# here we use aria-label for screen readers, and hide the image itself from them #}
+            <a class="footer__partner-logo"
+              href="{{ partner.link }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="{{ partner.title }} (opens in a new tab)">
+                <img src="{{ partner.image_url }}" alt="{{ partner.title }}" role="presentation" aria-hidden="true">
+            </a>
+          {% else %}
+            {# here we use the alt attribute to read out the actual image #}
+            <img class="footer__partner-logo" src="{{ partner.image_url }}" alt="{{ partner.title }}">
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer__top__container">
+      <h4 id="footer-contact" class="footer__heading">{{ footer.contact_title }}</h4>
+      <ul class="inline-list" aria-labelledby="footer-contact">
+        <li class="footer__contact__item footer__contact__item--standalone">
+          <a href="mailto:{{ footer.contact_details.email }}">{{ footer.contact_details.email }}</a>
+        </li>
+        <li class="footer__contact__item">
+          <a class="footer__contact__link footer__contact__link--facebook"
+            href="{{ footer.contact_details.facebook }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook (opens in a new tab)"></a>
+        </li>
+        <li class="footer__contact__item">
+          <a class="footer__contact__link footer__contact__link--twitter"
+            href="{{ footer.contact_details.twitter }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter (opens in a new tab)"></a>
+        </li>
+        <li class="footer__contact__item">
+          <a class="footer__contact__link footer__contact__link--instagram"
+            href="{{ footer.contact_details.instagram }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram (opens in a new tab)"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom" itemscope itemtype="http://schema.org/Organization">
+    <div class="footer__bottom__container">
+      <div class="footer__bottom__left">
+        <div class="footer__bottom__item">
+          <a href="https://wellcome.ac.uk/about-us/terms-use"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Opens in a new tab">Privacy &amp; cookies</a>
+        </div>
+      </div>
+      <div class="footer__bottom__right">
+        <div class="footer__bottom__item">
+          Made by <strong itemprop="name">Wellcome</strong>
+        </div>
+        <div class="footer__bottom__item" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+          <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">215 Euston Rd, NW1 2BE London</p>
+          <p>T: <a href="tel:004402076118888" itemprop="telephone">+44 (0)20 7611 8888</a></p>
+        </div>
+      </div>
+    </div>
+</footer>
