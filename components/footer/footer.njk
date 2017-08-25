@@ -10,8 +10,8 @@
               href="{{ partner.link }}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="{{ partner.title }} (opens in a new tab)">
-                <img src="{{ partner.image_url }}" alt="{{ partner.title }}" role="presentation" aria-hidden="true">
+              title="{{ partner.title }} (opens in a new tab)">
+                <img src="{{ partner.image_url }}" alt="" role="presentation" aria-hidden="true">
             </a>
           {% else %}
             {# here we use the alt attribute to read out the actual image #}
@@ -31,21 +31,21 @@
             href="{{ footer.contact_details.facebook }}"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Facebook (opens in a new tab)"></a>
+            title="Facebook (opens in a new tab)"></a>
         </li>
         <li class="footer__contact__item">
           <a class="footer__contact__link footer__contact__link--twitter"
             href="{{ footer.contact_details.twitter }}"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter (opens in a new tab)"></a>
+            title="Twitter (opens in a new tab)"></a>
         </li>
         <li class="footer__contact__item">
           <a class="footer__contact__link footer__contact__link--instagram"
             href="{{ footer.contact_details.instagram }}"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram (opens in a new tab)"></a>
+            title="Instagram (opens in a new tab)"></a>
         </li>
       </ul>
     </div>
