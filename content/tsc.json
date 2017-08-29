@@ -112,7 +112,7 @@
       {
         "title": "For individuals and teams",
         "body": "This kit gives you ideas and customisable materials so you can take part in the way that suits you",
-        "image_url": "../static/images/white_fists.png",
+        "image_url": "static/images/white_fists.png",
         "cta": {
           "text": "Download",
           "link": "",
@@ -122,7 +122,7 @@
       {
         "title": "For organisations",
         "body": "This kit gives you a guide and customisable materials so your academic, industry, governmental or non-governmental organisation can take part.",
-        "image_url": "../static/images/white_building.png",
+        "image_url": "static/images/white_building.png",
         "cta": {
           "text": "Download",
           "link": "",
@@ -156,7 +156,7 @@
       },
       {
         "title": "Medical Research Council",
-        "image_url": "../static/images/mrc-reverse-logo.svg"
+        "image_url": "static/images/mrc-reverse-logo.svg"
       }
     ],
     "contact_title": "Contact",
