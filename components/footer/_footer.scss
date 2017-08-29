@@ -68,6 +68,7 @@
 
 .footer__partner-logo {
   @include rem(margin-bottom, spacing(xs));
+  max-width: percentage(1/3);
 }
 
 .footer__contact__item {

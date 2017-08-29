@@ -1,5 +1,5 @@
 $breakpoints: (
-  s: 768px,
+  s: 900px,
   l: 1300px,
 );
 
@@ -8,7 +8,6 @@ $breakpoints: (
 }
 
 html {
-    scroll-behavior: smooth;
     // Better scrolling on webkit touch devices
     -webkit-overflow-scrolling: touch;
 }

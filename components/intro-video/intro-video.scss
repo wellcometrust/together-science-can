@@ -1,12 +1,10 @@
 .intro-video {
-  clip-path: circle(100% at 50% 0);
-  height: 380px;
+  height: 60vh;
   overflow: hidden;
   position: relative;
   width: 100%;
 
   @include respond-to(breakpoint(s)) {
-    clip-path: circle(80% at 0 20%);
     height: auto;
     position: absolute;
     top: 0;
@@ -17,9 +15,40 @@
 }
 
 .intro-video__video {
-  height: 380px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 
   @include respond-to(breakpoint(s)) {
     height: 100vh;
+  }
+}
+
+.tsc-video-overlay-pattern {
+
+}
+
+.intro-video__overlay {
+  background-color: rgba(0,0,0,0.55);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA05pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0REQkRGMkY4MUQyMTFFN0I4NDVGOTBENjFDMzRDOTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0REQkRGMkU4MUQyMTFFN0I4NDVGOTBENjFDMzRDOTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ZDZkYThlYTctYzg4YS0xMTdhLTkyMzgtZGJkOTRhNjFmM2FmIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ZDZkYThlYTctYzg4YS0xMTdhLTkyMzgtZGJkOTRhNjFmM2FmIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+FppQPwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5T/wDltzBKAAAAHElEQVR42mJgYGAEAwY4g5ERGwMkjcpAUQMQYAAH2AA5ubpRyAAAAABJRU5ErkJggg==);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.intro-video__mask {
+  bottom: -10%;
+  left: -50%;
+  position: absolute;
+  width: 200%;
+
+  @include respond-to(breakpoint(s)) {
+    bottom: -13%;
+    height: 200vh;
+    left: auto;
+    right: -10%;
+    width: auto;
   }
 }

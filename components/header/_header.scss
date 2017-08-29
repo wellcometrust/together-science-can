@@ -1,5 +1,23 @@
-.header {
+.main-nav--desktop {
   display: none;
+}
+
+$logo-spacing-top-s: spacing(xxl) + spacing(s);
+
+.logo-wrapper {
+  left: 0;
+  padding: $logo-spacing-top-s $body-padding 0;
+  position: absolute;
+  top: 0;
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(padding-top, spacing(s));
+    width: 31%;
+  }
+}
+
+.logo {
+  width: 100%;
 }
 
 .main-nav--mobile__list {
@@ -19,6 +37,11 @@
 
 // all these styles only apply on desktop so we wrap them in a media query
 @include respond-to(breakpoint(s)) {
+  .main-nav--desktop {
+    display: block;
+    text-align: right;
+  }
+
   .main-nav--mobile {
     display: none;
   }
@@ -29,24 +52,16 @@
   }
 
   .main-nav--desktop__list {
+    @include rem(padding, spacing(m) spacing(s) spacing(m) 0);
     box-sizing: border-box;
-    padding: spacing(m) spacing(s) spacing(m) 0;
+    display: inline-block;
     text-align: right;
-    width: 100%;
-  }
-
-  .main-nav--desktop__item--last {
-    @include rem(margin-left, spacing(s));
+    width: 55%;
   }
 }
 
 @include respond-to(breakpoint(l)) {
   .main-nav--desktop__list {
-    padding: spacing(xl) spacing(l) spacing(xl) 0;
-  }
-
-  .main-nav--desktop__item,
-  .main-nav--desktop__item--last {
-     @include rem(margin-left, spacing(xs) + spacing(xxs));
+    @include rem(padding, spacing(xl) spacing(l) spacing(xl) 0);
   }
 }
