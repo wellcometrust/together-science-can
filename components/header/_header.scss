@@ -1,5 +1,23 @@
-.header {
+.main-nav--desktop {
   display: none;
+}
+
+$logo-spacing-top-s: spacing(xxl) + spacing(s);
+
+.logo-wrapper {
+  left: 0;
+  padding: $logo-spacing-top-s $body-padding 0;
+  position: absolute;
+  top: 0;
+
+  @include respond-to(breakpoint(s)) {
+    padding-top: spacing(s);
+    width: 31%;
+  }
+}
+
+.logo {
+  width: 100%;
 }
 
 .main-nav--mobile__list {
@@ -19,6 +37,10 @@
 
 // all these styles only apply on desktop so we wrap them in a media query
 @include respond-to(breakpoint(s)) {
+  .main-nav--desktop {
+    display: block;
+  }
+
   .main-nav--mobile {
     display: none;
   }
