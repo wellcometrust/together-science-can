@@ -2,6 +2,8 @@ import './index.scss';
 
 import { nodeList } from 'utils';
 
+import customPlayButton from './common-js/customPlay.js';
+
 import setupForm from './patterns/form/form.js';
 import shareButton from './patterns/share-panel/shareButton.js';
 import flipCard from './patterns/card/card.js';
@@ -16,6 +18,9 @@ const initialize = function() {
 
   const flipCardWrappers = nodeList(document.getElementsByClassName('card-wrapper'));
   flipCardWrappers.forEach(wrapper => flipCard(wrapper));
+
+  const customPlayWrappers = nodeList(document.getElementsByClassName('custom-play'));
+  customPlayWrappers.forEach(wrapper => customPlayButton(wrapper));
 };
 
 if (document.readyState === 'loading') {
