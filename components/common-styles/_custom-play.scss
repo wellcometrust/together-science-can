@@ -2,7 +2,7 @@
   @include appearance(none);
   @include flex;
   @include transform(scale(0.1));
-  @include transition(transform 250ms, opacity 250ms, background-color 250ms);
+  @include transitionTransform(transform 250ms, opacity 250ms, background-color 250ms);
   background-color: rgba(0,0,0,0.5);
   border: none;
   cursor: pointer;
@@ -23,6 +23,10 @@
     display: block;
     height: spacing(xxl);
     width: spacing(xxl);
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:hover {

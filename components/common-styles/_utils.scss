@@ -138,3 +138,14 @@ $old-ie: false;
     -o-perspective: $perspective;
     perspective: $perspective;
 }
+
+// same as mixin transition but with prefixes for transform
+// first argument must be transform, e.g.:
+// @include transitionTransform(transform 1s, background-color 2s);
+// courtesy of Thomas Trusch
+@mixin transitionTransform($transform...) {
+  -webkit-transition: -webkit-#{$transform};
+     -moz-transition: -moz-#{$transform};
+       -o-transition: -o-#{$transform};
+          transition: $transform;
+}
