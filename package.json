@@ -7,8 +7,9 @@
     "build": "npm run clean-dist && webpack --config webpack.config.prod.js --define \"$(node index.js 2>&1)\"",
     "build:dev": "npm run clean-dist && webpack --config webpack.config.dev.js --define \"$(node index.js)\"",
     "watch": "nodemon --watch components --watch content --ext 'njk js scss json' --exec 'npm run build:dev'",
-    "clean-dist": "mkdir -p dist && rm -rf dist/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean-dist": "sh clean-dist.sh",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && sh deploy.sh"
   },
   "repository": {
     "type": "git",

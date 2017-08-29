@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 7.5.0
+dependencies:
+  override:
+    - npm install
+  cache_directories:
+    - node_modules
+compile:
+  override:
+    - npm run build
+test:
+  override:
+    - echo "We ain't got no tests"
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm run deploy

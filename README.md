@@ -1,3 +1,5 @@
+![TSC logo](https://raw.githubusercontent.com/wellcometrust/together-science-can/master/static/images/icons/android-chrome-256x256.png)
+
 # Together Science Can
 
 This is a single-page site for the *Together Science Can* campaign. It is designed as a static site generated from JSON, which means it's very lightweight and extensible.
