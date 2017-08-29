@@ -52,7 +52,7 @@
     }
   },
   "film": {
-    "embed_url": "https://www.youtube.com/embed/bnKaOo67mLQ?modestbranding=1&showinfo=0&controls=0",
+    "embed_url": "https://www.youtube.com/embed/bnKaOo67mLQ?modestbranding=1&showinfo=0&controls=0&enablejsapi=1",
     "sharing_url": "https://youtu.be/bnKaOo67mLQ",
     "tweet_text": "#TogetherScienceCan",
     "email_subject": "Together Science Can",
