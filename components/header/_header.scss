@@ -52,9 +52,8 @@ $logo-spacing-top-s: spacing(xxl) + spacing(s);
   }
 
   .main-nav--desktop__list {
-    display: inline-block; // before the include so it gets overriden
-    @include flex(flex-end, flex-start, row, wrap, 'inline-');
     box-sizing: border-box;
+    display: inline-block;
     padding: spacing(m) spacing(s) spacing(m) 0;
     text-align: right;
     width: 55%;
