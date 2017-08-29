@@ -94,11 +94,11 @@ $old-ie: false;
   transform: $transform;
 }
 
-@mixin flex($justify: center, $align: center, $direction: column, $wrap: nowrap) {
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
+@mixin flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $inline: '') {
+    display: #{$inline}flex;
+    display: -ms-#{$inline}flexbox;
+    display: -webkit-#{$inline}flex;
+    display: -moz-#{$inline}flex;
     justify-content: $justify;
     -webkit-justify-content: $justify;
     align-items: $align;

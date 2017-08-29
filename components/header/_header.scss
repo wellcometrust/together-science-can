@@ -39,6 +39,7 @@ $logo-spacing-top-s: spacing(xxl) + spacing(s);
 @include respond-to(breakpoint(s)) {
   .main-nav--desktop {
     display: block;
+    text-align: right;
   }
 
   .main-nav--mobile {
@@ -51,24 +52,17 @@ $logo-spacing-top-s: spacing(xxl) + spacing(s);
   }
 
   .main-nav--desktop__list {
+    display: inline-block; // before the include so it gets overriden
+    @include flex(flex-end, flex-start, row, wrap, 'inline-');
     box-sizing: border-box;
     padding: spacing(m) spacing(s) spacing(m) 0;
     text-align: right;
-    width: 100%;
-  }
-
-  .main-nav--desktop__item--last {
-    @include rem(margin-left, spacing(s));
+    width: 55%;
   }
 }
 
 @include respond-to(breakpoint(l)) {
   .main-nav--desktop__list {
     padding: spacing(xl) spacing(l) spacing(xl) 0;
-  }
-
-  .main-nav--desktop__item,
-  .main-nav--desktop__item--last {
-     @include rem(margin-left, spacing(xs) + spacing(xxs));
   }
 }
