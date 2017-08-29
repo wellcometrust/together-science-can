@@ -84,6 +84,7 @@ $form-widths: (
 .form__element {
   @include rem(margin-top, spacing(s));
   display: block;
+  position: relative;
 
   &:nth-last-of-type(2) {
     @include rem(padding-bottom, spacing(xxxs));
@@ -169,4 +170,34 @@ $form-widths: (
 
 .ajax-enabler {
   display: none;
+}
+
+.form__element__error {
+  bottom: -1.7em;
+  color: $tscRed;
+  display: none;
+  font-size: fs(xxxs);
+  left: 0;
+  margin: 0;
+  position: absolute;
+  white-space: nowrap;
+
+  @include respond-to(breakpoint(s)) {
+    bottom: -2em;
+    font-size: fs(xxs);
+  }
+}
+
+.form-item--invalid.form-item--invalid.form-item--invalid {
+  // need to override quite specific styling of the input elements
+  border-color: $tscRed;
+  outline-color: $tscRed;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23f54337;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_2'%3E%3Cg id='Layer_1-2'%3E%3Cpath class='cls-1' d='M10,20A10,10,0,1,1,20,10,10,10,0,0,1,10,20M10,2.07A7.93,7.93,0,1,0,17.93,10,7.94,7.94,0,0,0,10,2.07'/%3E%3Cpath class='cls-1' d='M8.73,14.33a1.18,1.18,0,0,1,.37-.87,1.23,1.23,0,0,1,.9-.36,1.28,1.28,0,0,1,.89.35,1.12,1.12,0,0,1,.38.86,1.17,1.17,0,0,1-.37.87,1.28,1.28,0,0,1-1.38.27,1.32,1.32,0,0,1-.4-.25,1.16,1.16,0,0,1-.28-.38,1.12,1.12,0,0,1-.1-.48'/%3E%3Crect class='cls-1' x='9.05' y='4.21' width='1.9' height='7.71' rx='0.5' ry='0.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E ") no-repeat;
+  background-size: auto 50%;
+  background-position: spacing(xxs) spacing(xxxs);
+  padding-left: spacing(l);
+
+  & ~ .form__element__error {
+    display: block;
+  }
 }

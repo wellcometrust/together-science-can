@@ -1,5 +1,7 @@
 import { nodeList } from 'utils';
 
+const INVALID_CLASS = 'form-item--invalid';
+
 const disableSubmit = submit => {
   submit.disabled = true;
   submit.classList.add('button--loading');
@@ -36,14 +38,20 @@ const setupForm = formWrapper => {
   const form = formWrapper.querySelector('form');
   if (!form) return;
 
-  const submit = nodeList(form.elements).filter(el => el.type === 'submit')[0];
+  const elements = nodeList(form.elements);
+  const submit = elements.filter(el => el.type === 'submit')[0];
 
   const success = formWrapper.parentElement.querySelector('.form__success');
 
   const ajaxFrame = formWrapper.querySelector('.ajax-enabler');
 
+  elements.forEach(el => {
+    el.addEventListener('invalid', e => el.classList.add(INVALID_CLASS));
+  });
+
   form.addEventListener('submit', e => {
     e.preventDefault();
+    elements.forEach(el => el.classList.remove(INVALID_CLASS));
 
     if (form.checkValidity()) {
       submitForm(form, ajaxFrame);

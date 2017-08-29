@@ -1,3 +1,7 @@
+{% import "patterns/share-panel/fb-share-button.njk" as fb_share_button %}
+{% import "patterns/share-panel/twitter-share-button.njk" as twitter_share_button %}
+{% import "patterns/share-panel/email-share-button.njk" as email_share_button %}
+
 <div class="section-wrapper--form drop-shadow {% block wrapper_classes %}{% endblock %}">
   <section
     id="{% block id %}{% endblock %}"
@@ -16,6 +20,18 @@
 
     <div class="form__success">
       <h3 class="form__title">{% block success %}{% endblock %}</h3>
+      <div class="form__success__content">
+        <aside class="share-panel">
+          <div class="share-panel__title">Share<span class="visuallyhidden">:</span>
+            <span class="share-panel__title__plus" aria-hidden="true" role="presentation">+</span>
+          </div>
+          <div class="share-panel__buttons">
+            {{ fb_share_button.create(url="https://togethersciencecan.org/") }}
+            {{ twitter_share_button.create(text="", url="https://togethersciencecan.org/") }}
+            {{ email_share_button.create(subject="Together Science Can", body="https://togethersciencecan.org/") }}
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
 </div>

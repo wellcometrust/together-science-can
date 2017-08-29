@@ -14,11 +14,13 @@
   <div class="form__element form__element--long">
     <label for="ps-first-name">First name</label>
     <input id="ps-first-name" type="text" name="cd_FIRSTNAME" required />
+    <p class="form__element__error">Please enter your first name</p>
   </div>
 
   <div class="form__element form__element--long">
     <label for="ps-email">Email address</label>
     <input id="ps-email" type="email" name="Email" required />
+    <p class="form__element__error">Please enter a valid email address</p>
   </div>
 
   <div class="form__element form__element--long">
@@ -26,6 +28,7 @@
     <select id="ps-country" name="cd_COUNTRY" required>
       {% include "patterns/form/countries.njk" %}
     </select>
+    <p class="form__element__error">Please select your country of residence</p>
   </div>
 
   <div class="form__element">
