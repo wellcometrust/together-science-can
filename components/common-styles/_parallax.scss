@@ -21,6 +21,10 @@ body {
   perspective-origin-x: 100%;
 }
 
+main > * {
+  @include transform(translateZ(0));
+}
+
 .background-wrapper--parallax {
   @include transform-origin(100% 100%);
   @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) scale(para-scale($parallax-factor, $parallax-depth)));
