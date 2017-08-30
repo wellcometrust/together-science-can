@@ -1,6 +1,21 @@
 {
   "global": {
-    "page_title": "Together Science Can"
+    "page_title": "Together Science Can",
+    "meta_description": "Add your voice to the movement to keep science open.",
+    "meta_facebook": {
+      "title": "Together Science Can",
+      "url": "https://togethersciencecan.org",
+      "image_url": "",
+      "description": "Add your voice to the movement to keep science open."
+    },
+    "meta_twitter": {
+      "site": "@togethersciencecan",
+      "title": "Together Science Can",
+      "creator": "@wellcometrust",
+      "image_url": "",
+      "image_alt": "Person showing the Together Science Can fists gesture",
+      "description": "Add your voice to the movement to keep science open."
+    }
   },
   "header": {
     "navigation": [
