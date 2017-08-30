@@ -1,0 +1,41 @@
+.background-wrapper--fists {
+  left: 0;
+}
+
+.background__overlay--fists {
+  @include transform(none);
+  opacity: 0.7;
+  position: absolute;
+  right: -1 * spacing(xxs);
+  top: spacing(xxs);
+
+  @include respond-to(breakpoint(s)) {
+    right: -1 * spacing(s);
+    top: spacing(l);
+  }
+}
+
+.background--fists {
+  background-color: $tscPurple;
+  background-position: top left;
+  background-size: cover;
+  left: -1 * spacing(xs);
+  top: -15vh;
+  width: 50vw;
+
+  @include respond-to(breakpoint(s)) {
+    left: -1 * spacing(xs);
+    top: -15vh;
+    width: 25vw;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    left: spacing(xl) * 2;
+    top: -20vh;
+    width: 25vw;
+  }
+
+  &.background--textured {
+    background-image: url('./static/images/backgrounds/fists--texture.png');
+  }
+}

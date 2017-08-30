@@ -1,0 +1,22 @@
+.background-wrapper--molecules {
+  right: 0;
+  z-index: 0;
+}
+
+.background--molecules {
+  right: -1 * spacing(xs);
+  top: -2 * spacing(xl) - spacing(xxxs);
+  width: 50vw;
+
+  @include respond-to(breakpoint(s)) {
+    right: -1 * spacing(xxl);
+    top: -1 * spacing(xxl);
+    width: 25vw;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    right: spacing(l);
+    top: spacing(xxl) * -2.5;
+    width: 25vw;
+  }
+}

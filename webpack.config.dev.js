@@ -36,7 +36,7 @@ module.exports = {
           use: [
             {
               loader: "css-loader",
-              options: { sourceMap: true, minimize: true }
+              options: { sourceMap: true, minimize: true, url: false }
             },
             {
               loader: "sass-loader",

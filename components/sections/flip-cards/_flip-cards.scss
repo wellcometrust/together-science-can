@@ -9,7 +9,7 @@ $flip-cards-widths: (
 );
 
 .section--flip-cards {
-  @include rem(margin-bottom, spacing(xxl) + spacing(xl) + spacing(xxxs));
+  @include rem(margin-bottom, spacing(xxl) * 2 + spacing(xl) * 2);
   margin-left: auto;
   margin-right: auto;
   padding: 0 ($body-padding / 2);

@@ -8,13 +8,14 @@ $breakpoints: (
 }
 
 html {
-    // Better scrolling on webkit touch devices
-    -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 body,
 html {
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
 }
 

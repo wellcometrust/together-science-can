@@ -1,0 +1,21 @@
+.background-wrapper--neurons {
+  right: 0;
+}
+
+.background--neurons {
+  right: 0;
+  top: spacing(xxl) * 15;
+  width: 70vw;
+
+  @include respond-to(breakpoint(s)) {
+    right: -1 * spacing(l);
+    top: spacing(xxl) * 3;
+    width: 27vw;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    right: -1 * spacing(l);
+    top: spacing(xxl) * 2;
+    width: 29vw;
+  }
+}

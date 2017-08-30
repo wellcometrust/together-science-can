@@ -51,6 +51,7 @@ $card-title-font-size: 35px;
 .card__title {
   @include rem(margin-bottom, spacing(s));
   font-size: $card-title-font-size;
+  hyphens: auto;
 }
 
 .button {
