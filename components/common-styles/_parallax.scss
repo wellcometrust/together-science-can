@@ -1,0 +1,31 @@
+$parallax-factor: 1;
+$parallax-depth: 0.1;
+
+@function para-transZ($factor, $depth) {
+  @return -1 * $factor * $depth;
+}
+
+@function para-scale($factor, $depth) {
+  @return 1 + ((para-transZ($factor, $depth) * -1) / $factor);
+}
+
+@function px($unitless) {
+  @return #{$unitless}px;
+}
+
+body {
+  height: 100vh;
+  overflow-y: auto;
+  perspective: px($parallax-factor);
+  -webkit-perspective-origin-x: 100%;
+  perspective-origin-x: 100%;
+}
+
+.background-wrapper--parallax {
+  @include transform-origin(100% 100%);
+  @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) scale(para-scale($parallax-factor, $parallax-depth)));
+}
+
+.background-wrapper--parallax-left {
+  @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) translateX(-#{100 * $parallax-depth}vw) scale(para-scale($parallax-factor, $parallax-depth)));
+}

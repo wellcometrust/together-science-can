@@ -3,6 +3,8 @@
   position: relative;
 
   &:before {
+    // fix for safari not respecting compositor layers with box-shadow
+    @include transform(translateZ(0));
     border-radius: 50%;
     bottom: 0;
     box-shadow: 0 0 100px 21px rgba(0,0,0,.44);
