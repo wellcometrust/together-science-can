@@ -1,0 +1,28 @@
+.background-wrapper--space {
+  left: 0;
+}
+
+.background__overlay--space {
+  @include transform(none);
+  display: none;
+
+  @include respond-to(breakpoint(s)) {
+    display: block;
+    left: -10vw;
+    position: absolute;
+    top: 0;
+    width: 30vw;
+  }
+}
+
+.background--space {
+  left: 0;
+  top: spacing(xxl) * 6;
+  width: 200vw;
+
+  @include respond-to(breakpoint(s)) {
+    left: 0;
+    top: 0;
+    width: 100vw;
+  }
+}
