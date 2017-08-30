@@ -7,6 +7,8 @@ import customPlayButton from './common-js/customPlay.js';
 import setupForm from './patterns/form/form.js';
 import shareButton from './patterns/share-panel/shareButton.js';
 import flipCard from './patterns/card/card.js';
+import { loadIntroVideoAfterImage } from './intro-video/introVideo.js';
+import { loadTextures } from './backgrounds/texturedBackgrounds.js';
 
 const initialize = function() {
   // select all signup forms
@@ -21,6 +23,13 @@ const initialize = function() {
 
   const customPlayWrappers = nodeList(document.getElementsByClassName('custom-play'));
   customPlayWrappers.forEach(wrapper => customPlayButton(wrapper));
+
+  const introVideo = document.querySelector('.intro-video__video');
+  const introMask = document.querySelector('.intro-video__mask');
+  loadIntroVideoAfterImage(introVideo, introMask);
+
+  const backgrounds = nodeList(document.getElementsByClassName('background'));
+  backgrounds.forEach(bg => loadTextures(bg));
 };
 
 if (document.readyState === 'loading') {

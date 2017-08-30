@@ -22,7 +22,6 @@
 
 .background--yellow-splooge {
   background-color: $tscYellow;
-  background-image: url('./static/images/backgrounds/yellow-splooge--texture.png');
   background-position: top right;
   right: -40vw;
   top: -12vh;
@@ -38,5 +37,9 @@
     right: 0;
     top: -20vh;
     width: 50vw;
+  }
+
+  &.background--textured {
+    background-image: url('./static/images/backgrounds/yellow-splooge--texture.png');
   }
 }

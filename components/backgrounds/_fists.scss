@@ -17,7 +17,6 @@
 
 .background--fists {
   background-color: $tscPurple;
-  background-image: url('./static/images/backgrounds/fists--texture.png');
   background-position: top left;
   background-size: cover;
   left: -1 * spacing(xs);
@@ -34,5 +33,9 @@
     left: spacing(xl) * 2;
     top: -20vh;
     width: 25vw;
+  }
+
+  &.background--textured {
+    background-image: url('./static/images/backgrounds/fists--texture.png');
   }
 }
