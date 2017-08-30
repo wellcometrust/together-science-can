@@ -1,0 +1,25 @@
+.background-wrapper--cloud {
+  left: 0;
+}
+
+.background--cloud {
+  background-color: $tscBlue;
+  background-image: url('./static/images/backgrounds/cloud--texture.png');
+  background-position: top left;
+  background-size: cover;
+  left: -50vw;
+  top: spacing(xl) * 2;
+  width: 100vw;
+
+  @include respond-to(breakpoint(s)) {
+    left: -1 * spacing(l);
+    top: 14vh;
+    width: 35vw;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    left: -2 * spacing(l);
+    top: 14vh;
+    width: 35vw;
+  }
+}
