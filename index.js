@@ -19,7 +19,9 @@ const render = require('./app/render.js');
 const OUTPUT_FILE_NAME = 'index.html';
 
 const hash = Date.now();
-const html = render('index.njk', Object.assign(content, { hash }));
+const env = { development: process.env.NODE_ENV === 'dev' };
+
+const html = render('index.njk', Object.assign(content, { hash, env }));
 
 fs.writeFile(
   path.join(__dirname, 'dist', OUTPUT_FILE_NAME),
