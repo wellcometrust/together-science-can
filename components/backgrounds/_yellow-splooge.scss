@@ -1,0 +1,42 @@
+.background-wrapper {
+  position: absolute;
+  z-index: -1;
+}
+
+.background {
+  background-repeat: no-repeat;
+  // this disables auto-generated margins
+  font-size: 0;
+  position: absolute;
+}
+
+.background__image {
+  // this corrects for uncovered margins of the .background div
+  @include transform(scale(1.05));
+  width: 100%;
+}
+
+.background-wrapper--yellow-splooge {
+  right: 0;
+}
+
+.background--yellow-splooge {
+  background-color: $tscYellow;
+  background-image: url('./static/images/backgrounds/yellow-splooge--texture.png');
+  background-position: top right;
+  right: -40vw;
+  top: -12vh;
+  width: 180vw;
+
+  @include respond-to(breakpoint(s)) {
+    right: -20vw;
+    top: -20vh;
+    width: 70vw;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    right: 0;
+    top: -20vh;
+    width: 50vw;
+  }
+}
