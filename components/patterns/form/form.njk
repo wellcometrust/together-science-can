@@ -6,7 +6,7 @@
   <section
     id="{% block id %}{% endblock %}"
     class="section section--form {% block section_classes %}{% endblock %}">
-    <div class="form__content">
+    <div class="form__content form__content--success">
       <h3 class="form__title">{% block title %}{% endblock %}</h3>
 
       {% block form %}
@@ -18,8 +18,9 @@
       </p>
     </div>
 
-    <div class="form__success">
+    <div class="form__success form__success--visible">
       <h3 class="form__title">{% block success %}{% endblock %}</h3>
+      <p class="form__success__body">{% block success_body %}{% endblock %}</p>
       <div class="form__success__content">
         <aside class="share-panel">
           <div class="share-panel__title">Share<span class="visuallyhidden">:</span>
