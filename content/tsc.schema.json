@@ -94,6 +94,62 @@
         "page_title": {
           "type": "string",
           "title": "Page title"
+        },
+        "meta_description": {
+          "type": "string",
+          "title": "Meta description (will appear in search results)"
+        },
+        "meta_facebook": {
+          "type": "object",
+          "title": "Facebook meta tags",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "url": {
+              "type": "string",
+              "title": "URL"
+            },
+            "image_url": {
+              "type": "string",
+              "title": "Image URL"
+            },
+            "description": {
+              "type": "string",
+              "title": "Description"
+            }
+          }
+        },
+        "meta_twitter": {
+          "type": "object",
+          "title": "Twitter meta tags",
+          "properties": {
+            "site": {
+              "type": "string",
+              "title": "Site"
+            },
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "description": {
+              "type": "string",
+              "title": "Description"
+            },
+            "creator": {
+              "type": "string",
+              "title": "Creator Twitter handle"
+            },
+            "image_alt": {
+              "type": "string",
+              "title": "Image alt text"
+            },
+            "image_url": {
+              "type": "string",
+              "title": "Image URL"
+            }
+          }
         }
       }
     },

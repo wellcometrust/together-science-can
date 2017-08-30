@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Together Science Can</title>
   <meta charset="utf-8">
+  <title>Together Science Can</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "meta/seo.njk" %}
   {% include "meta/icons.njk" %}
   {% include "meta/html5shiv.njk" %}
+  {% if not env.development %}
+    {% include "meta/analytics-head.njk" %}
+  {% endif %}
   <link rel="stylesheet" type="text/css" href="styles-{{ hash }}.css">
   <script defer type="text/javascript" src="main-{{ hash }}.js"></script>
 </head>
