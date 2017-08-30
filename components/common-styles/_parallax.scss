@@ -29,3 +29,15 @@ body {
 .background-wrapper--parallax-left {
   @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) translateX(-#{100 * $parallax-depth}vw) scale(para-scale($parallax-factor, $parallax-depth)));
 }
+
+@media screen and (prefers-reduced-motion) {
+  body {
+    height: auto;
+    perspective: none;
+  }
+
+  .background-wrapper--parallax,
+  .background-wrapper--parallax-left {
+    @include transform(none);
+  }
+}
