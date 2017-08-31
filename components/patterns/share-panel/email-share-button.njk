@@ -1,6 +1,5 @@
 {% macro create(subject="", body="") %}
   <a
     class="share-button share-button--email"
-    href="mailto:?subject={{ subject | urlencode }}&amp;body={{ body | urlencode }}"
-    title="Share by email (opens an email client)"></a>
+    href="mailto:?subject={{ subject | urlencode }}&amp;body={{ body | urlencode }}">Share by email (opens an email client)</a>
 {% endmacro %}
