@@ -20,10 +20,16 @@ body {
   -webkit-perspective-origin-x: 100%;
   perspective-origin-x: 100%;
 }
-
+// everything that's not on a lower layer should be on the top layer
+// intro video is a special case, only the overlays are promoted
 main > *,
-.intro-video {
+.intro-video__overlay,
+.intro-video__mask, {
   @include transform(translateZ(0));
+}
+// this fixes the play button disappearing
+.section--film {
+  @include transform(none);
 }
 
 .background-wrapper--parallax {

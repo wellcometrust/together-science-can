@@ -149,3 +149,8 @@ $old-ie: false;
        -o-transition: -o-#{$transform};
           transition: $transform;
 }
+
+@mixin transformStyle($style) {
+    -webkit-transform-style: $style;
+    transform-style: $style;
+}
