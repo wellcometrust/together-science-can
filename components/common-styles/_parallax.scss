@@ -21,7 +21,8 @@ body {
   perspective-origin-x: 100%;
 }
 
-main > * {
+main > *,
+.intro-video {
   @include transform(translateZ(0));
 }
 
