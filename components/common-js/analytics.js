@@ -1,3 +1,4 @@
+/* global ENV */
 import { nodeList } from 'utils';
 import { trackScrollDepth } from './scrollDepth.js';
 import { categories } from './customEvents.js';
