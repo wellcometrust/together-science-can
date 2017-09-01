@@ -2,7 +2,7 @@
 <form
   class="form"
   name="signup"
-  id="secondary-signup"
+  id="primary-signup"
   action="https://r1-t.trackedlink.net/signup.ashx"
   method="post">
 
@@ -12,24 +12,27 @@
   <input type="hidden" name="ReturnURL" value="https://togethersciencecan.org/thank-you">
 
   <div class="form__element form__element--long">
-    <label for="ss-first-name">First name</label>
-    <input id="ss-first-name" type="text" name="cd_FIRSTNAME" required />
+    <label for="card-first-name">First name</label>
+    <input id="card-first-name" type="text" name="cd_FIRSTNAME" required />
+    <p class="form__element__error">Please enter your first name</p>
   </div>
 
   <div class="form__element form__element--long">
-    <label for="ss-email">Email address</label>
-    <input id="ss-email" type="email" name="Email" required />
+    <label for="card-email">Email address</label>
+    <input id="card-email" type="email" name="Email" required />
+    <p class="form__element__error">Please enter a valid email address</p>
   </div>
 
   <div class="form__element form__element--long">
-    <label for="ss-country">Country of residence</label>
-    <select id="ss-country" name="cd_COUNTRY" required>
+    <label for="card-country">Country of residence</label>
+    <select id="card-country" name="cd_COUNTRY" required>
       {% include "patterns/form/countries.njk" %}
     </select>
+    <p class="form__element__error">Please select your country of residence</p>
   </div>
 
   <div class="form__element">
-    <input class="button button--green button--fullwidth button--expanded-ls" type="Submit" name="Submit" value="Join now" aria-label="Join now">
+    <input class="button button--yellow button--fullwidth button--expanded-ls" type="Submit" name="Submit" value="Join now" aria-label="Join now">
   </div>
 
 </form>

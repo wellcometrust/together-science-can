@@ -6,6 +6,7 @@ $card-title-font-size: 35px;
 }
 
 .card-wrapper {
+  @include transformStyle(preserve-3d);
   position: relative;
 }
 

@@ -57,7 +57,7 @@ const setupForm = formWrapper => {
       submitForm(form, ajaxFrame);
       disableSubmit(submit);
       formWrapper.classList.add('form__content--success');
-      success.classList.add('form_success--visible');
+      success.classList.add('form__success--visible');
     }
   });
 };

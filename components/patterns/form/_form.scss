@@ -50,11 +50,21 @@ $form-widths: (
   opacity: 0;
   z-index: -1;
 
-  &.form_success--visible {
+  &.form__success--visible {
     display: block;
     opacity: 1;
     position: relative;
     z-index: 1;
+  }
+}
+
+.form__success__body {
+  margin: 0;
+  text-align: center;
+
+  @include respond-to(breakpoint(l)) {
+    font-size: fs(m);
+    line-height: lh(m);
   }
 }
 
