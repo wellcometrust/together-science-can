@@ -10,6 +10,8 @@ import flipCard from './patterns/card/card.js';
 import { loadIntroVideoAfterImage } from './intro-video/introVideo.js';
 import { loadTextures } from './backgrounds/texturedBackgrounds.js';
 
+import setupAnalytics from './common-js/analytics.js';
+
 const initialize = function() {
   // select all signup forms
   const forms = nodeList(document.getElementsByClassName('form__content'));
@@ -30,6 +32,8 @@ const initialize = function() {
 
   const backgrounds = nodeList(document.getElementsByClassName('background'));
   backgrounds.forEach(bg => loadTextures(bg));
+
+  setupAnalytics();
 };
 
 if (document.readyState === 'loading') {
