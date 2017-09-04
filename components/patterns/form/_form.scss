@@ -1,5 +1,6 @@
 $form-widths: (
-  s: 1024px,
+  s: 334px,
+  m: 1024px,
   l: 1230px,
 );
 
@@ -7,6 +8,10 @@ $form-widths: (
   max-width: map-get($form-widths, s);
   margin-left: auto;
   margin-right: auto;
+
+  @include respond-to(breakpoint(m)) {
+    max-width: map-get($form-widths, m);
+  }
 
   @include respond-to(breakpoint(l)) {
     max-width: map-get($form-widths, l);
@@ -18,7 +23,7 @@ $form-widths: (
   padding-top: spacing(m);
   padding-bottom: spacing(m);
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     border-radius: border-radius(l);
     padding: spacing(l) spacing(l) spacing(m);
   }
@@ -32,7 +37,7 @@ $form-widths: (
 .form__footer {
   display: none;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     display: block;
     font-size: fs(xxxs);
     line-height: lh(xxxs);
@@ -79,7 +84,7 @@ $form-widths: (
 }
 
 .form {
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include flex(space-between, flex-end, row, wrap);
 
     .card & {
@@ -100,7 +105,7 @@ $form-widths: (
     @include rem(padding-bottom, spacing(xxxs));
   }
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     &, &:nth-last-of-type(2) {
       padding: 0;
     }
@@ -192,7 +197,7 @@ $form-widths: (
   position: absolute;
   white-space: nowrap;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     bottom: -2em;
     font-size: fs(xxs);
   }

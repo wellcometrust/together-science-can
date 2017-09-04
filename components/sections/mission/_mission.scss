@@ -36,7 +36,7 @@ $instagram-embed-bar-height: 66px;
 
 .mission__content,
 .mission__boomerang-wrapper {
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     display: inline-block;
     vertical-align: top;
   }
@@ -46,7 +46,7 @@ $instagram-embed-bar-height: 66px;
   box-sizing: border-box;
   text-align: left;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(padding-left, spacing(xs));
     max-width: map-get($mission-content-widths, s);
   }
@@ -57,7 +57,7 @@ $instagram-embed-bar-height: 66px;
 }
 
 .mission__boomerang-wrapper {
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     text-align: right;
     width: 50%;
   }

@@ -6,7 +6,7 @@
   @include transform(none);
   display: none;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     display: block;
     left: -10vw;
     position: absolute;
@@ -21,6 +21,12 @@
   width: 200vw;
 
   @include respond-to(breakpoint(s)) {
+    left: 0;
+    top: spacing(xxl) * 4;
+    width: 120vw;
+  }
+
+  @include respond-to(breakpoint(m)) {
     left: 0;
     top: 0;
     width: 100vw;

@@ -8,6 +8,7 @@
   color: $tscMediumGrey;
   font-size: fs(m);
   line-height: 1;
+  margin: 0;
 
   @include respond-to(breakpoint(l)) {
     font-size: fs(l);
@@ -21,7 +22,7 @@
   line-height: 1;
   text-transform: none;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(margin-bottom, spacing(m));
     font-size: fs(xl);
   }
@@ -38,12 +39,16 @@
   position: relative;
 
   @include respond-to(breakpoint(s)) {
-    @include flex(space-between, stretch, row, nowrap);
-    @include rem(margin-bottom, spacing(xl) * 2 + spacing(s));
-    margin-left: auto;
-    margin-right: auto;
+    @include flex(space-between, stretch, row, wrap);
+    margin: 0 auto;
     max-width: 984px;
     text-align: left;
+  }
+
+  @include respond-to(breakpoint(m)) {
+    @include rem(margin-bottom, spacing(xl) * 2 + spacing(s));
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 
     &:after,
     &:before {
@@ -74,13 +79,36 @@
   text-align: center;
   width: 100%;
 
-  @include respond-to(breakpoint(s)) {
-    text-align: left;
+  @include respond-to(breakpoint(m)) {
     white-space: nowrap;
   }
+}
 
-  & > .button {
-    display: inline-block;
+.social-feed__feed--loaded {
+  text-align: left;
+
+  .social-feed__post--fallback {
+    @include flex($inline: 'inline-');
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: border-radius(s);
+    height: 100%;
+
+    .button {
+      background: transparent;
+      box-sizing: border-box;
+      color: $tscMediumGrey;
+      display: inline-block;
+      margin-top: 0;
+      white-space: normal;
+    }
+
+    &:hover {
+      border-color: $tscBlack;
+
+      .button {
+        color: $tscBlack;
+      }
+    }
   }
 }
 
@@ -97,7 +125,7 @@
     display: block;
   }
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(margin-right, spacing(s));
     @include rem(width, spacing(xl));
     @include rem(height, spacing(xl));
@@ -140,6 +168,7 @@
 }
 
 .social-feed__post {
+  @include rem(padding, spacing(xxxs) * 0.5 0);
   width: 100%;
 
   .social-feed__post--current ~ &:not(.social-feed__post--current) {
@@ -147,13 +176,18 @@
   }
 
   @include respond-to(breakpoint(s)) {
+    @include rem(padding, spacing(xxxs) * 0.5 );
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  @include respond-to(breakpoint(m)) {
     @include rem(padding, 0 spacing(xxxs) * 0.5 );
     @include transitionTransform(transform 1s);
     @include transform(translateX(-100vw));
-    display: inline-block;
-    box-sizing: border-box;
     position: absolute;
-    vertical-align: top;
     width: 25%;
 
     &.social-feed__post--current {
@@ -172,6 +206,7 @@
     @include transformStyle(preserve-3d);
     box-sizing: border-box;
     margin-right: 0 !important;
+    margin-bottom: 0 !important;
     max-width: none !important;
   }
 }

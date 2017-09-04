@@ -4,7 +4,7 @@
   &:before {
     z-index: 0;
 
-    @include respond-to(breakpoint(s)) {
+    @include respond-to(breakpoint(m)) {
       // the shadow isn't affected by the transform by default
       @include transform(translateY(200%));
     }

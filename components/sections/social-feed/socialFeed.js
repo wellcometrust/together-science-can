@@ -85,16 +85,23 @@ const renderPost = container => (post, index) => {
 const loadSocialPosts = (container, prevButton, nextButton) => {
   if (!container || !prevButton || !nextButton) return;
 
+  const fallbackButton = container.querySelector('.social-feed__post--fallback');
+
   const xhr = new window.XMLHttpRequest();
   xhr.open('GET', POSTS_ENDPOINT);
   xhr.addEventListener('load', e => {
     if (xhr.status === 200) {
       try {
         const data = JSON.parse(xhr.responseText);
-        // empty the container
-        while (container.firstChild) container.removeChild(container.lastChild);
+        container.removeChild(fallbackButton);
+        container.classList.add('social-feed__feed--loaded');
 
-        const posts = data.map(renderPost(container));
+        const posts = data
+          .map(renderPost(container))
+          .concat(fallbackButton ? [ fallbackButton ] : []);
+
+        container.appendChild(fallbackButton);
+
         // interactivity
         carousel(posts, prevButton, nextButton);
 

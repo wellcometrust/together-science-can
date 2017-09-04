@@ -1,5 +1,6 @@
 $flip-cards-section-widths: (
-  s: 984px,
+  s: 334px,
+  m: 984px,
   l: 1400px,
 );
 
@@ -15,8 +16,12 @@ $flip-cards-widths: (
   padding: 0 ($body-padding / 2);
 
   @include respond-to(breakpoint(s)) {
-    @include rem(margin-bottom, spacing(xxl));
+    @include rem(margin-bottom, spacing(xxl) * 3);
     max-width: map-get($flip-cards-section-widths, s);
+  }
+
+  @include respond-to(breakpoint(m)) {
+    max-width: map-get($flip-cards-section-widths, m);
   }
 
   @include respond-to(breakpoint(l)) {
@@ -39,16 +44,17 @@ $flip-cards-widths: (
 }
 
 .flip-cards__cards {
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include flex(space-between, flex-start, row, nowrap);
   }
 
   .card-wrapper {
     @include rem(margin-bottom, spacing(xl) + spacing(xxxs));
 
-    @include respond-to(breakpoint(s)) {
+    @include respond-to(breakpoint(m)) {
       @include flex-basis(map-get($flip-cards-widths, s));
       @include rem(margin-right, spacing(xxxs));
+      height: 100%;
 
       &:last-of-type {
         margin-right: 0;

@@ -28,6 +28,12 @@
   width: 180vw;
 
   @include respond-to(breakpoint(s)) {
+    right: 7vw;
+    top: -6vw;
+    width: 93vw;
+  }
+
+  @include respond-to(breakpoint(m)) {
     right: -20vw;
     top: -20vh;
     width: 70vw;
