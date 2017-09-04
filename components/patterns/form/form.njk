@@ -23,9 +23,7 @@
       <p class="form__success__body">{% block success_body %}{% endblock %}</p>
       <div class="form__success__content">
         <aside class="share-panel">
-          <div class="share-panel__title">Share<span class="visuallyhidden">:</span>
-            <span class="share-panel__title__plus" aria-hidden="true" role="presentation">+</span>
-          </div>
+          <div class="share-panel__title">Share</div>
           <div class="share-panel__buttons">
             {{ fb_share_button.create(url="https://togethersciencecan.org/") }}
             {{ twitter_share_button.create(text="", url="https://togethersciencecan.org/") }}
