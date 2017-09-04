@@ -168,6 +168,7 @@
 }
 
 .social-feed__post {
+  @include rem(padding, spacing(xxxs) * 0.5 0);
   width: 100%;
 
   .social-feed__post--current ~ &:not(.social-feed__post--current) {
