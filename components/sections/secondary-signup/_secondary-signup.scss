@@ -1,7 +1,7 @@
 .section-wrapper--secondary-signup {
   margin-bottom: 0;
 
-  &:before {
+  .enhanced &:before {
     z-index: 0;
 
     @include respond-to(breakpoint(m)) {
@@ -11,7 +11,7 @@
   }
 }
 
-.section--secondary-signup {
+.enhanced .section--secondary-signup {
   // this changes stacking order so the shadow appears underneath even with z-index 0
   @include transform(translateY(0));
 

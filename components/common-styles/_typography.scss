@@ -19,11 +19,12 @@ $line-heights: (
   xl: 55px,
 );
 
+// here black = 500 because the version of Brandon Grotesque Black from MyFonts seems to display properly at 500 instead of 900
 $font-weights: (
   regular: 400,
   semibold: 600,
   bold: 700,
-  black: 900,
+  black: 500,
 );
 
 @function fs($size) {

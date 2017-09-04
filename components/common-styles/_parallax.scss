@@ -13,42 +13,44 @@ $parallax-depth: 0.1;
   @return #{$unitless}px;
 }
 
-body {
-  height: 100vh;
-  overflow-y: auto;
-  perspective: px($parallax-factor);
-  -webkit-perspective-origin-x: 100%;
-  perspective-origin-x: 100%;
-}
-// everything that's not on a lower layer should be on the top layer
-// intro video is a special case, only the overlays are promoted
-main > *,
-.intro-video__overlay,
-.intro-video__mask, {
-  @include transform(translateZ(0));
-}
-// this fixes the play button disappearing
-.section--film {
-  @include transform(none);
-}
-
-.background-wrapper--parallax {
-  @include transform-origin(100% 100%);
-  @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) scale(para-scale($parallax-factor, $parallax-depth)));
-}
-
-.background-wrapper--parallax-left {
-  @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) translateX(-#{100 * $parallax-depth}vw) scale(para-scale($parallax-factor, $parallax-depth)));
-}
-
-@media screen and (prefers-reduced-motion) {
+.enhanced {
   body {
-    height: auto;
-    perspective: none;
+    height: 100vh;
+    overflow-y: auto;
+    perspective: px($parallax-factor);
+    -webkit-perspective-origin-x: 100%;
+    perspective-origin-x: 100%;
+  }
+  // everything that's not on a lower layer should be on the top layer
+  // intro video is a special case, only the overlays are promoted
+  main > *,
+  .intro-video__overlay,
+  .intro-video__mask, {
+    @include transform(translateZ(0));
+  }
+  // this fixes the play button disappearing
+  .section--film {
+    @include transform(none);
   }
 
-  .background-wrapper--parallax,
+  .background-wrapper--parallax {
+    @include transform-origin(100% 100%);
+    @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) scale(para-scale($parallax-factor, $parallax-depth)));
+  }
+
   .background-wrapper--parallax-left {
-    @include transform(none);
+    @include transform(translateZ(px(para-transZ($parallax-factor, $parallax-depth))) translateX(-#{100 * $parallax-depth}vw) scale(para-scale($parallax-factor, $parallax-depth)));
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    body {
+      height: auto;
+      perspective: none;
+    }
+
+    .background-wrapper--parallax,
+    .background-wrapper--parallax-left {
+      @include transform(none);
+    }
   }
 }

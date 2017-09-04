@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+@import url("//hello.myfonts.net/count/348d3d");
+
+@font-face {
+  font-family: 'BrandonGrotesqueWeb-Black';
+  src: url('./static/fonts/348D3D_0_0.eot');
+  src: url('./static/fonts/348D3D_0_0.eot?#iefix') format('embedded-opentype'),
+       url('./static/fonts/348D3D_0_0.woff2') format('woff2'),
+       url('./static/fonts/348D3D_0_0.woff') format('woff'),
+       url('./static/fonts/348D3D_0_0.ttf') format('truetype');
+}
 
 $bodyFont: 'Montserrat', 'Trebuchet MS', sans-serif;
-$headingFont: 'Brandon Grotesque', Arial, sans-serif;
+$headingFont: 'BrandonGrotesqueWeb-Black', Arial, sans-serif;
