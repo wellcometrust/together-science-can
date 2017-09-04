@@ -19,7 +19,7 @@ $downloads-cards-widths: (
   }
 
   @include respond-to(breakpoint(l)) {
-    @include rem(margin-bottom, spacing(xl));
+    @include rem(margin-bottom, spacing(xxl) * 2);
     max-width: map-get($downloads-section-widths, l);
   }
 }

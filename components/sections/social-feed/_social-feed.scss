@@ -8,6 +8,7 @@
   color: $tscMediumGrey;
   font-size: fs(m);
   line-height: 1;
+  margin: 0;
 
   @include respond-to(breakpoint(l)) {
     font-size: fs(l);
