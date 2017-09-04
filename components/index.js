@@ -14,6 +14,9 @@ import { loadSocialPosts } from './sections/social-feed/socialFeed.js';
 import setupAnalytics from './common-js/analytics.js';
 
 const initialize = function() {
+  if (!('requestAnimationFrame' in window)) return;
+
+  document.documentElement.className += ' enhanced';
   // select all signup forms
   const forms = nodeList(document.getElementsByClassName('form__content'));
   forms.forEach(form => setupForm(form));
