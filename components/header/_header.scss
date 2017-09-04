@@ -9,6 +9,7 @@ $logo-spacing-top-s: spacing(s);
   padding: $logo-spacing-top-s $body-padding 0;
   position: absolute;
   top: 0;
+  z-index: 1;
 
   @include respond-to(breakpoint(s)) {
     @include rem(padding-top, spacing(s));
