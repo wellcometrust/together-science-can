@@ -8,12 +8,16 @@
     aria-label="{{ social_feed.hashtag | replace("#", "Hashtag ") }}">
     {{- social_feed.hashtag -}}
   </div>
-  <div class="social-feed__feed">
-    {# fallback link to Wellcome Twitter page #}
-    {{ button.create(
-            color="blue",
-            text="Join us on Twitter",
-            link="https://twitter.com/wellcometrust",
-            standalone=true) }}
+  <div class="social-feed__feed-wrapper">
+    <button class="social-feed__button social-feed__button--previous social-feed__button--hidden" aria-hidden="true" role="presentation" title="Show previous posts"></button>
+    <div class="social-feed__feed">
+      {# fallback link to Wellcome Twitter page #}
+      {{ button.create(
+              color="blue",
+              text="Follow us on Instagram",
+              link="https://instagram.com/togethersciencecan",
+              standalone=true) }}
+    </div>
+    <button class="social-feed__button social-feed__button--next" aria-hidden="true" role="presentation" title="Show following posts">Load more</button>
   </div>
 </section>

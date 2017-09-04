@@ -1,12 +1,13 @@
 .intro-video {
   background-color: $tscWhite;
-  height: 60vh;
+  height: 37vh;
   overflow: hidden;
   position: relative;
   width: 100%;
 
   @include respond-to(breakpoint(s)) {
     height: auto;
+    max-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;

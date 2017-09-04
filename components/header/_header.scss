@@ -2,7 +2,7 @@
   display: none;
 }
 
-$logo-spacing-top-s: spacing(xxl) + spacing(s);
+$logo-spacing-top-s: spacing(s);
 
 .logo-wrapper {
   left: 0;
@@ -17,7 +17,14 @@ $logo-spacing-top-s: spacing(xxl) + spacing(s);
 }
 
 .logo {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+
+  @include respond-to(breakpoint(s)) {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .main-nav--mobile__list {
@@ -57,6 +64,10 @@ $logo-spacing-top-s: spacing(xxl) + spacing(s);
     display: inline-block;
     text-align: right;
     width: 55%;
+
+    @include respond-to(breakpoint(s)) {
+      @include flex(flex-end, flex-start, row, nowrap, 'inline-');
+    }
   }
 }
 

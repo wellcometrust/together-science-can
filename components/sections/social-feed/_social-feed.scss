@@ -32,19 +32,146 @@
   }
 }
 
-.social-feed__feed {
+.social-feed__feed-wrapper {
   @include rem(margin-bottom, spacing(xxl) * 2);
-  text-align: center;
+  overflow: hidden;
+  position: relative;
 
   @include respond-to(breakpoint(s)) {
+    @include flex(space-between, stretch, row, nowrap);
     @include rem(margin-bottom, spacing(xl) * 2 + spacing(s));
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 984px;
+    text-align: left;
+
+    &:after,
+    &:before {
+      @include rem(width, spacing(xl));
+      background: $tscWhite;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+
+    &:after {
+      left: auto;
+      right: 0;
+    }
   }
 
   @include respond-to(breakpoint(l)) {
     @include rem(margin-bottom, spacing(xl) * 4);
+    max-width: 1315px;
+  }
+}
+
+.social-feed__feed {
+  text-align: center;
+  width: 100%;
+
+  @include respond-to(breakpoint(s)) {
+    text-align: left;
+    white-space: nowrap;
   }
 
   & > .button {
     display: inline-block;
+  }
+}
+
+.social-feed__button {
+  @include appearance(none);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+  &:last-of-type {
+    @extend .button;
+    @extend .button--anchor;
+    display: block;
+  }
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(margin-right, spacing(s));
+    @include rem(width, spacing(xl));
+    @include rem(height, spacing(xl));
+    @include transform-origin(center center);
+    @include transform(rotate(180deg));
+    @include transition(opacity 250ms);
+    -webkit-align-self: center;
+    align-self: center;
+    display: block;
+    opacity: 0.8;
+    z-index: 2;
+    // weird selectors to override .button styling
+    &,
+    &:last-of-type,
+    &:last-of-type:hover,
+    &:last-of-type:focus {
+      @include play-icon('9e9e9e');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      outline: none;
+    }
+
+    &:last-of-type {
+      @include rem(margin, 0 0 0 spacing(s));
+      @include transform(none);
+      font-size: 0;
+      padding: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.social-feed__button--hidden {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.social-feed__post {
+  width: 100%;
+
+  .social-feed__post--current ~ &:not(.social-feed__post--current) {
+    display: none;
+  }
+
+  @include respond-to(breakpoint(s)) {
+    @include rem(padding, 0 spacing(xxxs) * 0.5 );
+    @include transitionTransform(transform 1s);
+    @include transform(translateX(-100vw));
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    vertical-align: top;
+    width: 25%;
+
+    &.social-feed__post--current {
+      @include transform(translateX(0));
+      position: static;
+    }
+
+    .social-feed__post--current ~ &:not(.social-feed__post--current) {
+      @include transform(translateX(100vw));
+      position: absolute;
+      display: block;
+    }
+  }
+  // override the default IG style attribute
+  iframe {
+    @include transformStyle(preserve-3d);
+    box-sizing: border-box;
+    margin-right: 0 !important;
+    max-width: none !important;
   }
 }
