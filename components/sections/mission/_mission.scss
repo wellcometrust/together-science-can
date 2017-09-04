@@ -77,14 +77,18 @@ $instagram-embed-bar-height: 66px;
 }
 
 .mission__boomerang {
-  display: inline-block;
+  display: block;
   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   max-height: 100vw;
+  max-width: 400px;
   overflow: hidden;
   width: 100%;
 
   @include respond-to(breakpoint(s)) {
     @include rem(margin-right, spacing(xs));
+    display: inline-block;
     max-height: map-get($mission-boomerang-widths, s);
     overflow: visible;
     width: map-get($mission-boomerang-widths, s);
@@ -109,7 +113,9 @@ $instagram-embed-bar-height: 66px;
 
   & iframe {
     border: none;
-    margin: 0;
+    box-sizing: border-box;
+    margin: 0 !important;
+    max-width: none !important;
     position: relative;
     top: -$instagram-embed-bar-height;
   }

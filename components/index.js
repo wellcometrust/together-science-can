@@ -9,6 +9,7 @@ import shareButton from './patterns/share-panel/shareButton.js';
 import flipCard from './patterns/card/card.js';
 import { loadIntroVideoAfterImage } from './intro-video/introVideo.js';
 import { loadTextures } from './backgrounds/texturedBackgrounds.js';
+import { loadSocialPosts } from './sections/social-feed/socialFeed.js';
 
 import setupAnalytics from './common-js/analytics.js';
 
@@ -32,6 +33,12 @@ const initialize = function() {
 
   const backgrounds = nodeList(document.getElementsByClassName('background'));
   backgrounds.forEach(bg => loadTextures(bg));
+
+  const socialFeed = document.querySelector('.social-feed__feed');
+  const socialPrevButton = document.querySelector('.social-feed__button--previous');
+  const socialNextButton = document.querySelector('.social-feed__button--next');
+
+  loadSocialPosts(socialFeed, socialPrevButton, socialNextButton);
 
   setupAnalytics();
 };

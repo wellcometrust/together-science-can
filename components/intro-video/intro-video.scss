@@ -1,6 +1,8 @@
 .intro-video {
   background-color: $tscWhite;
-  height: 60vh;
+  // this fixes margins appearing under mask
+  font-size: 0;
+  height: 37vh;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -17,12 +19,12 @@
 
 .intro-video__video {
   height: 100%;
-  width: 100%;
+  left: 0;
   object-fit: cover;
-
-  @include respond-to(breakpoint(s)) {
-    height: 100vh;
-  }
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
 }
 
 .tsc-video-overlay-pattern {
@@ -37,19 +39,19 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 .intro-video__mask {
-  bottom: -10%;
-  left: -50%;
+  bottom: 0;
+  left: -10%;
   position: absolute;
-  width: 200%;
+  width: 160%;
+  z-index: 2;
 
   @include respond-to(breakpoint(s)) {
-    bottom: -13%;
-    height: 200vh;
-    left: auto;
-    right: -10%;
-    width: auto;
+    left: 0;
+    position: relative;
+    width: 100%;
   }
 }
