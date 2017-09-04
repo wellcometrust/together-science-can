@@ -1,4 +1,7 @@
-$share-panel-width: 400px;
+$share-panel-widths: (
+  s: 334px,
+  m: 400px,
+);
 
 .share-panel {
   @include flex(space-between, center, row, nowrap);
@@ -15,7 +18,11 @@ $share-panel-width: 400px;
     @include rem(margin, spacing(l) auto 0);
     border-radius: border-radius(s);
     position: static;
-    width: $share-panel-width;
+    width: map-get($share-panel-widths, s);
+  }
+
+  @include respond-to(breakpoint(m)) {
+    width: map-get($share-panel-widths, m);
   }
 
   @include respond-to(breakpoint(l)) {
@@ -49,7 +56,7 @@ $share-panel-width: 400px;
       background-color: $tscBlack;
     }
 
-    @include respond-to(breakpoint(s)) {
+    @include respond-to(breakpoint(m)) {
       font-size: fs(xxs);
     }
   }

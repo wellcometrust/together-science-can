@@ -1,6 +1,7 @@
 $breakpoints: (
   s: 768px,
-  l: 1300px,
+  m: 1024px,
+  l: 1600px,
 );
 
 @function breakpoint($level) {

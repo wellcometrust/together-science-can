@@ -9,7 +9,7 @@
   right: -1 * spacing(xxs);
   top: spacing(xxs);
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     right: -1 * spacing(s);
     top: spacing(l);
   }
@@ -24,6 +24,12 @@
   width: 50vw;
 
   @include respond-to(breakpoint(s)) {
+    left: -38px;
+    top: -12vh;
+    width: 24vw;
+  }
+
+  @include respond-to(breakpoint(m)) {
     left: -1 * spacing(xs);
     top: -15vh;
     width: 25vw;

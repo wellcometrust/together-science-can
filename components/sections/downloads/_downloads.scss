@@ -13,7 +13,7 @@ $downloads-cards-widths: (
   margin-right: auto;
   padding: 0 ($body-padding / 2);
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(margin-bottom, spacing(m));
     max-width: map-get($downloads-section-widths, s);
   }
@@ -28,7 +28,7 @@ $downloads-cards-widths: (
   @include rem(margin-bottom, spacing(m));
   padding: 0 ($body-padding / 2);
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(margin-bottom, spacing(xl));
   }
 }
@@ -59,11 +59,11 @@ $downloads-cards-widths: (
     @include rem(padding, #{spacing(m) - 6px} spacing(s));
     background-color: $tscRed;
 
-    @include respond-to(breakpoint(s)) {
+    @include respond-to(breakpoint(m)) {
       @include rem(padding, spacing(l) spacing(m));
     }
 
-    @include respond-to(breakpoint(s)) {
+    @include respond-to(breakpoint(m)) {
       @include rem(padding, spacing(xl));
     }
   }

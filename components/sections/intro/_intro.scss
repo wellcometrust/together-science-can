@@ -2,7 +2,10 @@
   text-align: center;
 
   @include respond-to(breakpoint(s)) {
-    margin: 0 auto;
+    max-width: 688px;
+  }
+
+  @include respond-to(breakpoint(m)) {
     max-width: 1366px;
     text-align: left;
   }
@@ -11,7 +14,7 @@
 .intro__content {
   padding-bottom: spacing(xxl);
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     box-sizing: border-box;
     margin-left: auto;
     padding-top: spacing(xxl);
@@ -24,5 +27,20 @@
     padding-top: spacing(xxl);
     padding-bottom: spacing(xxl) * 2 + spacing(xl);
     padding-left: spacing(xxxs);
+  }
+}
+
+.intro__heading {
+  @include respond-to(breakpoint(s), breakpoint(m)) {
+    // make the hero title not break
+    br {
+      display: none;
+    }
+  }
+}
+
+.intro__cta .button {
+  @include respond-to(breakpoint(s), breakpoint(m)) {
+    display: inline-block;
   }
 }

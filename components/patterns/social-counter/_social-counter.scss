@@ -67,7 +67,7 @@ $social-counter-fs: (
   letter-spacing: -0.05em;
   line-height: 1;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     font-size: map_get($social-counter-fs, m);
   }
   @include respond-to(breakpoint(l)) {

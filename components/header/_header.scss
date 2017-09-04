@@ -5,13 +5,15 @@
 $logo-spacing-top-s: spacing(s);
 
 .logo-wrapper {
+  box-sizing: border-box;
   left: 0;
-  padding: $logo-spacing-top-s $body-padding 0;
+  padding: 10% $body-padding 0;
   position: absolute;
   top: 0;
+  width: 100%;
   z-index: 1;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(padding-top, spacing(s));
     width: 31%;
   }
@@ -23,6 +25,10 @@ $logo-spacing-top-s: spacing(s);
   width: 80%;
 
   @include respond-to(breakpoint(s)) {
+    width: 50%;
+  }
+
+  @include respond-to(breakpoint(m)) {
     margin: 0;
     width: 100%;
   }
@@ -41,10 +47,14 @@ $logo-spacing-top-s: spacing(s);
     font-size: fs(xxs) - 1px;
     line-height: lh(xxs);
   }
+
+  @include respond-to(breakpoint(s)) {
+    width: 50%;
+  }
 }
 
 // all these styles only apply on desktop so we wrap them in a media query
-@include respond-to(breakpoint(s)) {
+@include respond-to(breakpoint(m)) {
   .main-nav--desktop {
     display: block;
     text-align: right;
@@ -66,7 +76,7 @@ $logo-spacing-top-s: spacing(s);
     text-align: right;
     width: 55%;
 
-    @include respond-to(breakpoint(s)) {
+    @include respond-to(breakpoint(m)) {
       @include flex(flex-end, flex-start, row, nowrap, 'inline-');
     }
   }

@@ -18,7 +18,7 @@ $card-title-font-size: 35px;
     width: 50%;
     border-radius: 12%;
 
-    @include respond-to(breakpoint(s)) {
+    @include respond-to(breakpoint(m)) {
       bottom: 1%;
       left: 20%;
       width: 60%;
@@ -34,7 +34,7 @@ $card-title-font-size: 35px;
   text-align: center;
   height: 100%;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(padding, spacing(m) spacing(s) + 5px);
   }
 
@@ -62,7 +62,7 @@ $card-title-font-size: 35px;
   margin-bottom: 0;
   text-align: center;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     display: inline-block;
   }
 }

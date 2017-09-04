@@ -8,6 +8,12 @@
   width: 70vw;
 
   @include respond-to(breakpoint(s)) {
+    right: -5vw;
+    top: spacing(xxl) * 11;
+    width: 45vw;
+  }
+
+  @include respond-to(breakpoint(m)) {
     right: -1 * spacing(l);
     top: spacing(xxl) * 3;
     width: 27vw;

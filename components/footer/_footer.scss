@@ -21,6 +21,10 @@
   text-align: center;
 
   @include respond-to(breakpoint(s)) {
+    @include rem(padding, spacing(xxl) * 4 0 spacing(xxl));
+  }
+
+  @include respond-to(breakpoint(m)) {
     @include rem(padding, spacing(xxl) * 2 0 spacing(xxl));
     text-align: left;
   }
@@ -38,7 +42,7 @@
   line-height: 1;
   text-transform: none;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(margin-bottom, spacing(xs));
   }
 
@@ -52,7 +56,7 @@
     @include rem(padding-top, spacing(s));
   }
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     max-width: 984px;
   }
 }
@@ -61,7 +65,7 @@
   @include flex(space-between, center, row, wrap);
   @include rem(padding, $body-padding);
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     padding: 0;
   }
 }
@@ -130,7 +134,7 @@
   background-color: $tscBlack;
   text-align: center;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     display: inline-block;
   }
 }
@@ -139,13 +143,17 @@
   @include rem(margin-bottom, spacing(s));
 
   @include respond-to(breakpoint(s)) {
+    @include rem(margin-bottom, spacing(xxxs));
+  }
+
+  @include respond-to(breakpoint(m)) {
     margin-bottom: 0;
     text-align: left;
   }
 }
 
 .footer__bottom__right {
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     float: right;
     text-align: right;
   }
@@ -156,7 +164,9 @@
 
     @include respond-to(breakpoint(s)) {
       margin-bottom: 0;
+    }
 
+    @include respond-to(breakpoint(m)) {
       &, p {
         @include rem(margin-left, spacing(m));
       }

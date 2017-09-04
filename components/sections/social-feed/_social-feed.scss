@@ -21,7 +21,7 @@
   line-height: 1;
   text-transform: none;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(margin-bottom, spacing(m));
     font-size: fs(xl);
   }
@@ -38,12 +38,16 @@
   position: relative;
 
   @include respond-to(breakpoint(s)) {
-    @include flex(space-between, stretch, row, nowrap);
-    @include rem(margin-bottom, spacing(xl) * 2 + spacing(s));
-    margin-left: auto;
-    margin-right: auto;
+    @include flex(space-between, stretch, row, wrap);
+    margin: 0 auto;
     max-width: 984px;
     text-align: left;
+  }
+
+  @include respond-to(breakpoint(m)) {
+    @include rem(margin-bottom, spacing(xl) * 2 + spacing(s));
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 
     &:after,
     &:before {
@@ -74,7 +78,7 @@
   text-align: center;
   width: 100%;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     text-align: left;
     white-space: nowrap;
   }
@@ -97,7 +101,7 @@
     display: block;
   }
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     @include rem(margin-right, spacing(s));
     @include rem(width, spacing(xl));
     @include rem(height, spacing(xl));
@@ -147,13 +151,18 @@
   }
 
   @include respond-to(breakpoint(s)) {
+    @include rem(padding, spacing(xxxs) * 0.5 );
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  @include respond-to(breakpoint(m)) {
     @include rem(padding, 0 spacing(xxxs) * 0.5 );
     @include transitionTransform(transform 1s);
     @include transform(translateX(-100vw));
-    display: inline-block;
-    box-sizing: border-box;
     position: absolute;
-    vertical-align: top;
     width: 25%;
 
     &.social-feed__post--current {

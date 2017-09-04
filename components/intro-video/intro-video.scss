@@ -7,7 +7,7 @@
   position: relative;
   width: 100%;
 
-  @include respond-to(breakpoint(s)) {
+  @include respond-to(breakpoint(m)) {
     height: auto;
     position: absolute;
     top: 0;
@@ -50,6 +50,11 @@
   z-index: 2;
 
   @include respond-to(breakpoint(s)) {
+    width: 130%;
+    left: 0;
+  }
+
+  @include respond-to(breakpoint(m)) {
     left: 0;
     position: relative;
     width: 100%;
