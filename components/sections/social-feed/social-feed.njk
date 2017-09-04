@@ -12,11 +12,13 @@
     <button class="social-feed__button social-feed__button--previous social-feed__button--hidden" aria-hidden="true" role="presentation" title="Show previous posts"></button>
     <div class="social-feed__feed">
       {# fallback link to Wellcome Twitter page #}
+      <div class="social-feed__post social-feed__post--fallback">
       {{ button.create(
               color="blue",
-              text="Follow us on Instagram",
+              text="See more on Instagram",
               link="https://instagram.com/togethersciencecan",
               standalone=true) }}
+      </div>
     </div>
     <button class="social-feed__button social-feed__button--next" aria-hidden="true" role="presentation" title="Show following posts">Load more</button>
   </div>
