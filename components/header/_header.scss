@@ -79,6 +79,10 @@ $logo-spacing-top-s: spacing(s);
     @include respond-to(breakpoint(m)) {
       @include flex(flex-end, flex-start, row, nowrap, 'inline-');
     }
+
+    .button--play:hover:after {
+      @include play-icon('9c28b1');
+    }
   }
 }
 

@@ -35,7 +35,7 @@ const next = (posts, prevButton, nextButton) => e => {
 
   const firstNextIndex = Math.min(posts.length, lastCurrentIndex + 1);
 
-  if (firstNextIndex === posts.length - 1) nextButton.classList.add('social-feed__button--hidden');
+  if (firstNextIndex + 4 >= posts.length - 1) nextButton.classList.add('social-feed__button--hidden');
   prevButton.classList.remove('social-feed__button--hidden');
 
   posts
@@ -63,7 +63,7 @@ const carousel = (posts, prevButton, nextButton) => {
  * @return     {Function}  the functor used to map over the posts data
  */
 const renderPost = container => (post, index) => {
-  const postContainer = document.createElement('div');
+  const postContainer = document.createElement('li');
   postContainer.classList.add('social-feed__post');
   postContainer.innerHTML = post.html;
   // show first POSTS_PER_PAGE posts

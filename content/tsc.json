@@ -72,7 +72,7 @@
     "tweet_text": "#TogetherScienceCan",
     "email_subject": "Together Science Can",
     "email_body": "Check out the #TogetherScienceCan campaign",
-    "show_stats": true
+    "show_stats": false
   },
   "mission": {
     "title": "Our <br>mission",
