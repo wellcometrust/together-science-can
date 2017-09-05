@@ -1,6 +1,5 @@
 .custom-play__button {
   @include appearance(none);
-  @include flex;
   @include transform(scale(0.1));
   @include transitionTransform(transform 250ms, opacity 250ms, background-color 250ms);
   background-color: rgba(0,0,0,0.5);
@@ -12,17 +11,21 @@
   opacity: 0;
   pointer-events: none;
   position: absolute;
+  text-align: center;
   top: 0;
   width: 100%;
   z-index: 2;
 
   &:after {
     @include play-icon('ffffff');
+    // @include transform(translateY(-50%));
     background-size: auto 100%;
     background-repeat: no-repeat;
     content: '';
-    display: block;
+    display: inline-block;
     height: spacing(xxl);
+    position: relative;
+    top: 50%;
     width: spacing(xxl);
   }
 
