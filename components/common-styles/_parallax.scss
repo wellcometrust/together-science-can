@@ -17,6 +17,7 @@ $parallax-depth: 0.1;
   body {
     height: 100vh;
     overflow-y: auto;
+    -webkit-perspective: px($parallax-factor);
     perspective: px($parallax-factor);
     -webkit-perspective-origin-x: 100%;
     perspective-origin-x: 100%;

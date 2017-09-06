@@ -14,7 +14,9 @@ $logo-spacing-top-s: spacing(s);
   z-index: 1;
 
   @include respond-to(breakpoint(m)) {
+    @include rem(margin-left, -1 * spacing(xxxs));
     @include rem(padding-top, spacing(s));
+    padding-left: 0;
     width: 31%;
   }
 }

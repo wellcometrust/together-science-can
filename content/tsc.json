@@ -69,9 +69,9 @@
   "film": {
     "embed_url": "https://www.youtube.com/embed/bnKaOo67mLQ?modestbranding=1&showinfo=0&controls=0&enablejsapi=1",
     "sharing_url": "https://youtu.be/bnKaOo67mLQ",
-    "tweet_text": "#TogetherScienceCan",
-    "email_subject": "Together Science Can",
-    "email_body": "Check out the #TogetherScienceCan campaign",
+    "tweet_text": "Get involved and show how #togethersciencecan",
+    "email_subject": "Get involved and show how #togethersciencecan",
+    "email_body": "https://togethersciencecan.org",
     "show_stats": false
   },
   "mission": {
