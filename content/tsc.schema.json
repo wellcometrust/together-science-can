@@ -4,7 +4,7 @@
   "definitions": {
     "signup_form": {
       "type": "object",
-      "required": [ "cta" ],
+      "required": [ "cta", "address_book_id" ],
       "properties": {
         "title": {
           "type": "string",
@@ -17,6 +17,11 @@
           "options": {
             "wysiwyg": true
           }
+        },
+        "address_book_id": {
+          "type": "string",
+          "title": "Dotmailer Address Book ID",
+          "description": "You can retrieve this by generating a signup form in DM and finding the AddressBookId field"
         },
         "cta": {
           "$ref": "#/definitions/cta",
