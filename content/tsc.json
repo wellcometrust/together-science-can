@@ -114,8 +114,8 @@
         "body": "Print, customise and share your own #TogetherScienceCan message to amplify our collective voice",
         "cta": {
           "text": "Download poster",
-          "link": "/together-science-can-poster.jpg",
-          "download": "together-science-can-poster.jpg"
+          "link": "static/downloads/together-science-can-poster.pdf",
+          "download": "together-science-can-poster.pdf"
         }
       }
     ]
