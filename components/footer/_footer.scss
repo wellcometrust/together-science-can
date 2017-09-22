@@ -62,8 +62,11 @@
 }
 
 .footer-partners__list {
-  @include flex(space-between, center, row, wrap);
   @include rem(padding, $body-padding);
+
+  @include respond-to(breakpoint(s)) {
+    @include flex(space-between, center, row, wrap);
+  }
 
   @include respond-to(breakpoint(m)) {
     padding: 0;
@@ -72,7 +75,33 @@
 
 .footer__partner-logo {
   @include rem(margin-bottom, spacing(xs));
-  max-width: percentage(1/3);
+  @include rem(padding, spacing(xxs));
+  box-sizing: border-box;
+  display: inline-block;
+  max-height: spacing(xxl);
+  width: 50%;
+
+  @include respond-to(breakpoint(s)) {
+    @include flex-basis(percentage(1/3));
+    height: spacing(xxl);
+    max-width: 100%;
+    width: auto;
+  }
+
+  @include respond-to(breakpoint(m)) {
+    @include flex-basis(auto);
+  }
+
+  img {
+    max-height: spacing(xxl);
+    max-width: 100%;
+
+    @include respond-to(breakpoint(s)) {
+      height: 100%;
+      max-width: none;
+      width: auto;
+    }
+  }
 }
 
 .footer__contact__item {

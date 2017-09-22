@@ -162,16 +162,28 @@
     "partners": [
       {
         "title": "Wellcome",
-        "image_url": "https://wellcome.ac.uk/sites/all/themes/corp_base/assets/images/new-logos/wellcome-logo--white.png",
+        "image_url": "https://wellcome.ac.uk/sites/all/themes/corp_base/assets/images/new-logos/wellcome-logo--white.svg",
         "link": "https://wellcome.ac.uk"
       },
       {
         "title": "Bill and Melinda Gates Foundation",
-        "image_url": "https://www.gatesfoundation.org/images/gfo/bmgf-logo.png"
+        "image_url": "static/images/partner-logos/gates-logo.svg",
+        "link": "https://www.gatesfoundation.org/"
       },
       {
-        "title": "Medical Research Council",
-        "image_url": "static/images/mrc-reverse-logo.svg"
+        "title": "The Max Planck Society",
+        "image_url": "static/images/partner-logos/max-planck.png",
+        "link": "https://www.mpg.de/en"
+      },
+      {
+        "title": "Helmholtz Association of German Research Centres",
+        "image_url": "static/images/partner-logos/helmholtz-logo.svg",
+        "link": "https://www.helmholtz.de/en/"
+      },
+      {
+        "title": "Global Health Technologies Coalition",
+        "image_url": "static/images/partner-logos/ghtc.svg",
+        "link": "http://www.ghtcoalition.org/"
       }
     ],
     "contact_title": "Contact",
