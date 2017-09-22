@@ -22,7 +22,7 @@
 
   @include respond-to(breakpoint(s)) {
     left: 0;
-    top: spacing(xxl) * 4;
+    top: spacing(xxl) * 3;
     width: 120vw;
   }
 
