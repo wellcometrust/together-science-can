@@ -45,7 +45,7 @@
   @include respond-to(breakpoint(s)) {
     @include flex(space-between, stretch, row, wrap);
     margin: 0 auto;
-    max-width: none;
+    max-width: 984px;
     text-align: left;
   }
 
@@ -56,7 +56,7 @@
 
     &:after,
     &:before {
-      @include rem(width, spacing(s));
+      @include rem(width, spacing(xl));
       background: $tscWhite;
       content: '';
       display: block;
@@ -76,11 +76,6 @@
   @include respond-to(breakpoint(l)) {
     @include rem(margin-bottom, spacing(xl) * 4);
     max-width: 1315px;
-
-    &:after,
-    &:before {
-      @include rem(width, spacing(xl));
-    }
   }
 }
 
@@ -135,8 +130,9 @@
   }
 
   @include respond-to(breakpoint(m)) {
-    @include rem(width, spacing(m));
-    @include rem(height, spacing(m));
+    @include rem(margin-right, spacing(s));
+    @include rem(width, spacing(xl));
+    @include rem(height, spacing(xl));
     @include transform-origin(center center);
     @include transform(rotate(180deg));
     @include transition(opacity 250ms);
@@ -158,6 +154,7 @@
     }
 
     &:last-of-type {
+      @include rem(margin, 0 0 0 spacing(s));
       @include transform(none);
       font-size: 0;
       padding: 0;
@@ -165,16 +162,6 @@
 
     &:hover {
       opacity: 1;
-    }
-  }
-
-  @include respond-to(breakpoint(l)) {
-    @include rem(margin-right, spacing(s));
-    @include rem(width, spacing(xl));
-    @include rem(height, spacing(xl));
-
-    &:last-of-type {
-      @include rem(margin, 0 0 0 spacing(s));
     }
   }
 }
@@ -197,15 +184,15 @@
     @include rem(padding, spacing(xxxs) * 0.5);
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: percentage(1/2);
   }
 
   @include respond-to(breakpoint(m)) {
-    @include rem(padding, 0 1px);
+    @include rem(padding, 0 spacing(xxxs) * 0.5);
     @include transitionTransform(transform 1s);
     @include transform(translateX(-100vw));
     position: absolute;
-    width: 25%;
+    width: percentage(1/3);
 
     &.social-feed__post--current {
       @include transform(translateX(0));
@@ -217,6 +204,10 @@
       position: absolute;
       display: block;
     }
+  }
+
+  @include respond-to(breakpoint(l)) {
+    width: percentage(1/4);
   }
   // override the default IG style attribute
   iframe {
