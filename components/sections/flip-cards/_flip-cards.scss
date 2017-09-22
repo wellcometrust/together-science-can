@@ -21,6 +21,7 @@ $flip-cards-widths: (
   }
 
   @include respond-to(breakpoint(m)) {
+    @include rem(margin-bottom, spacing(xxl));
     max-width: map-get($flip-cards-section-widths, m);
   }
 
