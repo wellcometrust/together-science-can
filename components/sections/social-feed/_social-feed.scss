@@ -95,7 +95,12 @@
     @include flex($inline: 'inline-');
     border: 1px solid rgb(219, 219, 219);
     border-radius: border-radius(s);
-    height: 100%;
+    min-height: 50vh;
+
+    @include respond-to(breakpoint(m)) {
+      height: 100%;
+      min-height: 0;
+    }
 
     .button {
       background: transparent;
@@ -127,6 +132,12 @@
     @extend .button;
     @extend .button--anchor;
     display: block;
+
+    &:hover:after,
+    &:focus:after,
+    &:active:after {
+      @include play-icon('9c28b1');
+    }
   }
 
   @include respond-to(breakpoint(m)) {
