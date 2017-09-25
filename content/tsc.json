@@ -5,15 +5,15 @@
     "meta_facebook": {
       "title": "Together Science Can",
       "url": "https://togethersciencecan.org",
-      "image_url": "",
+      "image_url": "static/images/tsc-social-poster.png",
       "description": "Add your voice to the movement to keep science open."
     },
     "meta_twitter": {
       "site": "@togethersciencecan",
       "title": "Together Science Can",
       "creator": "@wellcometrust",
-      "image_url": "",
-      "image_alt": "Person showing the Together Science Can fists gesture",
+      "image_url": "static/images/tsc-social-poster.png",
+      "image_alt": "Logo of the Together Science Can campaign",
       "description": "Add your voice to the movement to keep science open."
     }
   },
@@ -67,8 +67,8 @@
     }
   },
   "film": {
-    "embed_url": "https://www.youtube.com/embed/bnKaOo67mLQ?modestbranding=1&showinfo=0&controls=0&enablejsapi=1",
-    "sharing_url": "https://youtu.be/bnKaOo67mLQ",
+    "embed_url": "https://www.youtube.com/embed/k8lyA7IcDXg?modestbranding=1&showinfo=0&controls=0&enablejsapi=1",
+    "sharing_url": "https://youtu.be/k8lyA7IcDXg",
     "tweet_text": "Get involved and show how #togethersciencecan",
     "email_subject": "Get involved and show how #togethersciencecan",
     "email_body": "https://togethersciencecan.org",
