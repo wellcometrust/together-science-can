@@ -66,6 +66,7 @@ $instagram-embed-bar-height: 66px;
 .mission__boomerang__inner {
   border-radius: border-radius(l);
   overflow: hidden;
+  position: relative;
 
   @include respond-to(breakpoint(s)) {
     max-height: map-get($mission-boomerang-widths, s);
@@ -74,6 +75,11 @@ $instagram-embed-bar-height: 66px;
   @include respond-to(breakpoint(l)) {
     max-height: map-get($mission-boomerang-widths, l);
   }
+}
+
+.mission__boomerang__fallback {
+  height: 100%;
+  width: 100%;
 }
 
 .mission__boomerang {
