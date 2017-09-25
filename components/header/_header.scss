@@ -48,6 +48,12 @@ $logo-spacing-top-s: spacing(s);
     // inconsistency in design, but we can't have 100 standard font sizes
     font-size: fs(xxs) - 1px;
     line-height: lh(xxs);
+
+    &:hover:after,
+    &:focus:after,
+    &:active:after {
+      @include play-icon('9c28b1');
+    }
   }
 
   @include respond-to(breakpoint(s)) {

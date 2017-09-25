@@ -39,6 +39,8 @@ const observeCurrentPageSize = posts => {
       .slice(firstCurrentIndex, endOfPageIndex)
       .forEach(p => p.classList.add(CURRENT_POST_CLASS));
   }), DEBOUNCE_INTERVAL);
+
+  return posts;
 };
 
 /* gets the index of the first currently visible post */
