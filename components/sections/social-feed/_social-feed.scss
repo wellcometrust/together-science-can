@@ -89,7 +89,7 @@
 }
 
 .social-feed__feed--loaded {
-  text-align: left;
+  text-align: center;
 
   .social-feed__post--fallback {
     @include flex($inline: 'inline-');
@@ -215,6 +215,10 @@
       @include transform(translateX(100vw));
       position: absolute;
       display: block;
+    }
+
+    &.social-feed__post--fallback {
+      @include rem(margin, 0 spacing(xxxs) * 0.5);
     }
   }
 
