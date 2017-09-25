@@ -31,14 +31,17 @@ let postsPerPage = getPostsPerPage(PAGE_SIZES);
  * @return     {Array<HTMLElement>}  posts   Same as input for chaining
  */
 const observeCurrentPageSize = posts => {
-  window.addEventListener('resize', debounce(e => {
+  const onWindowResize = posts => e => {
     const firstCurrentIndex = getFirstCurrentIndex(posts);
     const endOfPageIndex = Math.min(posts.length, firstCurrentIndex + postsPerPage());
 
     posts
       .slice(firstCurrentIndex, endOfPageIndex)
       .forEach(p => p.classList.add(CURRENT_POST_CLASS));
-  }), DEBOUNCE_INTERVAL);
+  };
+
+  window.addEventListener('resize', debounce(onWindowResize(posts)), DEBOUNCE_INTERVAL);
+  onWindowResize(posts)();
 
   return posts;
 };
@@ -98,6 +101,8 @@ const next = (posts, prevButton, nextButton) => e => {
  * @return     {array<HTMLElement>}   The posts array (for chaining)
  */
 const carousel = (posts, prevButton, nextButton) => {
+  if (posts.length <= postsPerPage()) nextButton.classList.add('social-feed__button--hidden');
+
   prevButton.addEventListener('click', previous(posts, prevButton, nextButton));
   nextButton.addEventListener('click', next(posts, prevButton, nextButton));
 };
