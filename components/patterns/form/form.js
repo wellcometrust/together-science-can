@@ -1,7 +1,7 @@
 import { nodeList } from 'utils';
 
 const INVALID_CLASS = 'form-item--invalid';
-const PROXY_ENDPOINT = 'https://wt-corporate-master.codeenigma.net/together-science-can-signup';
+const PROXY_ENDPOINT = 'https://wellcome.ac.uk/together-science-can-signup';
 
 const disableSubmit = submit => {
   submit.disabled = true;
