@@ -1,30 +1,55 @@
 import { nodeList } from 'utils';
 
 const INVALID_CLASS = 'form-item--invalid';
+const PROXY_ENDPOINT = 'https://wellcome.ac.uk/together-science-can-signup';
 
 const disableSubmit = submit => {
   submit.disabled = true;
   submit.classList.add('button--loading');
 };
 
+const enableSubmit = submit => {
+  submit.disabled = false;
+  submit.classList.remove('button--loading');
+};
+
 /**
- * submits the form using a hidden <iframe> element to create an AJAX form-like experience.
- * The provided form is cloned in the <iframe> and submitted.
- * While this doesn't allow proper error handling, it's the only way to submit a cross-domain form without leaving the page.
+ * submits the form using XMLHttpRequest
  *
  * @param      {HTMLFormElement}  form       The form to submit
- * @param      {HTMLIFrameElement}  ajaxFrame  The <iframe> element to use for submission
+ * @param      {HTMLElement} submit    The submit button
+ * @param      {function} callback     Function to call after the form has been submitted
  * @return     {void}
  */
-const submitForm = (form, ajaxFrame) => {
-  const formClone = ajaxFrame.contentDocument.importNode(form, true);
-  ajaxFrame.contentDocument.body.appendChild(formClone);
+const submitForm = (form, submit, callback) => {
+  const data = nodeList(form.elements)
+    .reduce((obj, el) => {
+      obj[el.name] = el.value;
+      return obj;
+    }, {});
 
-  // ensure all values are the same (it's not guaranteed by importNode)
-  nodeList(formClone.elements)
-    .forEach((el, index) => el.value = form.elements[index].value);
+  // get only the information we need, strip hidden DM inputs
+  const output = {
+    first_name: data.cd_FIRSTNAME,
+    country: data.cd_COUNTRY,
+    email: data.Email
+  };
 
-  formClone.submit();
+  const xhr = new window.XMLHttpRequest();
+  xhr.open('POST', PROXY_ENDPOINT, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.addEventListener('load', e => {
+    if (xhr.status !== 200) {
+      enableSubmit(submit);
+      console.warn(JSON.parse(xhr.responseText));
+      // this almost never happens, so we can just use alert
+      window.alert('Could not submit the form. Please try again later.');
+    } else {
+      callback();
+    }
+  });
+
+  xhr.send(JSON.stringify(output));
 };
 
 /**
@@ -43,8 +68,6 @@ const setupForm = formWrapper => {
 
   const success = formWrapper.parentElement.querySelector('.form__success');
 
-  const ajaxFrame = formWrapper.querySelector('.ajax-enabler');
-
   elements.forEach(el => {
     el.addEventListener('invalid', e => el.classList.add(INVALID_CLASS));
   });
@@ -54,10 +77,12 @@ const setupForm = formWrapper => {
     elements.forEach(el => el.classList.remove(INVALID_CLASS));
 
     if (form.checkValidity()) {
-      submitForm(form, ajaxFrame);
       disableSubmit(submit);
-      formWrapper.classList.add('form__content--success');
-      success.classList.add('form__success--visible');
+
+      submitForm(form, submit, () => {
+        formWrapper.classList.add('form__content--success');
+        success.classList.add('form__success--visible');
+      });
     }
   });
 };
