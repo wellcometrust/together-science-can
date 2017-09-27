@@ -137,3 +137,16 @@
   }
 }
 
+.button:disabled {
+  background-color: $tscLightGrey;
+}
+
+@include keyframes('loading') {
+  0% { color: rgba(0,0,0,1); }
+  50% { color: rgba(0,0,0,0); }
+  100% { color: rgba(0,0,0,1); }
+}
+
+.button--loading {
+  @include animation(loading 1.5s cubic-bezier(0, 0, 0, 1.1) infinite);
+}
