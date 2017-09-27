@@ -58,6 +58,14 @@ $instagram-embed-bar-height: 66px;
     margin-right: 226px;
     max-width: map-get($mission-content-widths, l);
   }
+
+  h2 {
+    @include rem(margin-top, spacing(xxxs));
+
+    @include respond-to(breakpoint(m)) {
+      margin-top: 0;
+    }
+  }
 }
 
 .mission__boomerang-wrapper {

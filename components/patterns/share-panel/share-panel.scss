@@ -28,6 +28,12 @@ $share-panel-widths: (
   @include respond-to(breakpoint(l)) {
     @include rem(margin, spacing(m) auto 0);
   }
+
+  .form__success & {
+    border-radius: border-radius(s);
+    left: 0;
+    width: 100%;
+  }
 }
 
 .share-panel__title,
