@@ -154,3 +154,19 @@ $old-ie: false;
     -webkit-transform-style: $style;
     transform-style: $style;
 }
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+     -moz-animation: $animation;
+       -o-animation: $animation;
+          animation: $animation;
+}

@@ -4,12 +4,15 @@ const INVALID_CLASS = 'form-item--invalid';
 const PROXY_ENDPOINT = 'https://wellcome.ac.uk/together-science-can-signup';
 
 const disableSubmit = submit => {
+  submit.setAttribute('data-original-text', submit.value);
   submit.disabled = true;
+  submit.value = 'Submitting';
   submit.classList.add('button--loading');
 };
 
 const enableSubmit = submit => {
   submit.disabled = false;
+  submit.value = submit.setAttribute('data-original-text');
   submit.classList.remove('button--loading');
 };
 
