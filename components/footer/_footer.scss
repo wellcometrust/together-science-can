@@ -74,7 +74,7 @@
 }
 
 .footer__partner-logo {
-  @include rem(margin-bottom, spacing(xs));
+  @include rem(margin, spacing(xs));
   @include rem(padding, spacing(xxs));
   box-sizing: border-box;
   display: inline-block;

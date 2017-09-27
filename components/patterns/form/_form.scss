@@ -51,12 +51,15 @@ $form-widths: (
 
 .form__success {
   @include transition(opacity 0.5s 0.25s);
+  height: 0;
   position: absolute;
   opacity: 0;
+  overflow: hidden;
   z-index: -1;
 
   &.form__success--visible {
     display: block;
+    height: auto;
     opacity: 1;
     position: relative;
     z-index: 1;

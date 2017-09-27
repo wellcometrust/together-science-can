@@ -179,6 +179,31 @@
         "title": "Global Health Technologies Coalition",
         "image_url": "static/images/partner-logos/ghtc.svg",
         "link": "http://www.ghtcoalition.org/"
+      },
+      {
+        "title": "\"La Caixa\" Foundation",
+        "image_url": "static/images/partner-logos/la-caixa.svg",
+        "link": "https://www.fundacionbancarialacaixa.org/corporate/home_en.html"
+      },
+      {
+        "title": "Johnson & Johnson Innovation",
+        "image_url": "static/images/partner-logos/jnj-logo.png",
+        "link": "https://www.jnjinnovation.com/"
+      },
+      {
+        "title": "Alliance for Accelerating Excellence in Science in Africa",
+        "image_url": "static/images/partner-logos/aesa-logo.svg",
+        "link": "http://aesa.ac.ke/"
+      },
+      {
+        "title": "African Academy of Sciences",
+        "image_url": "static/images/partner-logos/aas-logo.svg",
+        "link": "https://www.aasciences.ac.ke/"
+      },
+      {
+        "title": "Wellcome Trust/DBT India Alliance",
+        "image_url": "static/images/partner-logos/india-alliance.svg",
+        "link": "http://wellcomedbt.org/"
       }
     ],
     "contact_title": "Contact",
