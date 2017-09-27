@@ -1,20 +1,20 @@
 {
   "global": {
     "page_title": "Together Science Can",
-    "meta_description": "Add your voice to the movement to keep science open.",
+    "meta_description": "Add your voice to keep science open.",
     "meta_facebook": {
       "title": "Together Science Can",
       "url": "https://togethersciencecan.org",
       "image_url": "static/images/tsc-social-poster.png",
-      "description": "Add your voice to the movement to keep science open."
+      "description": "Add your voice to keep science open."
     },
     "meta_twitter": {
-      "site": "@togethersciencecan",
+      "site": "@togetherscican",
       "title": "Together Science Can",
       "creator": "@wellcometrust",
       "image_url": "static/images/tsc-social-poster.png",
       "image_alt": "Logo of the Together Science Can campaign",
-      "description": "Add your voice to the movement to keep science open."
+      "description": "Add your voice to keep science open."
     }
   },
   "header": {
@@ -46,13 +46,13 @@
       }
     ],
     "cta": {
-      "text": "Join the movement",
+      "text": "Show your support",
       "link": "#signup"
     }
   },
   "intro": {
     "title": "Science <br>is powerful",
-    "body": "In a changing world, we need to come together to celebrate the power of international collaboration. Add your voice to the movement to keep science open.",
+    "body": "In a changing world, we need to come together to celebrate the power of interational collaboration. Add your voice to keep science open.",
     "cta": {
       "text": "Watch the film",
       "link": "#watch-the-film",
@@ -60,14 +60,14 @@
     }
   },
   "signup": {
-    "title": "Take action! Be part of the movement",
-    "footer": "We'll send you well-timed news and ideas for how you can support the movement. We won't share your email with anyone else.",
+    "title": "Take action! Join us to stay informed",
+    "footer": "We'll send you well-timed news and ideas for how you can get involved. We won't share your email with anyone else.",
     "cta": {
       "text": "Join now"
     }
   },
   "film": {
-    "embed_url": "https://www.youtube.com/embed/k8lyA7IcDXg?modestbranding=1&showinfo=0&controls=0&enablejsapi=1",
+    "embed_url": "https://www.youtube.com/embed/k8lyA7IcDXg?modestbranding=1&rel=0&showinfo=0&controls=1&enablejsapi=1",
     "sharing_url": "https://youtu.be/k8lyA7IcDXg",
     "tweet_text": "Get involved and show how #togethersciencecan",
     "email_subject": "Get involved and show how #togethersciencecan",
@@ -76,7 +76,7 @@
   },
   "mission": {
     "title": "Our <br>mission",
-    "body": "<p>Together Science Can celebrates the power of international collaboration. Today there are problems seemingly too big and too complex to solve. In these cases, there is only one thing researchers can do - stand together.</p><p>Together we mix backgrounds, logic and instinct. Together we push the boundaries of what is possible. Together we do more than we do apart.</p><p>Together science can keep borders open to collaboration and progress.</p>",
+    "body": "<p>We come from different places, from different cultures and backgrounds. Science brings us together.</p><p>Together we mix logic with intuition.<br>Together we push the boundaries of what’s possible.<br>Together we can solve colossal problems – and microscopic ones too.<br>Together we improve lives.</p><p>But divided we can’t, so more than ever, science needs us to join together.<p>Together science can.</p>",
     "boomerang_embed": ""
   },
   "flip_cards": {
@@ -84,21 +84,21 @@
     "body": "<p>Get involved and show how #TogetherScienceCan</p>",
     "cards": [
       {
-        "title": "Join the movement",
+        "title": "Show your support",
         "body": "Sign up and receive news and ideas for action from Together Science Can",
         "cta": {
           "text": "Join now",
           "link": "#signup"
         },
         "flip_side": {
-          "title": "Join the movement",
+          "title": "Show your support",
           "cta": {
             "text": "Join now"
           }
         },
         "complete": {
           "title": "Thank you",
-          "body": "Please invite others to join"
+          "body": "You've joined others around the world who want to keep science open. Please share the message and invite others too."
         }
       },
       {
@@ -152,7 +152,7 @@
   },
   "secondary_signup": {
     "title": "Join us, take action and stay informed",
-    "footer": "We'll send you well-timed news and ideas for how you can support the movement. We won't share your email with anyone else.",
+    "footer": "We'll send you well-timed news and ideas for how you can get involved. We won't share your email with anyone else.",
     "cta": {
       "text": "Join now"
     }
@@ -164,11 +164,6 @@
         "title": "Wellcome",
         "image_url": "https://wellcome.ac.uk/sites/all/themes/corp_base/assets/images/new-logos/wellcome-logo--white.svg",
         "link": "https://wellcome.ac.uk"
-      },
-      {
-        "title": "Bill and Melinda Gates Foundation",
-        "image_url": "static/images/partner-logos/gates-logo.svg",
-        "link": "https://www.gatesfoundation.org/"
       },
       {
         "title": "The Max Planck Society",
@@ -188,10 +183,10 @@
     ],
     "contact_title": "Contact",
     "contact_details": {
-      "email": "contact@togethersciencecan.org",
-      "facebook": "https://facebook.com/wellcometrust",
-      "instagram": "https://instagram.com/wellcometrust",
-      "twitter": "https://twitter.com/wellcometrust"
+      "email": "communications@wellcome.ac.uk",
+      "facebook": "https://facebook.com/togethersciencecan",
+      "instagram": "https://instagram.com/togethersciencecan",
+      "twitter": "https://twitter.com/togetherscican"
     }
   }
 }
