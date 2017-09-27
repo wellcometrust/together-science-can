@@ -4,8 +4,8 @@ $mission-section-widths: (
 );
 
 $mission-content-widths: (
-  s: 474px,
-  l: 576px,
+  s: 350px,
+  l: 350px,
 );
 
 $mission-boomerang-widths: (
@@ -48,10 +48,14 @@ $instagram-embed-bar-height: 66px;
 
   @include respond-to(breakpoint(m)) {
     @include rem(padding-left, spacing(xs));
+    // this is a last minute change, TODO: rationalize it
+    margin-right: 124px;
     max-width: map-get($mission-content-widths, s);
   }
 
   @include respond-to(breakpoint(l)) {
+    // this is a last minute change, TODO: rationalize it
+    margin-right: 226px;
     max-width: map-get($mission-content-widths, l);
   }
 }
