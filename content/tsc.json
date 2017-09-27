@@ -130,8 +130,7 @@
         "image_url": "static/images/white_fists.png",
         "cta": {
           "text": "Download",
-          "link": "",
-          "download": "tsc-action-kit-individuals-teams.zip"
+          "link": "static/downloads/tsc-toolkit-for-individuals.pdf"
         }
       },
       {
@@ -140,8 +139,7 @@
         "image_url": "static/images/white_building.png",
         "cta": {
           "text": "Download",
-          "link": "",
-          "download": "tsc-action-kit-organisations.zip"
+          "link": "static/downloads/tsc-toolkit-for-organisations.pdf"
         }
       }
     ]
