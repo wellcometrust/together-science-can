@@ -37,7 +37,6 @@ const submitForm = (form, submit, callback) => {
 
   const xhr = new window.XMLHttpRequest();
   xhr.open('POST', PROXY_ENDPOINT, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.addEventListener('load', e => {
     if (xhr.status !== 200) {
       enableSubmit(submit);
