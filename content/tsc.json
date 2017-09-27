@@ -164,29 +164,9 @@
         "link": "https://wellcome.ac.uk"
       },
       {
-        "title": "The Max Planck Society",
-        "image_url": "static/images/partner-logos/max-planck.png",
-        "link": "https://www.mpg.de/en"
-      },
-      {
-        "title": "Helmholtz Association of German Research Centres",
-        "image_url": "static/images/partner-logos/helmholtz-logo.svg",
-        "link": "https://www.helmholtz.de/en/"
-      },
-      {
-        "title": "Global Health Technologies Coalition",
-        "image_url": "static/images/partner-logos/ghtc.svg",
-        "link": "http://www.ghtcoalition.org/"
-      },
-      {
-        "title": "\"La Caixa\" Foundation",
-        "image_url": "static/images/partner-logos/la-caixa.svg",
-        "link": "https://www.fundacionbancarialacaixa.org/corporate/home_en.html"
-      },
-      {
-        "title": "Johnson & Johnson Innovation",
-        "image_url": "static/images/partner-logos/jnj-logo.png",
-        "link": "https://www.jnjinnovation.com/"
+        "title": "African Academy of Sciences",
+        "image_url": "static/images/partner-logos/aas-logo.svg",
+        "link": "https://www.aasciences.ac.ke/"
       },
       {
         "title": "Alliance for Accelerating Excellence in Science in Africa",
@@ -194,9 +174,44 @@
         "link": "http://aesa.ac.ke/"
       },
       {
-        "title": "African Academy of Sciences",
-        "image_url": "static/images/partner-logos/aas-logo.svg",
-        "link": "https://www.aasciences.ac.ke/"
+        "title": "\"La Caixa\" Foundation",
+        "image_url": "static/images/partner-logos/la-caixa.svg",
+        "link": "https://www.fundacionbancarialacaixa.org/corporate/home_en.html"
+      },
+      {
+        "title": "Global Health Technologies Coalition",
+        "image_url": "static/images/partner-logos/ghtc.svg",
+        "link": "http://www.ghtcoalition.org/"
+      },
+      {
+        "title": "Helmholtz Association of German Research Centres",
+        "image_url": "static/images/partner-logos/helmholtz-logo.svg",
+        "link": "https://www.helmholtz.de/en/"
+      },
+      {
+        "title": "Johnson & Johnson Innovation",
+        "image_url": "static/images/partner-logos/jnj-logo.png",
+        "link": "https://www.jnjinnovation.com/"
+      },
+      {
+        "title": "Knut and Alice Wallenberg Foundation",
+        "image_url": "static/images/partner-logos/wallenberg.svg",
+        "link": "http://kaw.wallenberg.org/"
+      },
+      {
+        "title": "The Max Planck Society",
+        "image_url": "static/images/partner-logos/max-planck.png",
+        "link": "https://www.mpg.de/en"
+      },
+      {
+        "title": "Novo Nordisk Foundation",
+        "image_url": "static/images/partner-logos/nnf-logo.svg",
+        "link": "http://novonordiskfonden.dk/en"
+      },
+      {
+        "title": "Royal Society",
+        "image_url": "static/images/partner-logos/royal-society.svg",
+        "link": "https://royalsociety.org/"
       },
       {
         "title": "Wellcome Trust/DBT India Alliance",
