@@ -2,7 +2,7 @@
 
 ### [togethersciencecan.org](https://togethersciencecan.org)
 
-This is a single-page site for the *Together Science Can* campaign. It is designed as a static site generated from JSON, which means it's very lightweight and extensible.
+This is a single-page site for the [#TogetherScienceCan](https://twitter.com/hashtag/togethersciencecan) campaign. It is designed as a static site generated from JSON, which means it's very lightweight and extensible.
 
 ## Requirements
 
