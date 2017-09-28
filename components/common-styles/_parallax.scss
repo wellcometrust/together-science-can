@@ -29,6 +29,11 @@ $parallax-depth: 0.1;
   .intro-video__mask, {
     @include transform(translateZ(0));
   }
+
+  .intro-video__mask {
+    // the scaling prevents a black line appearing on retina displays
+    @include transform(translateZ(0) scale(1.005));
+  }
   // this fixes the play button disappearing
   .section--film {
     @include transform(none);

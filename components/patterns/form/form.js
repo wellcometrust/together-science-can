@@ -84,6 +84,7 @@ const setupForm = formWrapper => {
       submitForm(form, submit, () => {
         formWrapper.classList.add('form__content--success');
         success.classList.add('form__success--visible');
+        success.scrollIntoView(false);
       });
     }
   });

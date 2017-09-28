@@ -19,6 +19,10 @@ $logo-spacing-top-s: spacing(s);
     padding-left: 0;
     width: 31%;
   }
+
+  @media screen and (orientation: landscape) and (max-width: breakpoint(s)) {
+    padding-top: 5%;
+  }
 }
 
 .logo {
@@ -33,6 +37,10 @@ $logo-spacing-top-s: spacing(s);
   @include respond-to(breakpoint(m)) {
     margin: 0;
     width: 100%;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: breakpoint(s)) {
+    max-width: 50%;
   }
 }
 
