@@ -1,0 +1,22 @@
+.cookie-message {
+  @include rem(padding, spacing(xxxs) spacing(xs));
+  background-color: $tscWhite;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  @supports (position: sticky) or (position: -webkit-sticky) {
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: auto;
+  }
+}
+
+.cookie-message__close {
+  @include rem(padding, spacing(xxxs) spacing(xs) 0);
+  float: right;
+}

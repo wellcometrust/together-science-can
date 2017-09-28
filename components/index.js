@@ -10,6 +10,7 @@ import flipCard from './patterns/card/card.js';
 import { loadIntroVideoAfterImage } from './intro-video/introVideo.js';
 import { loadTextures } from './backgrounds/texturedBackgrounds.js';
 import { loadSocialPosts } from './sections/social-feed/socialFeed.js';
+import { cookieMessage } from './cookie-message/cookie-message.js';
 
 import setupAnalytics from './common-js/analytics.js';
 
@@ -17,6 +18,10 @@ const initialize = function() {
   if (!('requestAnimationFrame' in window)) return;
 
   document.documentElement.className += ' enhanced';
+
+  const cookieMessageElement = document.getElementById('cookie-message');
+  if (cookieMessageElement) cookieMessage(cookieMessageElement);
+
   // select all signup forms
   const forms = nodeList(document.getElementsByClassName('form__content'));
   forms.forEach(form => setupForm(form));

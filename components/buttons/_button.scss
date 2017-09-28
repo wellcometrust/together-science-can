@@ -150,3 +150,10 @@
 .button--loading {
   @include animation(loading 1.5s cubic-bezier(0, 0, 0, 1.1) infinite);
 }
+
+.button__x {
+  font-size: 3em;
+  display: inline-block;
+  line-height: fs(xxxs);
+  vertical-align: text-top;
+}
