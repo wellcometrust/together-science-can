@@ -5,14 +5,14 @@
     "meta_facebook": {
       "title": "Together Science Can",
       "url": "https://togethersciencecan.org",
-      "image_url": "static/images/tsc-social-poster.png",
+      "image_url": "https://togethersciencecan.org/static/images/tsc-social-poster.png",
       "description": "Add your voice to keep science open."
     },
     "meta_twitter": {
       "site": "@togetherscican",
       "title": "Together Science Can",
       "creator": "@wellcometrust",
-      "image_url": "static/images/tsc-social-poster.png",
+      "image_url": "https://togethersciencecan.org/static/images/tsc-social-poster.png",
       "image_alt": "Logo of the Together Science Can campaign",
       "description": "Add your voice to keep science open."
     }
