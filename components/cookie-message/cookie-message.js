@@ -1,5 +1,8 @@
+// 28 days
+const COOKIE_AGE = 86400 * 28;
+
 const closeMessage = message => () => {
-  document.cookie = 'tsc_cookie_seen=true';
+  document.cookie = `tsc_cookie_seen=true; max-age=${COOKIE_AGE}; path=/`;
   message.parentElement.removeChild(message);
 };
 
