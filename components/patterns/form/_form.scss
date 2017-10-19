@@ -35,13 +35,8 @@ $form-widths: (
 }
 
 .form__footer {
-  display: none;
-
-  @include respond-to(breakpoint(m)) {
-    display: block;
-    font-size: fs(xxxs);
-    line-height: lh(xxxs);
-  }
+  font-size: fs(xxxs);
+  line-height: lh(xxxs);
 
   @include respond-to(breakpoint(l)) {
     font-size: fs(xxs);
