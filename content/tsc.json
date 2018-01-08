@@ -164,6 +164,11 @@
         "link": "https://wellcome.ac.uk"
       },
       {
+        "title": "American Association for the Advancement of Science",
+        "image_url": "static/images/partner-logos/aaas.png",
+        "link": "https://www.aaas.org/"
+      },
+      {
         "title": "African Academy of Sciences",
         "image_url": "static/images/partner-logos/aas-logo.svg",
         "link": "https://www.aasciences.ac.ke/"
@@ -174,9 +179,19 @@
         "link": "http://aesa.ac.ke/"
       },
       {
+        "title": "Bill and Melinda Gates Foundation",
+        "image_url": "static/images/partner-logos/gates-logo.svg",
+        "link": "https://www.gatesfoundation.org/"
+      },
+      {
         "title": "\"La Caixa\" Foundation",
         "image_url": "static/images/partner-logos/la-caixa.svg",
         "link": "https://www.fundacionbancarialacaixa.org/corporate/home_en.html"
+      },
+      {
+        "title": "Canadian Institute for Advanced Research",
+        "image_url": "static/images/partner-logos/cifar-reverse.png",
+        "link": "https://www.cifar.ca/"
       },
       {
         "title": "Global Health Technologies Coalition",
