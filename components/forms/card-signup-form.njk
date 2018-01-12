@@ -2,7 +2,7 @@
 <form
   class="form"
   name="signup"
-  id="primary-signup"
+  id="card-signup"
   action="https://r1-t.trackedlink.net/signup.ashx"
   method="post">
 
@@ -29,6 +29,14 @@
       {% include "patterns/form/countries.njk" %}
     </select>
     <p class="form__element__error">Please select your country of residence</p>
+  </div>
+
+  <div class="form__legal">
+    <input id="card-newsletter-promo-checkbox" class="checkbox" type="checkbox" name="legal-consent" required>
+    <label for="card-newsletter-promo-checkbox" class="form__legal__label">I agree to receive emails from Together Science can*</label>
+    <p class="form__legal__footnote">
+      *We use a third party to deliver our emails; you can unsubscribe at any time. For information about how we handle your data, please read our <a href="https://wellcome.ac.uk/about-us/terms-use#privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>.
+    </p>
   </div>
 
   <div class="form__element">
