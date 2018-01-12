@@ -84,6 +84,8 @@ $form-widths: (
 .form {
   @include respond-to(breakpoint(m)) {
     @include flex(space-between, flex-end, row, wrap);
+    @include rem(margin-bottom, spacing(xl));
+    position: relative;
 
     .card & {
       display: block;
@@ -213,4 +215,26 @@ $form-widths: (
   & ~ .form__element__error {
     display: block;
   }
+}
+
+.form__legal {
+  @include respond-to(breakpoint(m)) {
+    bottom: -1 * spacing(xl);
+    position: absolute;
+  }
+
+  #card-signup & {
+    @include respond-to(breakpoint(m)) {
+      position: static;
+    }
+  }
+}
+
+.form__legal__label {
+  font-size: fs(xxxs);
+}
+
+.form__legal__footnote {
+  font-size: fs(tiny);
+  margin-top: 0;
 }
