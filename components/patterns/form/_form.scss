@@ -48,20 +48,12 @@ $form-widths: (
   @include respond-to(breakpoint(m)) {
     display: none;
   }
-
-  @include respond-to(breakpoint(l)) {
-    display: none;
-  }
 }
 
 .form__footer-privacy-s {
   display: none;
 
   @include respond-to(breakpoint(m)) {
-    display: block;
-  }
-
-  @include respond-to(breakpoint(l)) {
     display: block;
   }
 }
