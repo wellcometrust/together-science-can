@@ -28,10 +28,9 @@
     </select>
   </div>
   <p class="form__footer form__footer-privacy">
-    Wellcome, on behalf of Together Science Can, will send you well-timed news and ideas for how you can get involved.
-    Wellcome uses a third party provide, Dotmailer, to deliver our newsletters and we won’t share your email with anyone else.
-    For more information about how Wellcome handles your data, please read our
-    <a href="https://wellcome.ac.uk/about-us/privacy-and-terms" title="privacy and terms">privacy notice</a>.
+    {% block footer %}
+      {{ secondary_signup.footer | safe }}
+    {% endblock %}
    </p>
 
   <div class="form__element">
