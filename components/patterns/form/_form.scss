@@ -44,6 +44,28 @@ $form-widths: (
   }
 }
 
+.form__footer-privacy {
+  @include respond-to(breakpoint(m)) {
+    display: none;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    display: none;
+  }
+}
+
+.form__footer-privacy-s {
+  display: none;
+
+  @include respond-to(breakpoint(m)) {
+    display: block;
+  }
+
+  @include respond-to(breakpoint(l)) {
+    display: block;
+  }
+}
+
 .form__success {
   @include transition(opacity 0.5s 0.25s);
   height: 0;

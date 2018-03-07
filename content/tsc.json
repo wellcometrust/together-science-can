@@ -61,7 +61,7 @@
   },
   "signup": {
     "title": "Take action! Join us to stay informed",
-    "footer": "We'll send you well-timed news and ideas for how you can get involved. We won't share your email with anyone else.",
+    "footer": "Wellcome, on behalf of Together Science Can, will send you well-timed news and ideas for how you can get involved. Wellcome uses a third party provide, Dotmailer, to deliver our newsletters and we won’t share your email with anyone else. For more information about how Wellcome handles your data, please read our <a href='https://wellcome.ac.uk/about-us/privacy-and-terms' title='privacy and terms'>privacy notice</a>.",
     "cta": {
       "text": "Join now"
     }
@@ -150,7 +150,7 @@
   },
   "secondary_signup": {
     "title": "Join us, take action and stay informed",
-    "footer": "We'll send you well-timed news and ideas for how you can get involved. We won't share your email with anyone else.",
+    "footer": "Wellcome, on behalf of Together Science Can, will send you well-timed news and ideas for how you can get involved. Wellcome uses a third party provide, Dotmailer, to deliver our newsletters and we won’t share your email with anyone else. For more information about how Wellcome handles your data, please read our <a href='https://wellcome.ac.uk/about-us/privacy-and-terms' title='privacy and terms'>privacy notice</a>.",
     "cta": {
       "text": "Join now"
     }
