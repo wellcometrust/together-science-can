@@ -27,6 +27,11 @@
       {% include "patterns/form/countries.njk" %}
     </select>
   </div>
+  <p class="form__footer form__footer-privacy">
+    {% block footer %}
+      {{ secondary_signup.footer | safe }}
+    {% endblock %}
+   </p>
 
   <div class="form__element">
     <input class="button button--green button--fullwidth button--expanded-ls" type="Submit" name="Submit" value="Join now" aria-label="Join now">
