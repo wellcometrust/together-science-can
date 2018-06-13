@@ -13,6 +13,7 @@ import { loadSocialPosts } from './sections/social-feed/socialFeed.js';
 import { cookieMessage } from './cookie-message/cookie-message.js';
 
 import setupAnalytics from './common-js/analytics.js';
+import fetchMediumPosts from './common-js/mediumPosts.js';
 
 const initialize = function() {
   if (!('requestAnimationFrame' in window)) return;
@@ -49,6 +50,7 @@ const initialize = function() {
   loadSocialPosts(socialFeed, socialPrevButton, socialNextButton);
 
   setupAnalytics();
+  fetchMediumPosts();
 };
 
 if (document.readyState === 'loading') {
