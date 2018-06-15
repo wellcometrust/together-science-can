@@ -1,0 +1,38 @@
+
+
+.section--blog-cards {
+  @extend .section--flip-cards;
+  max-width: map-get($flip-cards-section-widths, s);
+  @include rem(margin-bottom, spacing(xxl) * 3);
+
+  @include respond-to(breakpoint(m)) {
+    @include rem(margin-bottom, spacing(xxl));
+    max-width: map-get($flip-cards-section-widths, m);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin-bottom, spacing(xxl) + spacing(xl));
+    max-width: map-get($flip-cards-section-widths, l);
+  }
+}
+
+.blog-cards__header {
+  @extend .flip-cards__header;
+  text-align: center;
+  width: 100%;
+}
+
+.blog-cards__cards {
+  @extend .flip-cards__cards;
+
+  .card-wrapper {
+
+    .card__inner {
+      padding: 0;
+      background: none;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}

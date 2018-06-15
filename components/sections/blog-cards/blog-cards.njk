@@ -1,0 +1,28 @@
+{% import "patterns/card/card.njk" as card %}
+{% import "buttons/button.njk" as button %}
+
+<section id="ideas-for-action" class="section section--blog-cards">
+  <div class="blog-cards__header">
+    <h2>Blog</h2>
+    {{ blog_cards.body | safe }}
+  </div>
+  <div class="blog_cards__cards-wrapper">
+    <div class="blog-cards__cards cards-list">
+        {{ card.create(
+            body='body text',
+            image_url="url",
+            complete="") }}
+    {{ card.create(
+                        body='body text',
+
+            image_url="url",
+            complete="") }}
+    {{ card.create(
+                        body='body text',
+
+            image_url='url',
+            complete="") }}
+      </div>
+    </div>
+  </div>
+</section>
