@@ -22,8 +22,10 @@ const loadMediumPosts = (container) => {
           console.log(node);
           const post = data[i];
           node.querySelectorAll('img')[0].setAttribute('src', post.image_url);
+          node.querySelectorAll('.card__title')[0].innerText = post.title || 'here is some text';
           node.querySelectorAll('.card__body')[0].innerText = post.description || 'here is some text';
         });
+        container.classList.remove('unloaded');
       } catch (err) {
         console.error('Failed to load posts with error:', err);
       }

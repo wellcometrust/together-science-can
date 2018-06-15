@@ -14,6 +14,10 @@
     @include rem(margin-bottom, spacing(xxl) + spacing(xl));
     max-width: map-get($flip-cards-section-widths, l);
   }
+
+}
+.section--blog-cards.unloaded {
+  display: none;
 }
 
 .blog-cards__header {
@@ -24,14 +28,22 @@
 
 .blog-cards__cards {
   @extend .flip-cards__cards;
-
+  h3.card__title {
+    font-size: 20px;
+  }
   .card-wrapper {
 
     .card__inner {
       padding: 0;
-      background: none;
+      background-image: none;
+    }
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{$i}) .card:first-of-type .card__inner {
+        background-image: none;
+      }
     }
   }
+
   img {
     width: 100%;
   }

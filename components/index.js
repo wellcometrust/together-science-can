@@ -49,7 +49,7 @@ const initialize = function() {
 
   loadSocialPosts(socialFeed, socialPrevButton, socialNextButton);
 
-  const blogCards = document.querySelector('.blog_cards__cards-wrapper');
+  const blogCards = document.querySelector('.section--blog-cards');
   loadMediumPosts(blogCards);
 
   setupAnalytics();
