@@ -13,7 +13,7 @@ import { loadSocialPosts } from './sections/social-feed/socialFeed.js';
 import { cookieMessage } from './cookie-message/cookie-message.js';
 
 import setupAnalytics from './common-js/analytics.js';
-import fetchMediumPosts from './common-js/mediumPosts.js';
+import {loadMediumPosts} from './sections/blog-cards/blog-cards';
 
 const initialize = function() {
   if (!('requestAnimationFrame' in window)) return;
@@ -49,8 +49,10 @@ const initialize = function() {
 
   loadSocialPosts(socialFeed, socialPrevButton, socialNextButton);
 
+  const blogCards = document.querySelector('.blog_cards__cards-wrapper');
+  loadMediumPosts(blogCards);
+
   setupAnalytics();
-  fetchMediumPosts();
 };
 
 if (document.readyState === 'loading') {
