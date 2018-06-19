@@ -24,6 +24,20 @@
   @extend .flip-cards__header;
   text-align: center;
   width: 100%;
+  margin-bottom: 50px;
+  h3 {
+    color: $tscDarkGrey;
+    margin-bottom: 10px;
+  }
+  .medium-logo:after {
+    background-image: url('./static/images/logo/medium-logo.png');
+    width: 100px;
+    height: 20px;
+    background-size: 100%;
+    background-position: 50% 50%;
+    content: "";
+    display: inline-block;
+  }
 }
 
 .blog-cards__cards {
