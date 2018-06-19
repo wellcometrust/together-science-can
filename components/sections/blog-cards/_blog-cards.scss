@@ -29,7 +29,10 @@
 .blog-cards__cards {
   @extend .flip-cards__cards;
   h3.card__title {
-    font-size: 20px;
+
+  }
+  p.card__subtitle {
+    font-weight: bold;
   }
   .card-wrapper {
 
