@@ -37,7 +37,7 @@
   .card-wrapper {
 
     .card__inner {
-      padding: 0;
+      padding: 0 0 20px 0;
       background-image: none;
     }
     @for $i from 1 through 3 {
