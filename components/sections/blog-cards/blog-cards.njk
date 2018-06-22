@@ -1,24 +1,37 @@
 {% import "patterns/card/card.njk" as card %}
 {% import "buttons/button.njk" as button %}
-
-<section id="ideas-for-action" class="section section--blog-cards unloaded">
-  <div class="blog-cards__header">
-    <h2>Blog</h2>
+ <div class="blog-cards__header unloaded">
+    <h3>Our Blog</h3>
+    <h2> Ideas and thoughts from #togethersciencecan </h2>
+    <p class="medium-logo"> on </p>
     {{ blog_cards.body | safe }}
   </div>
+<section id="ideas-for-action" class="section section--blog-cards unloaded">
+
   <div class="blog_cards__cards-wrapper">
     <div class="blog-cards__cards cards-list">
         {{ card.create(
             body='body text',
+            clickable_tile=true,
+            grow=true,
             image_url="url",
+            subtitle="hello",
+            footer="footer",
             complete="") }}
     {{ card.create(
-                        body='body text',
-
+            grow=true,
+            body='body text',
             image_url="url",
-            complete="") }}
+             clickable_tile=true,
+            subtitle="hello",
+            complete="",
+            footer="footer") }}
     {{ card.create(
-                        body='body text',
+            grow=true,
+            body='body text',
+            subtitle="heelo",
+            footer="footer",
+            clickable_tile=true,
 
             image_url='url',
             complete="") }}
