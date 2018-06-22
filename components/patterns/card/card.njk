@@ -1,20 +1,41 @@
 {% macro create(
     title="",
+    subtitle="",
     body="",
     cta="",
+    clickable_tile=false,
     flip_side=false,
+    grow=false,
     complete="",
+    footer="",
     image_url=false) %}
-<div class="card-wrapper">
-  <div class="card {{ "card--head" if flip_side }} drop-shadow">
-    <div class="card__inner">
+
+
+<div class="card-wrapper  ">
+  <div class="card {{ "card--head" if flip_side }} {{ "grow" if grow }} drop-shadow">
+    {% if clickable_tile %}
+       <a>
+    {% endif %}
+    <div class="card__inner ">
       {% if image_url %}
         <img alt="" class="card__image" src="{{ image_url }}" role="presentation" aria-hidden="true">
       {% endif %}
-      <h3 class="card__title">{{ title | safe }}</h3>
+      {% if title %}
+          <h3 class="card__title">{{ title | safe }}</h3>
+      {% endif %}
+      {% if subtitle %}
+         <p class="card__subtitle">{{ subtitle | safe }}</p>
+      {% endif %}
+
       <div class="card__body">{{ body | safe }}</div>
+      {% if footer %}
+         <p class="card__footer">{{ footer | safe }}</p>
+      {% endif %}
       {{ cta | safe }}
     </div>
+    {% if clickable_tile %}
+       <a>
+    {% endif %}
   </div>
   {% if flip_side !== false %}
     <div class="card card--tail drop-shadow">
@@ -31,4 +52,7 @@
     </div>
   {% endif %}
 </div>
+{% if clickable_tile %}
+  </a>
+{% endif %}
 {% endmacro %}
