@@ -21,21 +21,21 @@
 }
 
 .blog-cards__header {
+  @include rem(margin-bottom, spacing(m));
   @extend .flip-cards__header;
   text-align: center;
   width: 100%;
   max-width: map-get($flip-cards-section-widths, m);
-  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   h3 {
+    @include rem(margin-bottom, spacing(s));
     color: $tscDarkGrey;
-    margin-bottom: 25px;
   }
   .medium-logo:after {
+    @include rem(height, $body-padding);
+    @include rem(width, spacing(s) * 4);
     background-image: url('./static/images/logo/medium-logo.png');
-    width: 100px;
-    height: 20px;
     background-size: 100%;
     background-position: 50% 30%;
     content: "";
@@ -50,7 +50,7 @@
   }
   .card-wrapper {
     .card__inner {
-      padding: 0 0 20px 0;
+      @include rem(padding, 0 0 $body-padding);
       background-image: none;
     }
     @for $i from 1 through 3 {
@@ -59,13 +59,13 @@
       }
     }
     .card__subtitle, .card__body, .card__footer {
-      margin-left: 20px;
-      margin-right: 20px;
+      @include rem(margin-left, spacing(xxxs));
+      @include rem(margin-right, $body-padding);
       text-align: left;
     }
     .card__subtitle {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      @include rem(margin-bottom, spacing(xxxs));
+      @include rem(margin-top, spacing(xxxs));
     }
     .card__footer {
       margin-bottom: 0;
