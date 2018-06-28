@@ -59,7 +59,7 @@
       }
     }
     .card__subtitle, .card__body, .card__footer {
-      @include rem(margin-left, spacing(xxxs));
+      @include rem(margin-left, $body-padding);
       @include rem(margin-right, $body-padding);
       text-align: left;
     }
