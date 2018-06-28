@@ -10,31 +10,16 @@
 
   <div class="blog_cards__cards-wrapper">
     <div class="blog-cards__cards cards-list">
+     {% for i in range(0, 3) %}
         {{ card.create(
-            body='body text',
+            body='Body text placeholder',
             clickable_tile=true,
             grow=true,
             image_url="url",
-            subtitle="hello",
-            footer="footer",
+            subtitle="Article title placeholder",
+            footer="Footer placeholder",
             complete="") }}
-    {{ card.create(
-            grow=true,
-            body='body text',
-            image_url="url",
-             clickable_tile=true,
-            subtitle="hello",
-            complete="",
-            footer="footer") }}
-    {{ card.create(
-            grow=true,
-            body='body text',
-            subtitle="heelo",
-            footer="footer",
-            clickable_tile=true,
-
-            image_url='url',
-            complete="") }}
+        {% endfor %}
       </div>
     </div>
   </div>
