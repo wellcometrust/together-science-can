@@ -1,4 +1,4 @@
-const POSTS_ENDPOINT = 'http://dev.wmdev.ratliffe/tsc-medium-latest-content.json';
+const POSTS_ENDPOINT = 'https://wellcome.ac.uk/tsc-medium-latest-content.json';
 const { monthNames } = require('../../common-js/utils');
 /**
  * Dynamically loads embedded posts from Medium into a cards.
