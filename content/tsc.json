@@ -54,8 +54,8 @@
     "title": "Science <br>is powerful",
     "body": "In a changing world, we need to come together to celebrate the power of international collaboration. Add your voice to keep science open.",
     "cta": {
-      "text": "Watch the film",
-      "link": "#watch-the-film",
+      "text": "Complete the survey",
+      "link": "#",
       "icon": "play"
     }
   },
@@ -230,7 +230,7 @@
       },
       {
         "title": "Wellcome Trust/DBT India Alliance",
-        "image_url": "static/images/partner-logos/india-alliance.svg",
+        "image_url": "static/images/partner-logos/India_Alliance_DBT_Wellcome_logo_white_web.png",
         "link": "http://wellcomedbt.org/"
       }
     ],
