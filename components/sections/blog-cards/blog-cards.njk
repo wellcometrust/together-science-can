@@ -1,0 +1,26 @@
+{% import "patterns/card/card.njk" as card %}
+{% import "buttons/button.njk" as button %}
+ <div class="blog-cards__header unloaded">
+    <h3>Our Blog</h3>
+    <h2> Ideas and thoughts from #togethersciencecan </h2>
+    <p class="medium-logo"> on </p>
+    {{ blog_cards.body | safe }}
+  </div>
+<section id="ideas-for-action" class="section section--blog-cards unloaded">
+
+  <div class="blog_cards__cards-wrapper">
+    <div class="blog-cards__cards cards-list">
+     {% for i in range(0, 3) %}
+        {{ card.create(
+            body='Body text placeholder',
+            clickable_tile=true,
+            grow=true,
+            image_url="url",
+            subtitle="Article title placeholder",
+            footer="Footer placeholder",
+            complete="") }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

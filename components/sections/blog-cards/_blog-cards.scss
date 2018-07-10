@@ -1,0 +1,86 @@
+
+
+.section--blog-cards {
+  @extend .section--flip-cards;
+  max-width: map-get($flip-cards-section-widths, s);
+  @include rem(margin-bottom, spacing(xxl) * 3);
+
+  @include respond-to(breakpoint(m)) {
+    @include rem(margin-bottom, spacing(xxl));
+    max-width: map-get($flip-cards-section-widths, m);
+  }
+
+  @include respond-to(breakpoint(l)) {
+    @include rem(margin-bottom, spacing(xxl) + spacing(xl));
+    max-width: map-get($flip-cards-section-widths, l);
+  }
+
+}
+.section--blog-cards.unloaded, .blog-cards__header.unloaded {
+  display: none;
+}
+
+.blog-cards__header {
+  @include rem(margin-bottom, spacing(m));
+  @extend .flip-cards__header;
+  text-align: center;
+  width: 100%;
+  max-width: map-get($flip-cards-section-widths, m);
+  margin-left: auto;
+  margin-right: auto;
+  h3 {
+    @include rem(margin-bottom, spacing(s));
+    color: $tscDarkGrey;
+  }
+  .medium-logo:after {
+    @include rem(height, $body-padding);
+    @include rem(width, spacing(s) * 4);
+    background-image: url('./static/images/logo/medium-logo.png');
+    background-size: 100%;
+    background-position: 50% 35%;
+    content: "";
+    display: inline-block;
+  }
+}
+
+.blog-cards__cards {
+  @extend .flip-cards__cards;
+  p.card__subtitle {
+    font-weight: bold;
+  }
+  .card-wrapper {
+    .card__inner {
+      @include rem(padding, 0 0 $body-padding);
+      background-image: none;
+    }
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{$i}) .card:first-of-type .card__inner {
+        background-image: none;
+      }
+    }
+    .card__subtitle, .card__body, .card__footer {
+      @include rem(margin-left, $body-padding);
+      @include rem(margin-right, $body-padding);
+      text-align: left;
+    }
+    .card__subtitle {
+      @include rem(margin-bottom, spacing(xxxs));
+      @include rem(margin-top, spacing(xxxs));
+    }
+    .card__footer {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+  a {
+    text-decoration: none;
+    color: $tscBlack;
+  }
+
+}
+
