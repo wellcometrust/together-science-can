@@ -54,8 +54,9 @@
     "title": "Science <br>is powerful",
     "body": "In a changing world, we need to come together to celebrate the power of international collaboration. Add your voice to keep science open.",
     "cta": {
-      "text": "Complete the survey",
-      "link": "https://www.research.net/r/togethersciencecan"
+      "text": "Show your support",
+      "link": "https://togethersciencecan.org/#signup",
+      "icon": "play"
     }
   },
   "signup": {
