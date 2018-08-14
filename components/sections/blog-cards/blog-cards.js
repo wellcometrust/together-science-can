@@ -13,9 +13,10 @@ const loadMediumPosts = (container) => {
     if (xhr.status === 200) {
       try {
         const data = JSON.parse(xhr.responseText);
+        const posts = data.sort((a, b) => b.date - a.date);
         const cards = container.querySelectorAll('.card-wrapper');
         cards.forEach((node, i) => {
-          const post = data[i];
+          const post = posts[i];
           const date = new Date(post.date);
           node.querySelectorAll('img')[0].setAttribute('src', post.image_url);
           node.querySelectorAll('.card__subtitle')[0].innerText = post.title;
