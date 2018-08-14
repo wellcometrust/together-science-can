@@ -13,7 +13,7 @@ const loadMediumPosts = (container) => {
     if (xhr.status === 200) {
       try {
         const data = JSON.parse(xhr.responseText);
-        const posts = data.reverse();
+        const posts = data.sort((a, b) => b.date - a.date);
         const cards = container.querySelectorAll('.card-wrapper');
         cards.forEach((node, i) => {
           const post = posts[i];
